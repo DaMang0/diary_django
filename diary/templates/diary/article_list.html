@@ -1,0 +1,15 @@
+{% extends 'diary/base.html' %}
+
+<!-- define webpage title -->
+{% block title %}List of Articles{% endblock %}
+
+<!-- printing list of articles  -->
+{% block content %}
+  <ul>
+    {% for article in article_list %}
+    <li style="list-style-type: none;">{{ article.title }}</li>
+    <p>Content: {{ article.content }}</p>
+    <p>Created on: {{ article.pub_date }}</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
