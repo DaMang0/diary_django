@@ -7,9 +7,10 @@
 {% block content %}
   <ul>
     {% for article in article_list %}
-    <li style="list-style-type: none;">{{ article.title }}</li>
-    <p>Content: {{ article.content }}</p>
+    <li style="list-style-type: none;"><a href="#">{{ article.title.capitalize }}</a></li>
+    <p>Content: {{ article.content.capitalize }}</p>
     <p>Created on: {{ article.pub_date }}</p>
+    <p>{{ article.slug }}</p>
     {% endfor %}
   </ul>
 {% endblock %}

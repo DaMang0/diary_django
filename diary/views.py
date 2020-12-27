@@ -1,10 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Article
-
-def home(request):
-  return HttpResponse("<h1>Testing Git Commit</h1>")
 
 class ArticleListView(ListView):
   model = Article
@@ -15,3 +12,6 @@ class ArticleCreate(CreateView):
   model = Article
   fields = ['title', 'content', 'slug',]
   template_name = 'diary/article_create.html'
+
+class ArticleDetail(DetailView):
+  model = Article
