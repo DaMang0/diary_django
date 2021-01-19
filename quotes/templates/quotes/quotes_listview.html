@@ -1,0 +1,24 @@
+{% extends 'quotes/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/quotes_listview.css' %}">
+{% endblock %}
+{% block title %}List of Quotes{% endblock %}
+
+{% block content %}
+  <ol class="quote-ol-container">
+    {% for quote in quote_list %}
+    <li class="quote-msg">{{ quote.message }}</li>
+    <small class="quote-created">Published on: {{ quote.created|date:"d M Y" }}</small>
+    <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="delete">
+    </form>
+    {% endfor %}
+  </ol>
+  <br>
+  <a class="quote-create" href="{% url 'quotes:create' %}">New Quote</a>
+  
+    
+{% endblock %}
+

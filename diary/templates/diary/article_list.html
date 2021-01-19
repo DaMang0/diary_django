@@ -1,16 +1,23 @@
 {% extends 'diary/base.html' %}
-
+{% load static %}
+{% block css %}
+<!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/article_list.css' %}"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+{% endblock %}
 <!-- define webpage title -->
-{% block title %}List of Articles{% endblock %}
+{% block title %}Be Inspired.{% endblock %}
 
 <!-- printing list of articles  -->
 {% block content %}
-  <ul>
-    {% for article in article_list %}
-    <li style="list-style-type: none;"><a href="#">{{ article.title.capitalize }}</a></li>
-    <p>Content: {{ article.content.capitalize }}</p>
-    <p>Created on: {{ article.pub_date }}</p>
-    <p>{{ article.slug }}</p>
-    {% endfor %}
-  </ul>
+<nav class="nav-1">EARN WITH YOU MIND, NOT YOUR TIME.<p class="p-1" id="inspired">BE INSPIRED AND WORK HARD.</p></nav>
+<ol class="order-list">
+  {% for article in article_list %}
+  <li class="article"><a class="article-title-link" href="{% url "article-detail" article.slug %}">{{ article.title.capitalize }}</a></li><br>
+  <!-- <p>Content: {{ article.content.capitalize }}</p> -->
+  <!-- <p>Created on: {{ article.pub_date }}</p> -->
+  <!-- <p>{{ article.slug }}</p> -->
+  {% endfor %}
+</ol>
 {% endblock %}

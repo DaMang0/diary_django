@@ -1,0 +1,29 @@
+*{
+  margin: 0px;
+}
+
+body{
+  
+}
+
+.quote-ol-container{
+  margin-top: 50px;
+}
+
+.quote-msg{
+  margin: 5px;
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.quote-create{
+  position: relative;
+  top: 40px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: rgb(68, 68, 68);
+}
+
+.quote-created{
+  color: rgb(68, 68, 68);
+}

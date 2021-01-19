@@ -1,0 +1,20 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/article_detail.css' %}">
+{% endblock %}
+{% block title %}{{ object.title }}{% endblock %}
+{% block content %}
+  <p class="article-title" id="article-detail-title">{{ object.title.capitalize }}</p>
+  <br>
+  <p id="article-detail-content">{{ object.content.capitalize|linebreaks }}</p>
+  <br>
+  <br>
+  <br>
+  <p class="pub-date">Date created: {{ object.pub_date }}</p>
+  <a href="{% url 'article-delete' object.slug %}">Delete?</a>
+  <br>
+  <a href="{% url 'article-update' object.slug %}">Edit Post</a>
+  <!-- <a href="{$ url 'article-update' article.slug %}">Update</a> -->
+{% endblock %}

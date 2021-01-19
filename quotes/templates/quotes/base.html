@@ -1,14 +1,12 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% block css %}
   {% endblock %}
-  <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   
@@ -23,9 +21,6 @@
     <!-- <li class="nav-list"><a href="#" class="nav-link">CLIPS</a></li> -->
     <li class="nav-list"><a href="{% url 'quotes:index' %}" class="nav-link">QUOTES</a></li>
     <li class="nav-list"><a href="#" class="nav-link">VALUES</a></li>
-    {% if request.user.is_superuser %}
-    <li class="nav-list"><a href="{% url 'admin:index' %}" class="nav-link">Admin</a></li>
-    {% endif %}
   </ul>
   {% block content %}
   {% endblock %}

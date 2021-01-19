@@ -1,0 +1,53 @@
+*{
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Crimson Text', serif; */
+  padding: 0px;
+  margin: 0px;
+  color: rgb(255, 242, 228);
+  background-color: black;
+}
+
+.nav-1{
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+  padding: 25%;
+  padding-left: 15%;
+  height: 275px;
+  
+  
+}
+
+.p-1{
+  font-family: 'Roboto Slab', serif;
+  position: absolute;
+  left: 600px;
+  margin-top: 5px;
+}
+
+.article-title-link{
+  font-size: 20px;
+  text-transform: capitalize;
+  color: white;
+  
+  
+}
+
+
+.pub-date{
+  color: rgb(186, 186, 186);
+  opacity: 75%;
+}
+
+.order-list{
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 25%;
+  color: black;
+  
+}
+
+.order-list>li{
+  
+}
