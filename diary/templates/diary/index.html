@@ -1,0 +1,13 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+{% endblock %}
+<!-- define webpage title -->
+{% block title %}Be Inspired.{% endblock %}
+<!-- printing list of articles  -->
+{% block content %}
+<nav class="front-page-quote">EARN WITH YOU MIND, NOT YOUR TIME.<p class="p-1" id="inspired">BE INSPIRED AND WORK HARD.</p></nav>
+{% endblock %}

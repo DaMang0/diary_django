@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, DeleteView
+from django.views.generic import ListView, CreateView, DeleteView, TemplateView
 from django.http import HttpResponse
 from .models import Quote
 
@@ -27,3 +27,6 @@ class QuoteDeleteView(DeleteView):
   def get_object(self):
     pk_ = self.kwargs.get("pk")
     return get_object_or_404(Quote, pk=pk_)
+
+class ValueTemplateView(TemplateView):
+  template_name = 'quotes/values.html'

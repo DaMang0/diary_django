@@ -1,0 +1,28 @@
+{% extends 'diary/base.html' %}
+{% block title %}Login{% endblock %}
+{% if form.errors %}
+  <p>Your Login details didn't match. Please try again.</p>
+{% endif %}
+{% block content %}
+<a href="{% url 'signup' %}">Need a Account?</a>
+
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+  <p>{{ form.username.label_tag }}</p>
+  <p>{{ form.username }}</p>
+  <p>{{ form.password.label_tag }}</p>
+  <p>{{ form.password }}</p>
+  <!-- Submit Button -->
+  <div>
+    <input type="submit" value="Login">
+  </div>
+</form>
+
+<p><a href="{% url 'password_reset' %}">Need help?</a></p><br><br>
+{% if messages %}
+  {% for m in messages %}
+  <p style="color: red;">{{ m }}</p>
+  {% endfor %}
+{% endif %}
+{% endblock %}
+

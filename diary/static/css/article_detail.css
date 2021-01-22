@@ -1,4 +1,22 @@
-#article-detail-title{
-  margin-top: 20px;
+*{
+  font-family: 'PT Sans', sans-serif;
 }
 
+#article-detail-title{
+  margin-top: 20px;
+  font-size: 1.7em;
+  font-weight: bolder;
+  color: rgb(112, 112, 112);
+}
+
+.detail-pub-date, .detail-article-delete-button, .detail-article-edit-button{
+  color: grey;
+  margin-left: 2px;
+}
+
+.detail-article-content{
+  display: flex;
+  text-align: center;
+  margin-left: 20px;
+  width: 75%;
+}

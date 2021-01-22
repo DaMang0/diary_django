@@ -1,29 +1,51 @@
 *{
   margin: 0px;
+  padding: 0px;
+  font-family: 'Merriweather', serif;
 }
 
 body{
-  
+background-color: rgb(253, 250, 246);
+}
+
+.quote-list-h2{
+  font-family: 'Merriweather', serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 25px 15px;
 }
 
 .quote-ol-container{
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-left: 20px;
+  
+  /* list-style-type: none; */
 }
 
-.quote-msg{
-  margin: 5px;
-  margin-top: 20px;
-  font-size: 2em;
+.quote-msg-link{
+  font-size: 1.7em;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: black; 
 }
 
 .quote-create{
-  position: relative;
-  top: 40px;
-  margin-left: 5px;
   text-decoration: none;
-  color: rgb(68, 68, 68);
+  color: black;
+  border-bottom: 1px solid black;
+  margin-left: 1px;
 }
 
 .quote-created{
-  color: rgb(68, 68, 68);
+  font-size: 12px;
+  color: rgb(160, 160, 160);
+  margin-left: 2px;
+  text-transform: uppercase;
+  font-family: 'Chakra Petch', sans-serif;
+  
+}
+
+.quote-delete-button{
+  margin-left: 2px;
 }

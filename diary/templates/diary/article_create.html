@@ -1,10 +1,15 @@
 {% extends 'diary/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/article_create.css' %}">
+{% endblock %}
 
 {% block title %}Create a New Article{% endblock %}
 
 {% block content %}
 <form action="" method="POST">{% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" value="Submit">
+  <br>
+  <input class="article-submit-button" type="submit" value="Submit">
 </form>
 {% endblock %}

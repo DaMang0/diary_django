@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+}
+
+.nav-box{
+  /* border-bottom: 1px solid grey; */
+  /* padding-top: 10px; */
+  background-color: black;
+  height: 2em;
+  border-bottom: 1px solid rgb(107, 107, 107);
+  
+}
+
+.nav-list{
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+.nav-link{
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 5px;
+  position: relative;
+  left: 30px;
+  color: white
+  
+}
+body{
+  background-color: black;
+  color: white;
+}
+.front-page-quote{
+  font-family: 'Roboto Slab', serif;
+  font-size: 3em;
+  padding: 25%;
+  padding-left: 15%;
+} 
+
+.p-1{
+  font-family: 'Roboto Slab', serif;
+  position: absolute;
+  left: 620px;
+  margin-top: 5px;
+}
+

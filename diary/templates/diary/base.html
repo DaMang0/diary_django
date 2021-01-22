@@ -5,26 +5,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% block css %}
   {% endblock %}
-  <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <!-- font-family: 'PT Sans', sans-serif; -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
   <ul class="nav-box">
-    <li class="nav-list"><a class="nav-link" href="{% url 'article-list' %}">Home</a></li>
-    <li class="nav-list"><a class="nav-link" href="{% url 'article-create' %}">Create</a></li>
-    <li class="nav-list"><a href="#articles" class="nav-link">Articles</a></li>
+    <li class="nav-list"><a id="home-button" class="nav-link" href="{% url 'article-index' %}">Home</a></li>
+    <!-- <li class="nav-list"><a class="nav-link" href="{% url 'article-create' %}">Create</a></li> -->
+    <li class="nav-list"><a href="{% url 'article-list' %}" class="nav-link">Articles</a></li>
     <!-- <li class="nav-list"><a href="#" class="nav-link">BOOKS</a></li> -->
     <!-- <li class="nav-list"><a href="#" class="nav-link">CLIPS</a></li> -->
     <li class="nav-list"><a href="{% url 'quotes:index' %}" class="nav-link">QUOTES</a></li>
-    <li class="nav-list"><a href="#" class="nav-link">VALUES</a></li>
+    <li class="nav-list"><a href="{% url 'value:index' %}" class="nav-link">VALUES</a></li>
     {% if request.user.is_superuser %}
-    <li class="nav-list"><a href="{% url 'admin:index' %}" class="nav-link">Admin</a></li>
+    <li class="nav-list"><a href="{% url 'admin:index' %}" class="nav-link" id="admin-link">Admin</a></li>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+    <li class="nav-list"><a class="nav-link" href="{% url 'account-detail' user.id %}">Account</a></li>
+    <li class="nav-list"><a class="nav-link" href="{% url 'logout' %}" id="logout-link">Logout</a></li>
+    {% else %}
+    <li class="nav-list"><a class="nav-link" href="{% url 'login' %}" id="login-link">Login</a><a class="nav-link" id="create-account-link" href="{% url 'signup' %}">| Create Account</a></li>
     {% endif %}
   </ul>
   {% block content %}

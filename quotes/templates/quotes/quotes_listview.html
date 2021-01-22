@@ -1,23 +1,28 @@
-{% extends 'quotes/base.html' %}
+{% extends 'diary/base.html' %}
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/quotes_listview.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
 {% endblock %}
-{% block title %}List of Quotes{% endblock %}
+{% block title %}Be Inspired. Quotes{% endblock %}
 
 {% block content %}
-  <ol class="quote-ol-container">
-    {% for quote in quote_list %}
-    <li class="quote-msg">{{ quote.message }}</li>
-    <small class="quote-created">Published on: {{ quote.created|date:"d M Y" }}</small>
-    <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="delete">
-    </form>
-    {% endfor %}
-  </ol>
+<h2 class="quote-list-h2">These are the collection of quotes you choose to remember.</h2>
+<ol class="quote-ol-container">
+  {% for quote in quote_list %}
+  <small class="quote-created">{{ quote.created|date:"M d Y" }}</small>
+  <li class="quote-msg"><a class="quote-msg-link" href="#">{{ quote.message }}</a></li>
+  
+  <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input class="quote-delete-button" type="submit" value="delete">
+  </form>
   <br>
-  <a class="quote-create" href="{% url 'quotes:create' %}">New Quote</a>
+  {% endfor %}
+</ol>
+<br>
+<a class="quote-create" href="{% url 'quotes:create' %}">New Quote</a>
   
     
 {% endblock %}

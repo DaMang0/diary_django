@@ -1,8 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import Article
 from django.urls import reverse_lazy
+
+class ArticleIndex(TemplateView):
+  model = Article
+  template_name = 'diary/index.html'
 
 class ArticleListView(ListView):
   model = Article

@@ -1,0 +1,21 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/listView.css' %}">
+{% endblock %}
+{% block title %}Value List{% endblock %}
+{% block content %}
+  
+  <ol>
+    {% for topic in object_list %}
+    <!-- <li>Article {{ topic.pk }}.</li> -->
+    <li>{{ topic.header }}</li>
+    <p>{{ topic.content }}</p>
+    <br>
+    <br>
+    <br>
+    {% endfor %}
+  </ol>
+
+  <h1>Style This Page!!!!!!!!!!!!</h1>
+{% endblock %}
