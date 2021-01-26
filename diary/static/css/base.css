@@ -5,7 +5,7 @@
 
 .nav-box{
   background-color: black;
-  height: 2em;
+  height: 3.5em;
   border-bottom: 1px solid rgb(107, 107, 107);
   
 }
@@ -42,4 +42,8 @@
 
 #logout-link, #login-link, #create-account-link{
   opacity: 65%;
+}
+
+#my-task-link{
+  color: rgb(0, 208, 0);
 }

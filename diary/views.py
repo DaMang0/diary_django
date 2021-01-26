@@ -12,6 +12,7 @@ class ArticleListView(ListView):
   model = Article
   context_object_name = 'article_list'
   template_name = 'diary/article_list.html'
+  queryset = Article.objects.all()[::-1] 
 
 class ArticleCreate(CreateView):
   model = Article

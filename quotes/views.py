@@ -12,6 +12,8 @@ class QuoteListView(ListView):
 
   model = Quote
   template_name = 'quotes/quotes_listview.html'
+  queryset = Quote.objects.all()[::-1]
+  
   context_object_name = 'quote_list'
 
 class QuoteCreateView(CreateView):

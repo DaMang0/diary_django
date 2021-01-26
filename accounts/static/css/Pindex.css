@@ -1,0 +1,13 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Merriweather', serif;
+}
+
+.account-index-h2{
+  font-family: 'Merriweather', serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 25px 15px;
+}

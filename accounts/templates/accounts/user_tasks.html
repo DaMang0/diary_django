@@ -1,0 +1,51 @@
+{% extends 'diary/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/Pprofile.css' %}">
+{% endblock %}
+
+{% block title %}{{ user.username.capitalize }} - Account{% endblock %}
+
+{% block content %}
+
+<h2 class="account-profile-h2">{{ user.username.capitalize }}'s Profile Page</h2>
+
+
+<!-- If task is more than zero -->
+
+  
+  <ul>
+  {% for task in user.tasks_set.all %}
+  <!-- <h2>"You have {{ tasks_count }} unfinished task"</h2><br> -->
+    <li>Title: {{ task.title.upper }}</li>
+    <li>Detail: {{ task.content }}</li>
+
+    <!-- Permission for Task Owner to delete task  -->
+    {% if request.user.id == user.id %}
+      <form action="/task/delete/{{task.pk}}/" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="task-delete-button" type="submit" value="Delete">
+      </form>
+      <br>
+    {% elif request.user.is_superuser %}
+      <p style="color: red;">(Admin Access)</p>
+      <form action="/task/delete/{{task.pk}}/" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="task-delete-button" type="submit" value="Delete">
+      </form>
+      <br>
+    {% endif %}
+
+  {% empty %}
+    <l>You do not have any awaiting Task, AWESOME!!!</l>
+  {% endfor %}
+  </ul>
+
+
+
+
+
+
+{% endblock %}
