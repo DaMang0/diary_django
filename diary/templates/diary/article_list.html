@@ -9,7 +9,14 @@
 {% block title %}Inspired. | Articles {% endblock %}
 
 {% block content %}
+
+<!-- Article List View Title -->
 <h2 class="article-list-h2">These are the article i should read if i ever feel down.</h2>
+
+<!-- Create New Article  -->
+<a href="{% url 'article-create' %}" class="article-create">New Article</a>
+
+<!-- Print out each article -->
 <ol class="order-list">
   {% for article in article_list %}
   <small class="article-created">{{ article.pub_date|date:"M d Y" }}</small>
@@ -20,5 +27,5 @@
   {% endfor %}
 </ol>
 <br>
-<a href="{% url 'article-create' %}" class="article-create">New Article</a>
+
 {% endblock %}

@@ -12,7 +12,7 @@ class QuoteListView(ListView):
 
   model = Quote
   template_name = 'quotes/quotes_listview.html'
-  queryset = Quote.objects.all()[::-1]
+  queryset = Quote.objects.all()
   
   context_object_name = 'quote_list'
 

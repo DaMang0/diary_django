@@ -16,7 +16,7 @@
   
   <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}
     {{ form.as_p }}
-    <input class="quote-delete-button" type="submit" value="delete">
+    <input class="quote-delete-button" onclick="return confirm('Are you sure you want to delete this quote?')" type="submit" value="delete">
   </form>
   <br>
   {% endfor %}

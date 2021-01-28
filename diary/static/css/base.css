@@ -1,49 +1,118 @@
 *{
   margin: 0px;
   padding: 0px;
-}
-
-.nav-box{
-  background-color: black;
-  height: 3.5em;
-  border-bottom: 1px solid rgb(107, 107, 107);
   
 }
-
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  background-color: rgb(0, 10, 15);
+}
+.menu{
+  list-style: none;
+}
 .nav-list{
-  display: inline-flex;
-  margin-right: 60px;
+  margin: 0px 25px;
 }
-
-.nav-link{
-  font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin: 5px;
-  position: relative;
-  left: 30px;
-  color: white
+.item{
   
 }
 
-.nav-link:hover{
-  color: rgb(211, 211, 211);
+
+.menu li{
+  display: inline-block;
+  padding: 0px 25px;
 }
 
-#home-button{
-  color: rgb(199, 0, 0);
+.menu li a{
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
+.button-first{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 0 20px;
+  padding: 8px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  
+}
+  
+.button-secondary{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 0 20px;
+  padding: 9px 25px;
+  background:transparent;
+  border: 1px solid rgba(0, 136, 169, 1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-list:first-child{
+  background-color: rgba(255, 0, 0, 0.633);
+  border-radius: 15px 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  
+  
+}
+
+
+.home-link:hover{
+  color: rgb(77, 105, 113);
+  text-shadow: 3px 18px rgba(255, 0, 0, 0.633);
+}
+
+#article-link{
+  color: rgba(0, 136, 169, 1);
+}
+#article-link:hover{
+  color: rgba(0, 136, 169, 0.8);
+}
+
+#kind-link{
+  color: rgba(255, 148, 207, 1);
+}
+#kind-link:hover{
+  color: rgba(255, 148, 207, 0.8);
+}
+
+#quote-link{
+  color: rgba(0, 140, 40, 1);
+}
+#quote-link:hover{
+  color: rgba(0, 140, 40, 0.8);
+}
+
+#value-link{
+  color: rgba(255, 68, 0, 1);
+}
+#value-link:hover{
+  color: rgba(255, 68, 0, 0.8);
+}
 #admin-link{
+  color: white;
+}
+#admin-link:hover{
   color: red;
-
+  opacity: 70%;
 }
 
-#logout-link, #login-link, #create-account-link{
-  opacity: 65%;
-}
-
-#my-task-link{
-  color: rgb(0, 208, 0);
+.button-first:hover{
+  background-color: rgba(0, 136, 169, 0.7);
 }

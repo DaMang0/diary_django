@@ -4,19 +4,18 @@
 {% block css %}
   <link rel="stylesheet" href="{% static 'css/article_detail.css' %}">
 {% endblock %}
+
 {% block title %}{{ object.title }}{% endblock %}
+
 {% block content %}
 <article class="article-container">
   <p class="article-title" id="article-detail-title">{{ object.title.capitalize }}</p>
   <br>
-  <p class="detail-article-content">{{ object.content.capitalize|linebreaks }}</p>
-  <br>
-  <br>
-  <br>
+  <p class="detail-article-content">{{ object.content }}</p>
+  <br><br><br>
   <p class="detail-pub-date">Date created: {{ object.pub_date|date:"M d Y" }}</p>
-  <a class="detail-article-delete-button" href="{% url 'article-delete' object.slug %}">Delete?</a>
-  <br>
   <a class="detail-article-edit-button" href="{% url 'article-update' object.slug %}">Edit Post</a>
-  <!-- <a href="{$ url 'article-update' article.slug %}">Update</a> -->
+  <br>
+  <a class="detail-article-delete-button" href="{% url 'article-delete' object.slug %}">Delete?</a>
 </article>
 {% endblock %}

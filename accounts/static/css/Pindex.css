@@ -2,6 +2,10 @@
   margin: 0px;
   padding: 0px;
   font-family: 'Merriweather', serif;
+  
+}
+body {
+  background-color: rgb(230, 230, 230);
 }
 
 .account-index-h2{

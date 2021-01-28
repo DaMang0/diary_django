@@ -6,7 +6,7 @@
 
 body{
   background-color: rgb(253, 250, 246);
-  color: black;
+  
 }
 
 .header-container{
@@ -31,6 +31,7 @@ body{
 
 .topic-li{
   border-bottom: 1px solid black;
+  color: rgb(0, 10, 25);
   margin: 20px 0px;
   width: 25%;
 }

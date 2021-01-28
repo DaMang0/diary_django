@@ -6,7 +6,7 @@ class ValueIndex(ListView):
   context_object_name = 'category'
   template_name = 'value/index.html'
   model = Category
-
+  queryset = Category.objects.all().order_by('name')
 
 
 class ValueTopicListView(ListView):

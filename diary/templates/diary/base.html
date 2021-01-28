@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% block css %}
   {% endblock %}
-  <link rel="shortcut icon" href="favicon.ico">
+  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Merriweather:wght@300&display=swap" rel="stylesheet">
   <!-- font-family: 'PT Sans', sans-serif; -->
@@ -31,36 +30,57 @@
   {% endfor %}
 
   {% endif %}
-
-  <ul class="nav-box">
-    <li class="nav-list"><a id="home-button" class="nav-link" href="{% url 'article-index' %}">Home</a></li>
-    <!-- <li class="nav-list"><a class="nav-link" href="{% url 'article-create' %}">Create</a></li> -->
-    <li class="nav-list"><a href="{% url 'article-list' %}" class="nav-link">Articles</a></li>
-    <!-- <li class="nav-list"><a href="#" class="nav-link">BOOKS</a></li> -->
-    <!-- <li class="nav-list"><a href="#" class="nav-link">CLIPS</a></li> -->
-    <li class="nav-list"><a href="{% url 'quotes:index' %}" class="nav-link">QUOTES</a></li>
-    <li class="nav-list"><a href="{% url 'value:index' %}" class="nav-link">VALUES</a></li>
-
-    {% if request.user.is_superuser %}
-
-    <li class="nav-list"><a href="{% url 'admin:index' %}" class="nav-link" id="admin-link">Admin</a></li>
-
-    {% endif %}
-
+  <header>
+    <nav>
+      <ul class="menu">
+        <li class="nav-list"><a class="home-link" class="item" href="{% url 'article-index' %}">INSPIRED</a></li>
+        <li class="nav-list"><a href="{% url 'article-list' %}" class="item" id="article-link">Articles</a></li>
+        <li class="nav-list"><a href="#" class="item" id="kind-link">Kind</a></li>
+        <li class="nav-list"><a href="{% url 'quotes:index' %}" class="item" id="quote-link">Quotes</a></li>
+        <li class="nav-list"><a href="{% url 'value:index' %}" class="item" id="value-link">Values</a></li>
+        
+        {% if request.user.is_superuser %}
+        <li class="nav-list"><a href="{% url 'admin:index' %}" class="item" id="admin-link">ADMIN ONLY</a></li>
+        {% endif %}
+      
+        <!-- {% if request.user.is_authenticated %}
+      
+        <li class="nav-list"><a class="nav-link" id="my-task-link" href="{% url 'user-task' request.user.pk %}">My Tasks</a></li>
+        <li class="nav-list"><a class="nav-link" href="{% url 'user-profile' %}">{{ request.user.username }}</a></li>
+        <li class="nav-list"><a class="nav-link" href="{% url 'logout' %}" id="logout-link">Logout</a></li>
+      
+        {% else %}
+      
+        <li class="nav-list"><a class="nav-link" href="{% url 'login' %}" id="login-link">Login</a><a class="nav-link" id="create-account-link" href="{% url 'signup' %}">| Create Account</a></li>
+      
+        {% endif %} -->
+      
+      </ul>
+    </nav>
     {% if request.user.is_authenticated %}
-
-    <li class="nav-list"><a class="nav-link" id="my-task-link" href="{% url 'user-task' request.user.pk %}">My Tasks</a></li>
-    <li class="nav-list"><a class="nav-link" href="{% url 'user-profile' %}">{{ request.user.username }}</a></li>
-    <li class="nav-list"><a class="nav-link" href="{% url 'logout' %}" id="logout-link">Logout</a></li>
-
+      <nav>
+        <a class="item" href="{% url 'user-profile' %}"><button class="button-first">Profile</button></a>
+        <a class="item" href="{% url 'logout' %}"><button onclick="return confirm('Are you sure you want to logout?')" class="button-first">Logout</button></a>
+      </nav>
     {% else %}
-
-    <li class="nav-list"><a class="nav-link" href="{% url 'login' %}" id="login-link">Login</a><a class="nav-link" id="create-account-link" href="{% url 'signup' %}">| Create Account</a></li>
-
+      <nav>
+        <a class="item" href="{% url 'signup' %}"><button class="button-secondary">Create Account</button></a>
+        <a class="item" href="{% url 'login' %}"><button class="button-first">Login</button></a>
+      </nav>
     {% endif %}
-
-  </ul>
-  {% block content %}
-  {% endblock %}
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  
 </body>
+<!-- <script>
+const home = document.querySelector('.home-link');
+home.addEventListener('click', func1);
+function func1()
+{
+alert("Hello");
+}
+</script> -->
 </html>
