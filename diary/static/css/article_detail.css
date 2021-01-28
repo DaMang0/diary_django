@@ -1,21 +1,25 @@
 *{
-  
-  font-family: 'Crimson Text', serif;
+  font-family: 'Crimson Text', serif; 
 }
 
 main{
   padding: 15px;
 }
 
-#article-detail-title{
+.article-detail-title{
   margin-top: 20px;
-  font-size: 1.7em;
-  font-weight: bolder;
-  color: rgb(112, 112, 112);
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(0, 200, 255);
+  text-align: center  ;
+  /* font-family: 'Crimson Text', serif; */
 }
 
 .detail-article-content{
-  font-size: 17px;
+  font-size: 26px;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 5% 15%;
   /* margin: 0 2.5%; */
 }
 

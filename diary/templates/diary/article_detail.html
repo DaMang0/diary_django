@@ -9,11 +9,12 @@
 
 {% block content %}
 <article class="article-container">
-  <p class="article-title" id="article-detail-title">{{ object.title.capitalize }}</p>
+  
+  <p class="article-detail-title">{{ object.pub_date|date:"M d Y" }} <span style="color: rgb(176, 176, 176);"> / </span> {{ object.title.capitalize }}</p>
   <br>
   <p class="detail-article-content">{{ object.content }}</p>
   <br><br><br>
-  <p class="detail-pub-date">Date created: {{ object.pub_date|date:"M d Y" }}</p>
+  <!-- <p class="detail-pub-date">Date created: {{ object.pub_date|date:"M d Y" }}</p> -->
   <a class="detail-article-edit-button" href="{% url 'article-update' object.slug %}">Edit Post</a>
   <br>
   <a class="detail-article-delete-button" href="{% url 'article-delete' object.slug %}">Delete?</a>

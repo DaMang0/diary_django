@@ -1,20 +1,54 @@
 body{
+  font-family: 'Roboto Slab', serif;
   background-color: rgba(0, 10, 15, 1);
   color: white;
 }
 
-.front-page-quote{
-  font-family: 'Roboto Slab', serif;
-  font-size: 3em;
-  padding: 25%;
-  padding-left: 15%;
-  
-} 
-
-.p-1{
-  font-family: 'Roboto Slab', serif;
-  position: absolute;
-  left: 620px;
-  margin-top: 5px;
+main{
+  flex-wrap: wrap;
+  padding: 2%;
 }
 
+.quote-1{
+  font-size: 3.5em;
+  /* padding: 25%; */
+  /* padding-left: 15%; */
+} 
+
+.quote-2{
+  
+  font-size: 3.5em;
+  
+  /* position: absolute; */
+  /* margin-top: 5px; */
+}
+
+.container-1, .container-2, .vid-container-1{
+  
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0px;
+
+}
+.vid-container-1{
+  margin: 50px 0px;
+}
+
+.container-1 > li{
+  display: inline-block;
+}
+
+
+.container-2 > li{
+  display: inline-block;
+}
+
+.vid-container-1 > li{
+  display: inline-block;
+
+}
+
+#vid-1{
+  width: 1300px;
+  height: 720px;
+}

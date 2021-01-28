@@ -35,52 +35,37 @@
       <ul class="menu">
         <li class="nav-list"><a class="home-link" class="item" href="{% url 'article-index' %}">INSPIRED</a></li>
         <li class="nav-list"><a href="{% url 'article-list' %}" class="item" id="article-link">Articles</a></li>
-        <li class="nav-list"><a href="#" class="item" id="kind-link">Kind</a></li>
+        <li class="nav-list"><a href="#" class="item" id="gratitude-link">Gratitude</a></li>
         <li class="nav-list"><a href="{% url 'quotes:index' %}" class="item" id="quote-link">Quotes</a></li>
         <li class="nav-list"><a href="{% url 'value:index' %}" class="item" id="value-link">Values</a></li>
-        
+        <!-- // ADMIN // -->
         {% if request.user.is_superuser %}
         <li class="nav-list"><a href="{% url 'admin:index' %}" class="item" id="admin-link">ADMIN ONLY</a></li>
         {% endif %}
       
-        <!-- {% if request.user.is_authenticated %}
-      
-        <li class="nav-list"><a class="nav-link" id="my-task-link" href="{% url 'user-task' request.user.pk %}">My Tasks</a></li>
-        <li class="nav-list"><a class="nav-link" href="{% url 'user-profile' %}">{{ request.user.username }}</a></li>
-        <li class="nav-list"><a class="nav-link" href="{% url 'logout' %}" id="logout-link">Logout</a></li>
-      
-        {% else %}
-      
-        <li class="nav-list"><a class="nav-link" href="{% url 'login' %}" id="login-link">Login</a><a class="nav-link" id="create-account-link" href="{% url 'signup' %}">| Create Account</a></li>
-      
-        {% endif %} -->
       
       </ul>
     </nav>
+    <!-- IF LOG IN  -->
     {% if request.user.is_authenticated %}
-      <nav>
-        <a class="item" href="{% url 'user-profile' %}"><button class="button-first">Profile</button></a>
-        <a class="item" href="{% url 'logout' %}"><button onclick="return confirm('Are you sure you want to logout?')" class="button-first">Logout</button></a>
-      </nav>
+    <nav>
+      <a class="item" href="{% url 'user-profile' %}"><button class="button-first">Profile</button></a>
+      <a class="item" href="{% url 'logout' %}"><button onclick="return confirm('Are you sure you want to logout?')" class="button-first">Logout</button></a>
+    </nav>
+    <!-- IF NOT LOG IN  -->
     {% else %}
-      <nav>
-        <a class="item" href="{% url 'signup' %}"><button class="button-secondary">Create Account</button></a>
-        <a class="item" href="{% url 'login' %}"><button class="button-first">Login</button></a>
-      </nav>
+    <nav>
+      <a class="item" href="{% url 'signup' %}"><button class="button-secondary">Create Account</button></a>
+      <a class="item" href="{% url 'login' %}"><button class="button-first">Login</button></a>
+    </nav>
     {% endif %}
   </header>
+
   <main>
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
   </main>
   
 </body>
-<!-- <script>
-const home = document.querySelector('.home-link');
-home.addEventListener('click', func1);
-function func1()
-{
-alert("Hello");
-}
-</script> -->
+
 </html>

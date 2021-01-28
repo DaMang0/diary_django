@@ -12,17 +12,12 @@ header {
 }
 .menu{
   list-style: none;
-}
-.nav-list{
-  margin: 0px 25px;
-}
-.item{
-  
-}
-
-
-.menu li{
   display: inline-block;
+}
+
+.nav-list{
+  display: inline-block;
+  margin: 0px 25px;
   padding: 0px 25px;
 }
 
@@ -37,9 +32,8 @@ header {
 .button-first{
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  margin: 0 20px;
-  padding: 8px 25px;
+  margin: 10px 20px;
+  padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border-radius: 50px;
   border: none;
@@ -51,14 +45,17 @@ header {
 .button-secondary{
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  margin: 0 20px;
+  margin: 10px 20px;
   padding: 9px 25px;
   background:transparent;
   border: 1px solid rgba(0, 136, 169, 1);
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+}
+
+.button-first:hover{
+  background-color: rgba(0, 136, 169, 0.7);
 }
 
 .nav-list:first-child{
@@ -75,7 +72,7 @@ header {
 
 .home-link:hover{
   color: rgb(77, 105, 113);
-  text-shadow: 3px 18px rgba(255, 0, 0, 0.633);
+  text-shadow: 10px 22px rgba(255, 0, 0, 0.633);
 }
 
 #article-link{
@@ -85,10 +82,10 @@ header {
   color: rgba(0, 136, 169, 0.8);
 }
 
-#kind-link{
+#gratitude-link{
   color: rgba(255, 148, 207, 1);
 }
-#kind-link:hover{
+#gratitude-link:hover{
   color: rgba(255, 148, 207, 0.8);
 }
 
@@ -113,6 +110,3 @@ header {
   opacity: 70%;
 }
 
-.button-first:hover{
-  background-color: rgba(0, 136, 169, 0.7);
-}

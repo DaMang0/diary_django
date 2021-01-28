@@ -1,17 +1,26 @@
-*{
+/* *{
   margin: 0px;
   padding: 0px;
   font-family: 'Merriweather', serif;
   
-}
-body {
-  background-color: rgb(230, 230, 230);
+} */
+main{
+  margin: 25px 15px;
 }
 
-.account-index-h2{
+.head{
   font-family: 'Merriweather', serif;
   color: black;
   font-weight: bold;
   font-size: 1.4em;
-  margin: 25px 15px;
+  /* margin: 25px 15px; */
 }
+/* .chg-password{
+
+}
+.joined-date{
+  
+}
+.last-log{
+  
+} */
