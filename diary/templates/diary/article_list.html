@@ -1,11 +1,10 @@
 {% extends 'diary/base.html' %}
 {% load static %}
+<!-- Load CSS -->
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Merriweather:wght@300&display=swap" rel="stylesheet"> -->
 {% endblock %}
-
+<!-- Load Page Title -->
 {% block title %}Inspired. | Articles {% endblock %}
 
 {% block content %}
@@ -20,7 +19,7 @@
 <ol class="order-list">
   {% for article in article_list %}
   <small class="article-created">{{ article.pub_date|date:"M d Y" }}</small>
-  <li class="article"><a class="article-title-link" href="{% url "article-detail" article.slug %}">{{ article.title.capitalize }}</a></li><br>
+  <li class="article"><a class="article-title-link" href="{% url 'article-detail' article.slug %}">{{ article.title.capitalize }}</a></li><br>
   <!-- <p>Content: {{ article.content.capitalize }}</p> -->
   <!-- <p>Created on: {{ article.pub_date }}</p> -->
   <!-- <p>{{ article.slug }}</p> -->

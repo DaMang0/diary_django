@@ -1,10 +1,10 @@
 {% extends 'diary/base.html' %}
 {% load static %}
-
+<!-- Load CSS -->
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/Pindex.css' %}">
 {% endblock %}
-
+<!-- Load Page Title -->
 {% block title %}{{ user.username }} - Profile{% endblock %}
 
 {% block content %}

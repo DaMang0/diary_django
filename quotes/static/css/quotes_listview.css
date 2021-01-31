@@ -1,51 +1,75 @@
 *{
+  text-decoration: none;
   margin: 0px;
   padding: 0px;
   font-family: 'Merriweather', serif;
 }
 
 body{
-background-color: rgb(253, 250, 246);
+  background-color: rgb(253, 250, 246);
+  color: black;
 }
 
 .quote-list-h2{
   font-family: 'Merriweather', serif;
   color: black;
-  font-weight: bold;
   font-size: 1.4em;
   margin: 25px 15px;
+  cursor: default;
 }
 
 .quote-ol-container{
-  margin-top: 10px;
   margin-left: 20px;
+  margin-top: 10px;
+  list-style-position: inside;
+  color: red;
   
-  /* list-style-type: none; */
 }
 
-.quote-msg-link{
-  font-size: 1em;
+.quote-msg{
+  margin: 10px 0px;
+  color: black;
+  font-size: 1.3em;
+  font-family: 'Crimson Text', serif; 
   text-transform: capitalize;
-  text-decoration: none;
-  color: black; 
+}
+
+.quote-msg > a{
+  transition: font-size 350ms ease-in 100ms,
+  margin-left 400ms ease-out 100ms;
+}
+
+.quote-msg>a:hover{
+  cursor: default;
+  
+  font-size: 1.5em;
+  margin-left: 15px;
 }
 
 .quote-create{
   text-decoration: none;
   color: black;
-  border-bottom: 1px solid black;
   margin-left: 1px;
+}
+
+.quote-create:hover{
+  text-decoration: underline;
 }
 
 .quote-created{
   font-size: 12px;
-  color: rgb(160, 160, 160);
+  color: rgba(160, 160, 160, .6);
   margin-left: 2px;
   text-transform: uppercase;
   font-family: 'Chakra Petch', sans-serif;
-  
 }
+
 
 .quote-delete-button{
   margin-left: 2px;
+  opacity: 70%;
+}
+
+.quote-delete-button:hover{
+  color: red;
 }

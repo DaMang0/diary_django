@@ -1,7 +1,12 @@
+*{
+  color: white;
+
+}
+
 body{
   font-family: 'Roboto Slab', serif;
-  background-color: rgba(0, 10, 15, 1);
   color: white;
+  background-color: rgb(0, 10, 15);
 }
 
 main{
@@ -9,19 +14,18 @@ main{
   padding: 2%;
 }
 
-.quote-1{
+.quote-1, .quote-2{
   font-size: 3.5em;
+  cursor: default;
   /* padding: 25%; */
   /* padding-left: 15%; */
 } 
 
-.quote-2{
-  
-  font-size: 3.5em;
-  
-  /* position: absolute; */
-  /* margin-top: 5px; */
+#mind{
+  text-decoration: underline;
 }
+
+
 
 .container-1, .container-2, .vid-container-1{
   
@@ -30,6 +34,17 @@ main{
   margin: 25px 0px;
 
 }
+
+.plan-container{
+  list-style-type: none;
+  font-size: 2em;
+  
+}
+
+.plan{
+  color: coral;
+}
+
 .vid-container-1{
   margin: 50px 0px;
 }

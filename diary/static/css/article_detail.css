@@ -1,9 +1,13 @@
 *{
   font-family: 'Crimson Text', serif; 
 }
-
+body{
+  background-color: rgb(253, 250, 246);
+  
+}
 main{
   padding: 15px;
+  
 }
 
 .article-detail-title{
@@ -18,7 +22,8 @@ main{
 .detail-article-content{
   font-size: 26px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: white;
+  color: black;
   margin: 5% 15%;
   /* margin: 0 2.5%; */
 }

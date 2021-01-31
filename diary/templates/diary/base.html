@@ -8,15 +8,19 @@
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% block css %}
   {% endblock %}
-  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Crimson+Text&family=Merriweather&family=PT+Sans&family=Poppins&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+  
+  <!-- font-family: 'Crimson Text', serif; -->
+  <!-- font-family: 'Merriweather', serif; -->
+  <!-- font-family: 'Poppins', sans-serif; -->
   <!-- font-family: 'PT Sans', sans-serif; -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+  <!-- font-family: 'Lato', sans-serif; -->
+  
+  
   <title>{% block title %}{% endblock %}</title>
 </head>
 
@@ -32,13 +36,16 @@
   {% endif %}
   <header>
     <nav>
+      <li class="nav-list-first"><a id="home-link" class="item" href="{% url 'article-index' %}">INSPIRED</a></li>
+    </nav>
+    <nav>
       <ul class="menu">
-        <li class="nav-list"><a class="home-link" class="item" href="{% url 'article-index' %}">INSPIRED</a></li>
+        
         <li class="nav-list"><a href="{% url 'article-list' %}" class="item" id="article-link">Articles</a></li>
         <li class="nav-list"><a href="#" class="item" id="gratitude-link">Gratitude</a></li>
         <li class="nav-list"><a href="{% url 'quotes:index' %}" class="item" id="quote-link">Quotes</a></li>
         <li class="nav-list"><a href="{% url 'value:index' %}" class="item" id="value-link">Values</a></li>
-        <!-- // ADMIN // -->
+        <!-- ADMIN -->
         {% if request.user.is_superuser %}
         <li class="nav-list"><a href="{% url 'admin:index' %}" class="item" id="admin-link">ADMIN ONLY</a></li>
         {% endif %}

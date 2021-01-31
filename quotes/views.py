@@ -12,7 +12,7 @@ class QuoteListView(ListView):
 
   model = Quote
   template_name = 'quotes/quotes_listview.html'
-  queryset = Quote.objects.all()
+  queryset = Quote.objects.all().order_by('-created')
   
   context_object_name = 'quote_list'
 

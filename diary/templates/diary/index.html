@@ -1,16 +1,17 @@
 {% extends 'diary/base.html' %}
 {% load static %}
+<!-- Load CSS -->
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 {% endblock %}
-<!-- define webpage title -->
+<!-- Load Page Title -->
 {% block title %}Be Inspired.{% endblock %}
-<!-- printing list of articles  -->
+
 {% block content %}
 <div class="container-1">
-  <h1 class="quote-1">EARN WITH YOU MIND, NOT YOUR TIME.</h1>
+  <h1 class="quote-1">EARN WITH YOU <span id="mind">MIND</span> ,NOT YOUR TIME.</h1>
   <li></li>
   <li></li>
 </div>
@@ -20,6 +21,15 @@
   <h1 class="quote-2">BE INSPIRED AND WORK HARD.</h1>
   <li></li>
 </div>
+<!-- The Goal of the Website -->
+<div class="plan-container">
+  <li class="plan">Allow user to write down things they are grateful for ( Add New Thing in Index Page )</li>
+  <li class="plan">Random generate one thing they wrote.</li>
+  <li class="plan">Notification / Email Alert</li>
+  <li class="plan">Visually Comfortable </li>
+  <li class="plan">So easy to use even a kid could use it.</li>
+</div>
+
 <div class="vid-container-1">
   <li></li>
   <li><iframe id="vid-1" class="video" src="https://www.youtube.com/embed/NXQK3zgSgKY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>

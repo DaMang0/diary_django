@@ -2,17 +2,21 @@
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/quotes_listview.css' %}">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
 {% endblock %}
 {% block title %}Be Inspired. Quotes{% endblock %}
 
 {% block content %}
+<!-- Page Header -->
 <h2 class="quote-list-h2">These are the collection of quotes you choose to remember.</h2>
+
+<!-- Add New Quote -->
+<a class="quote-create" href="{% url 'quotes:create' %}">New Quote</a>
+
 <ol class="quote-ol-container">
   {% for quote in quote_list %}
   <small class="quote-created">{{ quote.created|date:"M d Y" }}</small>
-  <li class="quote-msg"><a class="quote-msg-link" href="#">{{ quote.message }}</a></li>
+  <li class="quote-msg"><a href="#">{{ quote.message }}</a></li>
+  
   
   <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}
     {{ form.as_p }}
@@ -22,8 +26,6 @@
   {% endfor %}
 </ol>
 <br>
-<a class="quote-create" href="{% url 'quotes:create' %}">New Quote</a>
-  
     
 {% endblock %}
 
