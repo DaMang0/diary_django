@@ -4,25 +4,6 @@
   font-family: 'Merriweather', serif;
 }
 
-body{
-  background-color: rgb(253, 250, 246);
-  
-}
-
-.header-container{
-  /* background-color: yellow; */
-}
-
-.topic-header{
-  font-family: 'Merriweather', serif;
-  
-  color: black;
-  font-weight: bold;
-  font-size: 1.4em;
-  margin: 25px 15px;
-  text-transform: capitalize;
-}
-
 .topic-ul-container{
   margin-left: 20px;
   margin-top: 10px;

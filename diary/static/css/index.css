@@ -1,48 +1,38 @@
-*{
-  color: white;
-
-}
-
-body{
-  font-family: 'Roboto Slab', serif;
-  color: white;
-  background-color: rgb(0, 10, 15);
+* {
+  /* background-color: rgb(230, 228, 223); */
 }
 
 main{
   flex-wrap: wrap;
-  padding: 2%;
+  font-family: 'Roboto Slab', serif;
+  color: rgba(0, 10, 15, 1);
+  /* background-color: rgb(255, 250, 241); */
+  padding: 2.5% 2.5%;
 }
 
 .quote-1, .quote-2{
-  font-size: 3.5em;
+  font-size: 1.4em;
   cursor: default;
-  /* padding: 25%; */
-  /* padding-left: 15%; */
+
 } 
 
 #mind{
   text-decoration: underline;
 }
 
-
-
 .container-1, .container-2, .vid-container-1{
-  
   display: flex;
   justify-content: space-around;
   margin: 25px 0px;
 
 }
-
 .plan-container{
-  list-style-type: none;
-  font-size: 2em;
-  
+  list-style-type: circle;
+  font-size: 1.4em;
 }
 
 .plan{
-  color: coral;
+  color: red;
 }
 
 .vid-container-1{

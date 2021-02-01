@@ -10,13 +10,14 @@
 {% block content %}
 
 <!-- Article List View Title -->
-<h2 class="article-list-h2">These are the article i should read if i ever feel down.</h2>
+<h2 class="article-list-h2 page-header">These are the article i should read if i ever feel down.</h2>
 
 <!-- Create New Article  -->
-<a href="{% url 'article-create' %}" class="article-create">New Article</a>
+<a href="{% url 'article-create' %}" class="article-create create-link"><button class="create-button"><span>New</span></button></a>
+
 
 <!-- Print out each article -->
-<ol class="order-list">
+<ol class="article-ol-container page-ol-container">
   {% for article in article_list %}
   <small class="article-created">{{ article.pub_date|date:"M d Y" }}</small>
   <li class="article"><a class="article-title-link" href="{% url 'article-detail' article.slug %}">{{ article.title.capitalize }}</a></li><br>

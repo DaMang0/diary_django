@@ -7,15 +7,15 @@
 
 {% block content %}
 <!-- Page Header -->
-<h2 class="quote-list-h2">These are the collection of quotes you choose to remember.</h2>
+<h2 class="quote-list-h2 page-header">These are the collection of quotes you choose to remember.</h2>
 
 <!-- Add New Quote -->
-<a class="quote-create" href="{% url 'quotes:create' %}">New Quote</a>
+<a class="quote-create create-link" href="{% url 'quotes:create' %}"><button class="create-button"><span>New </span></button></a> 
 
-<ol class="quote-ol-container">
+<ol class="quote-ol-container page-ol-container">
   {% for quote in quote_list %}
   <small class="quote-created">{{ quote.created|date:"M d Y" }}</small>
-  <li class="quote-msg"><a href="#">{{ quote.message }}</a></li>
+  <li class="quote-msg"><a class="quote-link" href="#">{{ quote.message }}</a></li>
   
   
   <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}

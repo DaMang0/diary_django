@@ -1,16 +1,37 @@
-*{
-  margin: 0px;
-  color: black;
-  box-sizing: border-box;
+* {
+  color: #05386B;
+  font-size: 1em;
+  background-color: rgba(255, 255, 251, 1);
+  /* background-color: rgb(31, 31, 31); */
+
+}
+body{
+  padding: 2% 3.5% 2%;
+  
+}
+
+body::-webkit-scrollbar{
+  width: 10px;
+}
+body::-webkit-scrollbar-track{
+  background-color: rgb(235, 235, 235);
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(180, 180, 180);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5% 5%;
-  background-color: rgb(0, 10, 15);
+  width: 100vw;
+  max-width: 100%;
+  height: 7vh;
   list-style: none;
+}
+
+main{
+  padding: 2% 2%;
 }
 
 .nav-list-first{
@@ -25,53 +46,53 @@ header {
 }
 
 .menu li a{
-  font-size: 17px;
-  transition: all 0.3s ease 0s;
-  text-decoration: none;
-  color: white;
+  font-size: 18px;
   font-family: 'Poppins', sans-serif;
-  /* font-weight: 500; */
+  font-weight: 500;
+  color: #05386B;
+  text-decoration: none;
+
 }
 
 .button-first{
-  font-size: 16px;
+  font-size: 15px;
   color: white;
   height: 45px;
   width: 100px; 
   font-family: 'Poppins', sans-serif;
   margin: 10px 20px;
-  padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
-  border-radius: 50px;
+  background-color: #05386B;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
-  transition: background-color 400ms ease 0ms;
+  transition: background-color, opacity 300ms ease 0ms;
 }
 .button-first:hover{
   text-decoration: none;
-  background-color:rgba(0, 136, 169, 0.7);
+  background-color: #05386B;
+  opacity: 85%;
 }
   
 .button-secondary{
-  font-size: 17px;
-  color: white;
+  font-size: 15px;
+  color: #05386B;
   font-family: 'Poppins', sans-serif;
   margin: 10px 20px;
   padding: 9px 25px;
   background:transparent;
-  border: 1px solid rgba(0, 136, 169, 1);
-  border-radius: 50px;
+  border: 1px solid #05386B;
+  border-radius: 4px;
   cursor: pointer;
-  transition: color 400ms ease 0ms;
+  /* transition: opacity 300ms ease 0ms; */
 }
-.button-secondary:hover{
+/* .button-secondary:hover{
   text-decoration: none;
-  color: rgba(255,255,255,0.7);
-  border-color: rgba(255,255,255, 0.7);
-}
+  opacity: 0.7;
+  
+} */
 
 .nav-list-first:first-child{
-  background-color: yellow;
+  background-color: rgba(255, 255, 25, 1);
   border-radius: 1% 35%;
   display: inline-flex;
   justify-content: center;
@@ -82,28 +103,26 @@ header {
 
 
 /* Nav Home */
-#home-link{
-  font-size: 17px;
+#main-link{
+  font-size: 16px;
+  font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
   text-decoration: none;
-  color: rgba(0, 10, 15, 1);
+  color: black;
+  background-color: rgba(255, 255, 25, 1);
   transition-property: text-shadow, opacity;
   transition-duration: 500ms;
 }
-
-#home-link:hover{
-  text-shadow: 130px 0px  rgba(255, 255, 255, 1);
+#main-link:hover{
+  text-shadow: 130px 0px  black;
   opacity: 90%;
-  transform: rotate(1080deg);
 }
 
 
 /* Article Nav */
 #article-link{
-  /* color: rgba(0, 136, 169, 1); */
-  color: white;
-  transition-duration: 400ms;
+  /* color: white; */
+  transition-duration: 350ms;
   transition-property: color;
   position: relative;
 }
@@ -118,21 +137,21 @@ header {
 
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 250ms ease-in;
+  transition: transform 400ms ease;
 }
 #article-link:hover::after{
   transform: scaleX(1);
 }
 
 #article-link:hover{
-  color: rgb(5, 205, 255);
+  color: rgb(0, 147, 184);
+  background-color: rgba(0, 147, 184, .2);
+  border-radius: 3px;
 }
 
 
 /* Gratitude Nav */
 #gratitude-link{
-  /* color: rgba(255, 148, 207, 1); */
-  color: white;
   transition-duration: 400ms;
   transition-property: color;
   position: relative;
@@ -148,20 +167,22 @@ header {
 
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 250ms ease-in;
+  transition: transform 400ms ease;
 }
 #gratitude-link:hover::after{
   transform: scaleX(1);
 }
 #gratitude-link:hover{
-  color: rgb(255, 148, 207, 1);
+  color: rgb(194, 61, 134);
+  background-color: rgba(194, 61, 134, .2);
+  border-radius: 3px;
 }
 
 
 /* Quote Nav */
 #quote-link{
   /* color: rgba(0, 140, 40, 1); */
-  color: white;
+  /* color: white; */
   transition-duration: 400ms;
   transition-property: color;
   position: relative;
@@ -177,19 +198,21 @@ header {
 
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 250ms ease-in;
+  transition: transform 400ms ease;
 }
 #quote-link:hover::after{
   transform: scaleX(1);
 }
 #quote-link:hover{
-  color: rgb(44, 255, 104);
+  color: rgba(55, 150, 131, 1);
+  background-color:rgba(55, 150, 131, 0.3);
+  border-radius: 3px;
 }
 
 
 /* Value Nav */
 #value-link{
-  color: white;
+  /* color: white; */
   transition-duration: 400ms;
   transition-property: color;
   position: relative;
@@ -205,14 +228,15 @@ header {
 
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 250ms ease-in;
+  transition: transform 400ms ease;
 }
 #value-link:hover::after{
   transform: scaleX(1);
 }
 #value-link:hover{
-  color: rgba(255, 68, 0, 1);
-
+  color: rgba(181, 30, 30, 1);
+  background-color: rgba(181, 30, 30, 0.2);
+  border-radius: 3px;
 }
 
 
@@ -225,3 +249,86 @@ header {
   /* opacity: 70%;   */
   }
 
+
+  /* Article + Quotes + Values Page Header  */
+.page-header{
+  font-family: 'Merriweather', serif;
+  color: #05386B;;
+  font-weight: 400;
+  font-size: 1.4em;
+  margin: 25px 15px;
+  cursor: default;
+}
+
+.page-header::before{
+  content: open-quote;
+  color: rgb(160, 160, 160);
+}
+.page-header::after{
+  content: close-quote;
+  color: rgb(160, 160, 160);
+}
+
+/* .create-button{
+  cursor: pointer;
+  
+  border-radius: 4px;
+  width: 160px;
+  height: 30px;
+  border: black;
+  background-color: rgba(70, 70, 70, 1);
+  color: white;
+  text-align: center;
+  transition: background-color 350ms ease;
+}
+
+.create-button:hover{
+  background-color: rgba(30, 30, 30, 1);
+} */
+
+.create-button {
+  border-radius: 4px;
+  background-color: rgba(70, 70, 70, 1);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /* margin: 5px; */
+}
+
+.create-button span {
+  background-color: rgba(70, 70, 70, 1);
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.create-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.create-button:hover span {
+  padding-right: 25px;
+}
+
+.create-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.page-ol-container {
+  margin-top: 20px;
+  list-style-position: inside;
+  color: rgb(215, 0, 0);
+}
