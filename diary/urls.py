@@ -1,6 +1,6 @@
 from django.urls import include, path
 from . import views
-from .views import ArticleListView, ArticleCreate, ArticleDetail, ArticleDelete, ArticleUpdate, ArticleIndex
+from .views import ArticleListView, ArticleCreate, ArticleDetail, ArticleDelete, ArticleUpdate, ArticleIndex, Test
 
 urlpatterns = [
   # path('', views.home),
@@ -9,6 +9,7 @@ urlpatterns = [
   path('article/<slug:slug>/detail/', ArticleDetail.as_view(), name='article-detail'),
   path('article/create/', ArticleCreate.as_view(), name='article-create'),
   path('article/<slug:slug>/delete/', ArticleDelete.as_view(), name='article-delete'),
+  path('article/test/', Test.as_view(), name='test'),
   path('', ArticleIndex.as_view(), name='article-index'),
   # path('<slug:slug>/', ArticleDetail.as_view(), name='article-detail'),
   

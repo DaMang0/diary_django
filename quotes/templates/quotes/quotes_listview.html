@@ -2,6 +2,7 @@
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/quotes_listview.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 {% endblock %}
 {% block title %}Be Inspired. Quotes{% endblock %}
 
@@ -14,14 +15,19 @@
 
 <ol class="quote-ol-container page-ol-container">
   {% for quote in quote_list %}
-  <small class="quote-created">{{ quote.created|date:"M d Y" }}</small>
+  <small class="quote-pub pub-date">{{ quote.created|date:"M d Y" }}</small>
   <li class="quote-msg"><a class="quote-link" href="#">{{ quote.message }}</a></li>
-  
-  
   <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}
     {{ form.as_p }}
-    <input class="quote-delete-button" onclick="return confirm('Are you sure you want to delete this quote?')" type="submit" value="delete">
+    <button onclick="return confirm('Are you sure you want to delete this quote?')">
+      <i class="fas fa-trash"></i>
+    </button>
   </form>
+
+  <!-- <form action="/quotes/delete/{{quote.pk}}/" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input class="quote-delete-button" onclick="return confirm('Are you sure you want to delete this quote?')" type="submit" value="delete">
+  </form> -->
   <br>
   {% endfor %}
 </ol>

@@ -8,7 +8,7 @@ from . import views as account_views
 from django.urls import path, re_path
 
 urlpatterns = [
-    path(r'^profile/$', account_views.Profile.as_view(), name='user-profile'),
+    path('profile/', account_views.Profile.as_view(), name='user-profile'),
     path('profile/<int:pk>/tasks/', account_views.UserTasks.as_view(), name='user-task'),
     # path('<int:pk>/', account_views.UserAccount.as_view(), name='account-detail'),
     

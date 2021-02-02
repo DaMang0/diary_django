@@ -1,9 +1,8 @@
 * {
-  color: #05386B;
+  color: black;
   font-size: 1em;
-  background-color: rgba(255, 255, 251, 1);
-  /* background-color: rgb(31, 31, 31); */
-
+  /* background-color: rgba(255, 255, 240, 1); */
+  background-color: gold;
 }
 body{
   padding: 2% 3.5% 2%;
@@ -28,11 +27,10 @@ header {
   max-width: 100%;
   height: 7vh;
   list-style: none;
+  
+  
 }
 
-main{
-  padding: 2% 2%;
-}
 
 .nav-list-first{
   display: inline-block;
@@ -92,7 +90,7 @@ main{
 } */
 
 .nav-list-first:first-child{
-  background-color: rgba(255, 255, 25, 1);
+  background-color: rgba(255, 255, 220, 1);
   border-radius: 1% 35%;
   display: inline-flex;
   justify-content: center;
@@ -109,7 +107,7 @@ main{
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
   color: black;
-  background-color: rgba(255, 255, 25, 1);
+  background-color: rgba(255, 255, 220, 1);
   transition-property: text-shadow, opacity;
   transition-duration: 500ms;
 }
@@ -133,7 +131,8 @@ main{
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: currentColor;
+  background-color: rgba(0, 147, 184, 1);
+  
 
   transform: scaleX(0);
   transform-origin: left;
@@ -143,11 +142,11 @@ main{
   transform: scaleX(1);
 }
 
-#article-link:hover{
-  color: rgb(0, 147, 184);
-  background-color: rgba(0, 147, 184, .2);
+/* #article-link:hover{
+  color: rgba(55, 150, 131, 1);
+  background-color:rgba(55, 150, 131, 0.3);
   border-radius: 3px;
-}
+} */
 
 
 /* Gratitude Nav */
@@ -163,7 +162,7 @@ main{
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: currentColor;
+  background-color: rgb(228, 68, 156);
 
   transform: scaleX(0);
   transform-origin: left;
@@ -172,11 +171,11 @@ main{
 #gratitude-link:hover::after{
   transform: scaleX(1);
 }
-#gratitude-link:hover{
+/* #gratitude-link:hover{
   color: rgb(194, 61, 134);
   background-color: rgba(194, 61, 134, .2);
   border-radius: 3px;
-}
+} */
 
 
 /* Quote Nav */
@@ -194,7 +193,7 @@ main{
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: currentColor;
+  background-color: rgb(0, 150, 55);
 
   transform: scaleX(0);
   transform-origin: left;
@@ -203,11 +202,12 @@ main{
 #quote-link:hover::after{
   transform: scaleX(1);
 }
-#quote-link:hover{
-  color: rgba(55, 150, 131, 1);
-  background-color:rgba(55, 150, 131, 0.3);
+/* #quote-link:hover{
+  color: rgba(0, 147, 184, 1);
+  background-color: rgba(0, 147, 184, .2);
+  
   border-radius: 3px;
-}
+} */
 
 
 /* Value Nav */
@@ -224,8 +224,8 @@ main{
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: currentColor;
-
+  /* background-color: currentColor; */
+  background-color: rgba(250, 101, 47, 1);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 400ms ease;
@@ -233,16 +233,16 @@ main{
 #value-link:hover::after{
   transform: scaleX(1);
 }
-#value-link:hover{
+/* #value-link:hover{
   color: rgba(181, 30, 30, 1);
-  background-color: rgba(181, 30, 30, 0.2);
+  background-color: rgba(238, 45, 45, 0.2);
   border-radius: 3px;
-}
+} */
 
 
 /* Admin Nav */
 #admin-link{
-  color: white;
+  color: #05386B;
 }
 #admin-link:hover{
   color: rgb(255, 34, 34);
@@ -252,10 +252,10 @@ main{
 
   /* Article + Quotes + Values Page Header  */
 .page-header{
-  font-family: 'Merriweather', serif;
-  color: #05386B;;
+  font-family: 'Domine', serif;
+  color: #05386B;
   font-weight: 400;
-  font-size: 1.4em;
+  font-size: 2.4em;
   margin: 25px 15px;
   cursor: default;
 }
@@ -288,20 +288,20 @@ main{
 
 .create-button {
   border-radius: 4px;
-  background-color: rgba(70, 70, 70, 1);
+  background-color: #05386B;
   border: none;
   color: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px;
-  width: 150px;
+  width: 100px;
   transition: all 0.5s;
   cursor: pointer;
   /* margin: 5px; */
 }
 
 .create-button span {
-  background-color: rgba(70, 70, 70, 1);
+  background-color: #05386B;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -330,5 +330,12 @@ main{
 .page-ol-container {
   margin-top: 20px;
   list-style-position: inside;
+  list-style-type: lower-roman;
   color: rgb(215, 0, 0);
+}
+
+.pub-date{
+  color: rgba(130, 130, 130, 0.7);
+  font-size: 12px;
+  font-family: 'Chakra Petch', sans-serif;
 }

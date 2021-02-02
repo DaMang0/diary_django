@@ -1,34 +1,36 @@
-*{
+* {
   font-family: 'Crimson Text', serif; 
 }
-body{
+body {
   background-color: rgb(253, 250, 246);
   
 }
-main{
+main {
   padding: 15px;
   
 }
 
-.article-detail-title{
+.article-detail-title {
   margin-top: 20px;
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 400;
   color: rgb(0, 200, 255);
   text-align: center  ;
   /* font-family: 'Crimson Text', serif; */
 }
 
-.detail-article-content{
-  font-size: 26px;
+.detail-article-body {
+  /* font-size: 24px; */
   text-align: center;
-  background-color: white;
-  color: black;
-  margin: 5% 15%;
-  /* margin: 0 2.5%; */
-}
+  /* background-color: white; */
+  /* color: black; */
+  /* margin: 5% 15%; */
+  
+} 
 
-.detail-pub-date, .detail-article-delete-button, .detail-article-edit-button{
+
+
+.detail-pub-date, .detail-article-delete-button, .detail-article-edit-button { 
   color: grey;
   margin-left: 2px;
 }

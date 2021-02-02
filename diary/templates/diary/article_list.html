@@ -19,7 +19,7 @@
 <!-- Print out each article -->
 <ol class="article-ol-container page-ol-container">
   {% for article in article_list %}
-  <small class="article-created">{{ article.pub_date|date:"M d Y" }}</small>
+  <small class="article-pub pub-date">{{ article.pub_date|date:"M d Y" }}</small>
   <li class="article"><a class="article-title-link" href="{% url 'article-detail' article.slug %}">{{ article.title.capitalize }}</a></li><br>
   <!-- <p>Content: {{ article.content.capitalize }}</p> -->
   <!-- <p>Created on: {{ article.pub_date }}</p> -->

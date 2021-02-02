@@ -1,38 +1,43 @@
-* {
-  /* background-color: rgb(230, 228, 223); */
-}
-
-main{
+main {
   flex-wrap: wrap;
-  font-family: 'Roboto Slab', serif;
   color: rgba(0, 10, 15, 1);
-  /* background-color: rgb(255, 250, 241); */
-  padding: 2.5% 2.5%;
+  /* padding: 2vh 10vw; */
 }
 
-.quote-1, .quote-2{
-  font-size: 1.4em;
+.quote-1, .quote-2 {
+  font-family: 'Domine', serif;
+  font-size: 2.4em;
   cursor: default;
+  font-weight: 400;
+  text-transform: capitalize;
 
 } 
 
-#mind{
-  text-decoration: underline;
+.message {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.3em;
+  text-align: center;
 }
 
-.container-1, .container-2, .vid-container-1{
+.container-1 {
+  margin-top: 4%;
+}
+.container-1, .container-2, .vid-container-1 {
   display: flex;
   justify-content: space-around;
-  margin: 25px 0px;
+  
 
 }
-.plan-container{
+.plan-container {
   list-style-type: circle;
   font-size: 1.4em;
+  margin: 500px 0px;
 }
 
 .plan{
-  color: red;
+  font-size: 26px;
+  font-family: 'Crimson Text', serif;
+  color: rgb(205, 0, 0);
 }
 
 .vid-container-1{

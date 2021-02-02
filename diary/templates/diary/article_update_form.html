@@ -1,4 +1,7 @@
-<form method="post">{% csrf_token %}
+<form method="post">
+  {% csrf_token %}
+  {{ form.media }}
   {{ form.as_p }}
+  <br>
   <input type="submit" value="Update">
 </form>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
-from .models import Article
+from .models import Article, RichTextArticle
 from django.urls import reverse_lazy
 
 class ArticleIndex(TemplateView):
@@ -16,7 +16,7 @@ class ArticleListView(ListView):
 
 class ArticleCreate(CreateView):
   model = Article
-  fields = ['title', 'content']
+  fields = ['title', 'body']
   template_name = 'diary/article_create.html'
 
 class ArticleDetail(DetailView):
@@ -38,9 +38,14 @@ class ArticleDelete(DeleteView):
 
 class ArticleUpdate(UpdateView):
   model = Article
-  fields = ['title', 'content']
+  fields = ['title', 'body']
   template_name = "diary/article_update_form.html"
 
   def get_object(self):
     slug_ = self.kwargs.get("slug")
     return get_object_or_404(Article, slug=slug_)
+
+class Test(ListView):
+  model = RichTextArticle
+  context_object_name = 'richTextArticle_list'
+  template_name = 'diary/test_article.html'

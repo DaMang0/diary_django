@@ -6,7 +6,7 @@ from accounts.models import Profile
 
 class Tasks(models.Model):
   # user = models.ForeignKey(User, on_delete=models.CASCADE)
-  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
   title = models.CharField(max_length=100)
   content = models.TextField(blank=True)
   created = models.DateTimeField(auto_now_add=True)

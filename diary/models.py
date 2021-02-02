@@ -1,11 +1,12 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+from ckeditor.fields import RichTextField
 
-# Create your models here.
+
 class Article(models.Model):
   title = models.CharField(max_length=100)
-  content = models.TextField()
+  body = RichTextField(blank=True, null=True)
   slug = models.SlugField(unique=True)
   pub_date = models.DateTimeField(auto_now_add=True)
   # modified = models.DateTimeField(auto_now=True, null=True)
@@ -21,3 +22,12 @@ class Article(models.Model):
     self.slug = slugify(self.title)
     super(Article, self).save(*args, **kwargs)
 
+
+class RichTextArticle(models.Model):
+  title = models.CharField(max_length=75)
+  body = RichTextField(blank=True, null=True)
+  
+  def __str__(self):
+    return self.title
+
+  

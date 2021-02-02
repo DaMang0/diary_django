@@ -13,6 +13,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <!-- font-family: 'Domine', serif; -->
+  <!-- font-family: 'Barlow', sans-serif; -->
+
+
   
   <!-- font-family: 'Crimson Text', serif; -->
   <!-- font-family: 'Merriweather', serif; -->
@@ -41,7 +49,7 @@
     <nav>
       <ul class="menu">
         
-        <li class="nav-list"><a href="{% url 'article-list' %}" class="item" id="article-link">Articles</a></li>
+        <li class="nav-list"><a href="{% url 'article-list' %}" class="item" id="article-link">Journal</a></li>
         <li class="nav-list"><a href="#" class="item" id="gratitude-link">Gratitude</a></li>
         <li class="nav-list"><a href="{% url 'quotes:index' %}" class="item" id="quote-link">Quotes</a></li>
         <li class="nav-list"><a href="{% url 'value:index' %}" class="item" id="value-link">Values</a></li>
@@ -59,7 +67,7 @@
       <a class="item" href="{% url 'user-profile' %}"><button class="button-first">Profile</button></a>
       <a class="item" href="{% url 'logout' %}"><button onclick="return confirm('Are you sure you want to logout?')" class="button-first">Logout</button></a>
     </nav>
-    <!-- IF NOT LOG IN  -->
+    <!-- IF NOT SIGN IN  -->
     {% else %}
     <nav>
       <a class="item" href="{% url 'signup' %}"><button class="button-secondary">Create Account</button></a>
