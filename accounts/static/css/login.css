@@ -1,3 +1,95 @@
-main {
-  margin: 15% 10%;
+body {
+  color: rgb(33, 65, 99);
+  background-color: white;
+  font-family: 'PT Sans', sans-serif; 
 }
+.text-wrap{
+  text-align: center;
+  margin: 4rem 0;
+}
+.msg {
+  color: ;
+}
+.error-msg{
+  text-align: center;
+}
+.login-form-wrapper{
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  /* background-color: rgb(243, 243, 243); */
+  /* border: 1px solid rgb(187, 187, 187); */
+  /* border-radius: 8px; */
+  width: 500px;
+  height: 400px;
+}
+form label {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+}
+
+#id_username, #id_password{
+  background-color: rgb(240, 240, 240);
+  border: none;
+  padding: 0.75rem 1rem;
+  width: 250px;
+}
+#id_username, #id_password:focus{
+  outline-color: rgb(33, 65, 99);
+}
+
+.help1{
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+  padding: 0.25rem .5rem;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #00a82d;
+  border-radius: 2px;
+  color: white;
+  white-space: nowrap;
+  transition: background-color 150ms ease-in-out;
+}
+.help1:hover{
+  background-color: #10ca42;
+}
+
+.help2{
+  display: block;
+  text-decoration: none;
+  color: #606a74;
+  margin-top: 2rem;
+}
+.help2:hover{
+  color: black;
+}
+
+.login-btn {
+  
+  padding: 0.65rem 3.75rem;
+  cursor: pointer;
+  background-color: #05386B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 150ms ease-in-out;
+}
+.login-btn:hover{
+  background-color: #0a4580;
+}
+.copy-right{
+  color: #0a4580;
+}
+input:focus{
+  outline-color: rgb(103, 176, 255) !important;
+}
+    @media all and (max-width: 750px) and (min-width: 250px) {
+      .login-form-wrapper{
+        width: 90%;
+        height: 40rem;
+      }
+    }

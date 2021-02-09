@@ -1,0 +1,156 @@
+*{
+  list-style: none;
+  font-size: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  background-color: rgb(27, 39, 49);
+}
+body > main {
+  font-family: 'PT Sans', sans-serif; 
+}
+.big-wrap{
+  display: flex;
+  margin: 5%;
+  margin-left: 15%;
+}
+.text-wrap{
+  margin-right: 3.5rem;
+}
+
+.text-title{
+  color: white;
+  font-size: 3.75rem;
+  font-weight: 700;
+  /* line-height: 2rem; */
+}
+.text-msg{
+  font-size: 1.4rem;
+  color: #f7f7f7;
+  font-weight: 400;
+  /* line-height: 1.75rem; */
+  
+}
+.form-wrap{
+  padding: 1rem;
+  font-size: 1rem;
+  background: #fff;
+  text-align: center;
+  margin: 0 auto ;
+  width: 625px;
+  height: 720px;
+  border-radius: 8px;
+  box-shadow: 2px 3px 5px rgb(170, 170, 170);
+}
+.fa-user-alt{
+  font-size: 1.45rem;
+  padding: 1rem;
+}
+.form-title{
+  font-size: 1.75rem;
+  font-weight: 700;
+  
+}
+.form-msg{
+  font-size: .85rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.form-box{
+  color: #525f6a; 
+}
+
+.field-wrap{
+  margin: 2rem;
+}
+
+.register-btn{
+  margin-top: 0.5rem;
+  background-color: #00a82d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 4rem;
+  border-radius: 4px;
+  transition: background-color 150ms ease-in-out;
+}
+.register-btn:hover{
+  background-color: #24e959;
+}
+.already{
+  font-size: 0.75rem;
+  color: grey;
+  margin-left: 0.25rem;
+}
+.already:hover{
+  color: black;
+}
+
+.form-label{
+  font-size: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+/* All input fields  */
+form input {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid rgb(175, 175, 175);
+}
+form input:focus{
+  border-color: rgb(77, 200, 221) !important;
+}
+
+.name-wrap{
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 1rem auto;
+}
+.name-wrap input{
+  padding: 1rem 1rem;
+  width: 7.5rem;
+}
+
+
+@media all and (max-width: 750px) and (min-width: 250px) {
+  html{
+    font-size: 62.5%;
+  }
+  body{
+    
+  }
+  .big-wrap{
+    display: block;
+  }
+  .text-wrap{
+    display: block;
+    padding: 2rem;
+  }
+  .text-title{
+    color: white;
+    font-size: 4rem;
+    
+  }
+  .text-msg{
+    font-size: 1.5rem;
+    color: #f7f7f7;
+    font-weight: 400;
+  }
+  .form-wrap{
+    width: 325px;
+    height: 475px;
+    overflow: auto;
+    margin: 0 auto;
+  }
+  .form-wrap input {
+    width: 125px;
+  }
+  .name-wrap {
+    display: block;
+  }
+  #id_first_name, #id_last_name {
+    margin: 0.2rem 0rem;
+
+  }
+}

@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, DetailView
 from django.contrib.auth.views import LoginView, LogoutView
-from .forms import SignUpForm
+from .forms import SignUpForm, CustomSignUpForm
 from django.utils import timezone
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -27,6 +27,16 @@ def SignUp(request):
     form = UserCreationForm()
   return render(request, 'registration/signup.html', {'form': form})
 
+def CustomSignUp(request):
+  if request.method == 'POST':
+    form = CustomSignUpForm(request.POST)
+    if form.is_valid():
+      form.save()
+      return redirect('login')
+  else:
+    form = CustomSignUpForm()
+  context = {'form': form}
+  return render(request, 'registration/custom_register.html', context)
 
 class SignUpView(SuccessMessageMixin, CreateView):
   form_class = SignUpForm
@@ -42,7 +52,6 @@ class SignUpView(SuccessMessageMixin, CreateView):
 class LoginFormView(SuccessMessageMixin, LoginView):
     template_name = 'registration/login.html'
     success_message = "Welcome "
-
 
 class UserAccount(DetailView):
   template_name = 'accounts/index.html'

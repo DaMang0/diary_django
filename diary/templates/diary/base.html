@@ -9,78 +9,99 @@
   {% block css %}
   {% endblock %}
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Crimson+Text&family=Merriweather&family=PT+Sans&family=Poppins&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-  <!-- font-family: 'Domine', serif; -->
-  <!-- font-family: 'Barlow', sans-serif; -->
-
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Crimson+Text&family=Domine&family=Lato&family=Merriweather&family=PT+Sans:wght@400;700&family=Raleway:wght@400;600;900&family=Poppins:wght@400;600;700&family=Roboto&family=Signika+Negative&display=swap" rel="stylesheet">
+  <!-- 
   
-  <!-- font-family: 'Crimson Text', serif; -->
-  <!-- font-family: 'Merriweather', serif; -->
-  <!-- font-family: 'Poppins', sans-serif; -->
-  <!-- font-family: 'PT Sans', sans-serif; -->
-  <!-- font-family: 'Lato', sans-serif; -->
-  
-  
+  font-family: 'Barlow', sans-serif;
+  font-family: 'Crimson Text', serif;
+  font-family: 'Domine', serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif; 
+  font-family: 'Signika Negative', sans-serif;
+  -->
   <title>{% block title %}{% endblock %}</title>
+  
 </head>
-
 
 <body>
 
   {% if messages %}
-
   {% for m in messages %}
   {{ m }}{{ request.user.username }}
   {% endfor %}
-
   {% endif %}
+
   <header>
-    <nav>
-      <li class="nav-list-first"><a id="main-link" class="item" href="{% url 'article-index' %}">INSPIRED</a></li>
-    </nav>
-    <nav>
-      <ul class="menu">
+    <!-- <nav>
+      <li class="nav-list-first"><a id="main-link" class="item" href="{% url 'article-index' %}">InSpire</a></li>
+    </nav> -->
+    <nav class="navbar">
+      <a class="home-link" href="{% url 'article-index' %}"><div class="home-title">Inspire</div></a>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="nav-div-container">
+        <ul class="menu">
+          <li class="nav-list">
+            <a class="item1" href="#" id="gratitude-link">Gratitude<br>List</a>
+          </li>
+          <li class="nav-list">
+            <a class="item1" href="{% url 'article-list' %}" id="journal-link">My<br>Journal</a>
+          </li>
+          
+          <li class="nav-list">
+            <a class="item1"  href="{% url 'quotes:index' %}"id="quote-link">Quote<br>List</a>
+          </li>
+          <li class="item1" class="nav-list">
+            <a href="{% url 'value:index' %}" id="value-link">My<br>Values</a>
+          </li>
+          <!-- ADMIN -->
+          {% if request.user.is_superuser %}
+          <li class="nav-list">
+            <a class="item1" href="{% url 'admin:index' %}" id="admin-link">ADMIN</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="button-div">
+        <!-- IF LOG IN  -->
+        {% if request.user.is_authenticated %}
+        <a class="item2" href="{% url 'user-profile' %}"><button class="button-first">Profile</button></a>
+        <a class="item2" href="{% url 'logout' %}"><button onclick="return confirm('Are you sure you want to logout?')" class="button-first">Logout</button></a>
         
-        <li class="nav-list"><a href="{% url 'article-list' %}" class="item" id="article-link">Journal</a></li>
-        <li class="nav-list"><a href="#" class="item" id="gratitude-link">Gratitude</a></li>
-        <li class="nav-list"><a href="{% url 'quotes:index' %}" class="item" id="quote-link">Quotes</a></li>
-        <li class="nav-list"><a href="{% url 'value:index' %}" class="item" id="value-link">Values</a></li>
-        <!-- ADMIN -->
-        {% if request.user.is_superuser %}
-        <li class="nav-list"><a href="{% url 'admin:index' %}" class="item" id="admin-link">ADMIN ONLY</a></li>
+        {% else %}
+        <!-- IF NOT SIGN IN  -->
+        <a class="item2" href="{% url 'signup' %}">
+          <button class="button-secondary">Sign Up</button>
+        </a>
+        <a class="item2" href="{% url 'login' %}">
+          <button class="button-first">Login</button>
+        </a>
         {% endif %}
+      </div>
+        
       
-      
-      </ul>
     </nav>
-    <!-- IF LOG IN  -->
-    {% if request.user.is_authenticated %}
-    <nav>
-      <a class="item" href="{% url 'user-profile' %}"><button class="button-first">Profile</button></a>
-      <a class="item" href="{% url 'logout' %}"><button onclick="return confirm('Are you sure you want to logout?')" class="button-first">Logout</button></a>
-    </nav>
-    <!-- IF NOT SIGN IN  -->
-    {% else %}
-    <nav>
-      <a class="item" href="{% url 'signup' %}"><button class="button-secondary">Create Account</button></a>
-      <a class="item" href="{% url 'login' %}"><button class="button-first">Login</button></a>
-    </nav>
-    {% endif %}
-  </header>
+    </header>
 
   <main>
-  {% block content %}
-  {% endblock %}
+    {% block content %}
+    {% endblock %}
   </main>
+
+  <footer>
+    {% block footer %}
+    {% endblock %}
+  </footer>
   
+  <p class="copy-right"><span class="copy-symbol">&copy </span>Inspire 2021</p>
 </body>
 
 </html>

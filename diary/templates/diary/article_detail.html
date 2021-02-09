@@ -10,13 +10,27 @@
 {% block content %}
 <article class="article-container">
   
-  <p class="article-detail-title">{{ object.pub_date|date:"M d Y" }} <span style="color: rgb(176, 176, 176);"> / </span> {{ object.title.capitalize }}</p>
+  <p class="article-detail-title">{{ object.pub_date|date:"M d Y" }} <span style="color: rgb(114, 114, 114);"> / </span> {{ object.title.capitalize }}</p>
   <br>
   <p class="detail-article-body">{{ object.body|safe }}</p>
   <br><br><br>
-  <!-- <p class="detail-pub-date">Date created: {{ object.pub_date|date:"M d Y" }}</p> -->
-  <a class="detail-article-edit-button" href="{% url 'article-update' object.slug %}">Edit Post</a>
-  <br>
-  <a class="detail-article-delete-button" href="{% url 'article-delete' object.slug %}">Delete?</a>
 </article>
+  <!-- <p class="detail-pub-date">Date created: {{ object.pub_date|date:"M d Y" }}</p> -->
+  
+  <div class="icon-container">
+    <a class="detail-article-edit-button" href="{% url 'article-update' object.slug %}">
+      <button class="icon">
+        <i class="fas fa-pen-square"></i>
+      </button>
+    </a>
+    
+    <br>
+    <a class="detail-article-delete-button" href="{% url 'article-delete' object.slug %}">
+      <button class="icon" onclick="return confirm('Are you sure you want to delete this article?')">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </a>
+  </div>
+  
+
 {% endblock %}

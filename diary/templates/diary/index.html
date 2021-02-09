@@ -9,39 +9,100 @@
 <!-- Load Page Title -->
 {% block title %}Get Inspired.{% endblock %}
 
+<!-- Main Section -->
 {% block content %}
-<div class="container-1">
-  <h1 class="quote-1">Keep track and Focus on the things that makes you happy.</h1>
-  <li></li>
-  <li></li>
-</div>
 
+<div class="container-1">
+  <h1 class="quote-1">Keep track and Focus on good things in Life</h1>
+</div>
 <div class="container-2">
-  <li></li>
-  <!-- <h1 class="quote-2">Write down what you're grateful for and focus on the good things in your life.</h1>
-  <li></li> -->
-  <h1 class="quote-2">Train your brain to be more optimistic.</h1>
-  <li></li>
+  <h1 class="quote-2">Rewire your brain to be more optimistic.</h1>
 </div>
 <div class="container-3">
-  <p class="message">Enter message here to explain more about the purpose of this website</p>
+  <p class="message"><!-- <span class="name">INSPIRE</span> is here to help you cultivate a better mindset. -->START NOW to keep track and form a habit of acknowledging the good things in your everyday life. 
+  </p>
 </div>
+
+  <div class='box1'>
+    <a class="get-start--link" href="{% url 'signup' %}"><button class="get-start--btn">Get a free account</button></a>
+    <!-- <a href="{% url 'signup' %}">Get Started</a> -->
+  </div>
+  <div class="box2">
+    <a class="already" href="{% url 'login' %}">Already have an account? Log in</a>
+    <a>
+  </div>
+
+<!-- Explain To Customer What is the point of Gratitude Tracking -->
+  <div class="about-container">
+    <ul class="about-list">
+      <p class="about-header">Why Should I Keep Track of Good Things In My Life:</p>
+      <li class="about-item">It's easy to get overwhelmed by negative emotions.</li>
+      <p class="about-header">Lorem ipsum dolor sit amet.</p>
+      <li class="about-item">The things you think about will determine the quality of your mind.</li>
+      <p class="about-header">Lorem ipsum dolor sit amet.</p>
+      <li class="about-item">You will become more aware of the good things in your life.</li>
+      <p class="about-header">Lorem ipsum dolor sit amet.</p>
+      <li class="about-item">While you can't control your experiences, you can control your explanations.</li>
+      <p class="about-header">Lorem ipsum dolor sit amet.</p>
+      <li class="about-item">Reformulate the ways you view a negative event.</li>
+      
+    </ul>
+  </div>
+
+<a class='feature-link' href="#feature"><span id='feature'class="feature">See all features</span></a>
+{% endblock %}
+
+{% block footer %}
+<!-- Compare Box Header  -->
+<h2 class="background__1-header" style="color: white; font-size: 2em;">Show a Comparison of a Positive Journal and Negative Journal Side by Side</h2>
+<div class="background__1">
+  <ul class="positive-box">
+    <h3 class="positive-header">Positive way of viewing.</h3>
+    <li class="positive-item">Lorem ipsum dolor sit amet.</li>
+    <li class="positive-item">Lorem ipsum dolor sit amet.</li>
+    <li class="positive-item">Lorem ipsum dolor sit amet.</li>
+    <li class="positive-item">Lorem ipsum dolor sit amet.</li>
+  </ul>
+  <ul class="negative-box">
+    <h3 class="negative-header">Negative way of viewing.</h3>
+    <li class="negative-item">Lorem ipsum dolor sit amet.</li>
+    <li class="negative-item">Lorem ipsum dolor sit amet.</li>
+    <li class="negative-item">Lorem ipsum dolor sit amet.</li>
+    <li class="negative-item">Lorem ipsum dolor sit amet.</li>
+  </ul>
+</div>
+<div class="background__2">
+  <div class="bk2-wrapper">
+    
+      <div>
+        <h3 class="bk2-head">Journaling</h3>
+        <p class="bk2-msg">Journaling anywhere</p>
+      </div>
+      <div>
+        <h3 class="bk2-head">Quote Keeping</h3>
+        <p class="bk2-msg">All your favourite quotes in one place</p>
+      </div>
+      <div>
+        <h3 class="bk2-head">Gratitude List</h3>
+        <p class="bk2-msg">Happiness is a choice</p>
+      </div>
+    
+  </div>
+</div>
+<div class="background__3"></div>
+<div class="background__4"></div>
+{% endblock %}
+
+
 <!-- The Goal of the Website -->
-<div class="plan-container">
-  <li class="plan" style="border-bottom: 1px solid;">Main Page for Visiter</li>
-  <li class="plan" style="border-bottom: 1px solid;">Main Page for User</li>
+<!-- <div class="plan-container">
+  <li class="plan">Main Page for Visiter</li>
+  <li class="plan">Main Page for User</li>
   <li class="plan">Allow user to write down things they are grateful for ( Add New Thing in Index Page )</li>
   <li class="plan">Random generate one thing they wrote.</li>
   <li class="plan">Notification / Email Alert</li>
   <li class="plan">Visually Comfortable </li>
   <li class="plan">So easy to use even a kid could use it.</li> 
-</div>
-
-<!-- <div class="vid-container-1">
-  <li></li>
-  <li><iframe id="vid-1" class="video" src="https://www.youtube.com/embed/NXQK3zgSgKY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-  <li></li>
 </div> -->
 
 
-{% endblock %}

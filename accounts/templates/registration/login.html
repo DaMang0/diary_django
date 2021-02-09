@@ -2,34 +2,67 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 
 {% block title %}Login{% endblock %}
 
-{% if form.errors %}
-  <p>Your Login details didn't match. Please try again.</p>
-{% endif %}
+
 {% block content %}
-<a href="{% url 'signup' %}">Need a Account?</a>
 
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %}
-  <p>{{ form.username.label_tag }}</p>
-  <p>{{ form.username }}</p>
-  <p>{{ form.password.label_tag }}</p>
-  <p>{{ form.password }}</p>
-  <!-- Submit Button -->
-  <div>
-    <input type="submit" value="Login">
-  </div>
-</form>
+{% if form.errors %}
+<p class="error-msg" style="color: red;">Your username and password didn't match. Please try again.</p>
+{% endif %}
 
-<p><a href="{% url 'password_reset' %}">Need help?</a></p><br><br>
+{% if next %}
+    {% if user.is_authenticated %}
+    <p class="error-msg" style="color: red;">Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% else %}
+    <p class="error-msg" style="color: red;">Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+
+<div class="text-wrap">
+  <h2 class="msg">Welcome</h2>
+  <p>Sign in to continue</p>
+</div>
+  
+<div class='login-form-wrapper'>
+  
+  <!-- <a class="help1" href="{% url 'signup' %}">Need a Account?</a> -->
+  
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <!-- <p>{{ form.username.label_tag }}</p> -->
+    <p>{{ form.username }}</p>
+    <!-- <p>{{ form.password.label_tag }}</p> -->
+    <p>{{ form.password }}</p>
+    <!-- Submit Button -->
+    <div>
+      <input class="login-btn" type="submit" value="Login">
+    </div>
+  </form>
+
+  <a class="help2" href="{% url 'password_reset' %}">Need help?</a>
+  
+</div>
+
+<br>
+
 {% if messages %}
   {% for m in messages %}
   <p style="color: red;">{{ m }}</p>
   {% endfor %}
 {% endif %}
+
 {% endblock %}
 
+{% block footer %}
+<script>
+  document.getElementById('id_username').setAttribute('placeholder', "Username");
+  document.getElementById('id_password').setAttribute('placeholder', "Password")
+  document.getElementById('id_first_name').setAttribute('placeholder', "First name")
+  document.getElementById('id_last_name').setAttribute('placeholder', "First name")
+</script>
+{% endblock %}

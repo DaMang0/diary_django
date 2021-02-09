@@ -10,22 +10,33 @@
 {% block content %}
 
 <!-- Article List View Title -->
-<h2 class="article-list-h2 page-header">These are the article i should read if i ever feel down.</h2>
+<div class="art-banner-container1">
+  <div class="head-container">
+    <h4 class="type">Journal</h4>
+    <h1 class="head-title">Better than, yesterday</h1>
+    <h6 class="head-detail">By Mathew Ho on Friday, 08 February 2021</h6>
+  </div>
+</div>
+<!-- <h2 class="article-list-h2 page-header">These are the article i should read if i ever feel down.</h2> -->
 
 <!-- Create New Article  -->
-<a href="{% url 'article-create' %}" class="article-create create-link"><button class="create-button"><span>New</span></button></a>
+<a class="article-create create-link" href="{% url 'article-create' %}"><button class="create-button"><span>New</span></button></a>
 
 
 <!-- Print out each article -->
-<ol class="article-ol-container page-ol-container">
+<p class="entry-title">Latest journal entries</p>
+<div class="article-wrapper">
+  <ol class="article-ol-container page-ol-container">
   {% for article in article_list %}
-  <small class="article-pub pub-date">{{ article.pub_date|date:"M d Y" }}</small>
-  <li class="article"><a class="article-title-link" href="{% url 'article-detail' article.slug %}">{{ article.title.capitalize }}</a></li><br>
-  <!-- <p>Content: {{ article.content.capitalize }}</p> -->
-  <!-- <p>Created on: {{ article.pub_date }}</p> -->
-  <!-- <p>{{ article.slug }}</p> -->
+  <li class="article-list">
+    <a class="article-link" href="{% url 'article-detail' article.slug %}">{{ article.title.capitalize }}</a><br>
+    <small class="article-pub pub-date">{{ article.pub_date|date:"D. M d Y" }}</small>
+  </li>
+  <br>
+
   {% endfor %}
-</ol>
+  </ol>
+</div>
 <br>
 
 {% endblock %}
