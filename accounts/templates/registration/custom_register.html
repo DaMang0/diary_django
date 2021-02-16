@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css/signup.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <title>Inspire - log in or sign up</title>
   
 </head>
@@ -19,7 +20,8 @@
 
       <div class='text-wrap'>
         <h1 class="text-title">Inspire</h1>
-        <h2 class="text-msg">Inspire helps you connect and share with the people in your life.</h2>
+        <!-- <h2 class="text-msg">Inspire helps you connect and share with the people in your life.</h2> -->
+        <p class="text-msg">The best time to start is now.</p>
       </div>
       
 
@@ -27,26 +29,26 @@
         <div>
           <i class="fas fa-user-alt"></i>
         </div>
-        <h2 class="form-title">Create your account</h2>
-        <p class="form-msg">Remember the good things.</p>
+        <h2 class="form-title">Start your free journal of Inspire</h2>
+        
         <form class="form-box" method="post" action="{% url 'signup' %}">{% csrf_token %}
           {% if form.errors %}
             <p>{{ form.errors }}</p>
           {% endif %}
           <div class="field-wrap">
-            <p class="username-label form-label">{{ form.username.label_tag }}</p>
+            <!-- <p class="username-label form-label">{{ form.username.label_tag }}</p> -->
             {{ form.username }}
           </div>
           <div class="field-wrap">
-            <p class="email-label form-label">{{ form.email.label_tag }}</p>
+            <!-- <p class="email-label form-label">{{ form.email.label_tag }}</p> -->
             {{ form.email }}
           </div>
           <div class="field-wrap">
-            <p class="password1-label form-label">{{ form.password1.label_tag }}</p>
+            <!-- <p class="password1-label form-label">{{ form.password1.label_tag }}</p> -->
             {{ form.password1 }}
           </div>
           <div class="field-wrap">
-            <p class="password2-label form-label">{{ form.password2.label_tag }}</p>
+            <!-- <p class="password2-label form-label">{{ form.password2.label_tag }}</p> -->
             {{ form.password2 }}
           </div>
     
@@ -56,8 +58,13 @@
             <!-- <p class="lname-label form-label">{{ form.last_name.label_tag }}</p> -->
               {{ form.last_name }}
           </div>
-          <button class="register-btn" type="submit">Register</button>
+          
           <a class="already" href="{% url 'login' %}">Already Member?</a>
+          <button class="register-btn" type="submit">Register</button>
+                  
+          <div class="cc-container">
+            <p class="no-cc-required">No credit card & payment required.</p>
+          </div>
           
           <!-- <input type="submit" value="Create"> -->
         </form>
@@ -66,6 +73,10 @@
   </main>
   <footer>
     <script>
+      document.getElementById('id_username').setAttribute('placeholder', "Username")
+      document.getElementById('id_email').setAttribute('placeholder', "Email address")
+      document.getElementById('id_password1').setAttribute('placeholder', "Password")
+      document.getElementById('id_password2').setAttribute('placeholder', "Password Confirmation")
       document.getElementById('id_first_name').setAttribute('placeholder', "First name")
       document.getElementById('id_last_name').setAttribute('placeholder', "Surname")
     </script>

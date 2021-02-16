@@ -1,42 +1,48 @@
-body {
-  color: rgb(33, 65, 99);
+main{
+  padding: 5%;
+  color: #000;
   background-color: white;
   font-family: 'PT Sans', sans-serif; 
 }
-.text-wrap{
-  text-align: center;
-  margin: 4rem 0;
-}
+
 .msg {
-  color: ;
+  font-size: 3rem;
+  word-spacing: .075rem;
+  padding-left: 5%;
 }
 .error-msg{
-  text-align: center;
+  text-align: left;
 }
 .login-form-wrapper{
   font-family: 'Roboto', sans-serif; 
   font-size: 1rem;
+  
+  
+}
+.login-form{
+  width: 500px;
   margin: 0 auto;
   text-align: center;
-  /* background-color: rgb(243, 243, 243); */
-  /* border: 1px solid rgb(187, 187, 187); */
-  /* border-radius: 8px; */
-  width: 500px;
-  height: 400px;
 }
 form label {
   font-size: 0.88rem;
   text-transform: uppercase;
+
 }
 
 #id_username, #id_password{
   background-color: rgb(240, 240, 240);
   border: none;
-  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
   width: 250px;
 }
-#id_username, #id_password:focus{
-  outline-color: rgb(33, 65, 99);
+#id_username{
+  margin-top: 5rem;
+}
+#id_username:focus, #id_password:focus {
+  outline: rgb(77, 200, 221) !important;
 }
 
 .help1{
@@ -58,19 +64,40 @@ form label {
   background-color: #10ca42;
 }
 
-.help2{
-  display: block;
+.help-link{
+  
+  display: inline-block;
   text-decoration: none;
-  color: #606a74;
-  margin-top: 2rem;
+  color: #868e96;
+  transition: color 100ms ease-in;
 }
-.help2:hover{
-  color: black;
+.help-link:hover{
+  text-decoration: underline;
+  color: #0c5ca2;
+}
+.ca-wrapper{
+  color: #868e96;
+}
+.create{
+  text-decoration: underline;
+  margin-top: 3rem;
+  color: #1c7ed6;;
+  text-decoration-color: initial;
+}
+.help{
+  margin: 1.5rem;
+  display: block;
+}
+h2.msg{
+  text-align: center;
 }
 
 .login-btn {
-  
-  padding: 0.65rem 3.75rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  width: 250px;
+  padding: 1.2rem 3.75rem;
   cursor: pointer;
   background-color: #05386B;
   color: white;
@@ -79,17 +106,25 @@ form label {
   transition: background-color 150ms ease-in-out;
 }
 .login-btn:hover{
-  background-color: #0a4580;
+  background-color: #4e95dc;
 }
+
 .copy-right{
-  color: #0a4580;
+  display: none;
 }
-input:focus{
-  outline-color: rgb(103, 176, 255) !important;
+input{
+  margin: 0 auto;
 }
-    @media all and (max-width: 750px) and (min-width: 250px) {
+
+    @media only screen and (min-width: 750px) and (max-width: 1250px){
+      main{
+        margin-top: 10%;
+      }
       .login-form-wrapper{
         width: 90%;
         height: 40rem;
+        margin: 0 auto;
       }
-    }
+      h2.msg{
+        text-align: left;
+      }

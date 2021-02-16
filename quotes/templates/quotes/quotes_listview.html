@@ -20,7 +20,11 @@
 <!-- <h2 class="quote-list-h2 page-header">These are the collection of quotes you choose to remember.</h2> -->
 
 <!-- Add New Quote -->
-<a class="quote-create create-link" href="{% url 'quotes:create' %}"><button class="create-button"><span>New </span></button></a> 
+
+<a class="quote-create create-link" href="{% url 'quotes:create' %}">
+  <button class="create-button"><span>New </span></button>
+</a> 
+
 
 <ol class="quote-ol-container page-ol-container">
   {% for quote in quote_list %}

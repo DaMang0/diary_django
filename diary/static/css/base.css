@@ -1,3 +1,6 @@
+root:{
+  font-size: 100%;
+}
 *{
   box-sizing: border-box;
   
@@ -13,8 +16,8 @@ html {
 }
 
 body { 
-  color: #05386B;  
-  background-color: rgb(235, 235, 235);
+  color: #000;  
+  background: #fbfbfd;
   margin: 0px;
   padding: 0px;
   min-width: 100%;
@@ -30,35 +33,34 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: rgb(180, 180, 180);
 }
-header {
-  background-color:rgba(13, 15, 25, 1);
-} 
+
 
 .navbar{
   font-family: 'Poppins', sans-serif;
   display: flex;
   position: relative;
   top: 0px;
-  width: 100%;
-  height: 4.5rem;
+  max-width: 100%;
+  height: 70px;
   justify-content: space-between;
   align-items: center;
   margin: 0px;
 }
 .home-title{
   font-size: 2rem;
-  font-family: 'Signika Negative', sans-serif;
-  /* font-family: 'Raleway', sans-serif; */
-  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   padding: 1rem;
-  /* z-index: -1; */
 }
+/* .home-title:hover{
+  color: rgb(185, 145, 96);
+} */
 .nav-list {
   list-style: none;
 
 }
 .navbar a {
-  color: white;
+  color: black;
   background-color: transparent;
   padding: 1rem;
   display: inline-block;
@@ -90,6 +92,7 @@ header {
   display: flex;
   position: relative;
   right: 0.1rem;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   
@@ -157,25 +160,16 @@ header {
 
 /* Nav Home */
 #main-link {
-  
   font-weight: 600;
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  transition-property: text-shadow, opacity;
+  text-align: center;
+  transition-property: text-shadow;
   transition-duration: 350ms;
 }
-#main-link:hover {
-  text-shadow: 120px 0px #05386B;
-  opacity:88%;
-}
+/* #main-link:hover {
+  text-shadow: 120px 0px #fff;
+} */
 
 /* Article Nav */
-#journal-link {
-  transition-duration: 350ms;
-  transition-property: color;
-  position: relative;
-}
 #journal-link::after {
   content: "";
   position: absolute;
@@ -183,22 +177,13 @@ header {
   bottom: 0;
   width: 100%;
   height: 0.3rem;
-  background-color: rgba(0, 147, 184, 1);
-  
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 200ms ease;
+  background-color: #7eb9f9;
 }
 #journal-link:hover::after {
   transform: scaleX(1);
 }
 
 /* Gratitude Nav */
-#gratitude-link {
-  transition-duration: 200ms;
-  transition-property: color;
-  position: relative;
-}
 #gratitude-link::after {
   content: "";
   position: absolute;
@@ -206,24 +191,13 @@ header {
   bottom: 0;
   width: 100%;
   height: 0.3rem;
-  background-color: rgb(228, 68, 156);
-
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 200ms ease;
+  background-color: #FFD36A;
 }
 #gratitude-link:hover::after {
   transform: scaleX(1);
 }
 
 /* Quote Nav */
-#quote-link {
-  /* color: rgba(0, 140, 40, 1); */
-  /* color: white; */
-  transition-duration: 200ms;
-  transition-property: color;
-  position: relative;
-}
 #quote-link::after {
   content: "";
   position: absolute;
@@ -232,22 +206,12 @@ header {
   width: 100%;
   height: 0.3rem;
   background-color: rgb(0, 150, 55);
-
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 200ms ease;
 }
 #quote-link:hover::after {
   transform: scaleX(1);
 }
 
 /* Value Nav */
-#value-link {
-  /* color: white; */
-  transition-duration: 200ms;
-  transition-property: color;
-  position: relative;
-}
 #value-link::after {
   content: "";
   position: absolute;
@@ -256,23 +220,29 @@ header {
   width: 100%;
   height: 0.3rem;
   background-color: rgb(255, 120, 29);
-
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 200ms ease;
 }
 #value-link:hover::after {
   transform: scaleX(1);
 }
+.item1{
+  transition-duration: 200ms;
+  transition-property: color;
+  position: relative;
+}
+.item1::after{
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
 
 /* Admin Nav */
 #admin-link {
-  color: #05386B;
+  color: #fff;
 }
 #admin-link:hover {
   color: rgb(255, 34, 34);
-  /* opacity: 70%;   */
-  }
+}
 
   /* Article + Quotes + Values Page Header  */
 .page-header {
@@ -283,7 +253,6 @@ header {
   margin: 1em 0.75em;
   cursor: default;
 }
-
 .page-header::before {
   content: open-quote;
   color: rgb(160, 160, 160);
@@ -294,11 +263,12 @@ header {
 }
 
 .create-button {
-  position: absolute;
-  
-  right: 0rem;
+  position:absolute;
+  right: 0;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   border-radius: 0px;
-  background-color: #05386B;
+  background-color: rgb(66, 108, 116);
   border: none;
   color: white;
   text-align: center;
@@ -311,11 +281,11 @@ header {
 
 .create-button:hover{
   color: inherit;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .create-button span {
-  background-color: #05386B;
+  background-color: rgb(66, 108, 116);
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -344,13 +314,15 @@ header {
 .page-ol-container {
   list-style-position: inside;
   list-style-type: lower-roman;
-  color: rgb(215, 0, 0);
+  list-style: none;
+  /* color: rgb(215, 0, 0); */
 }
 
 .pub-date {
-  color: rgba(130, 130, 130, 0.7);
-  font-size: 0.75rem;
+  color: rgba(165, 165, 165, 1);
+  /* font-size: 0.75rem; */
   font-family: 'Chakra Petch', sans-serif;
+  /* font-style: italic; */
   
 }
 
@@ -381,26 +353,28 @@ header {
   text-decoration: none;
 }
 .copy-right{
-  color: rgb(233, 233, 233);
+  color: #000;
   text-align: center;
 
 }
 
 
-    @media all and (max-width: 750px) and (min-width: 250px) {
+    @media all and (max-width: 750px){
       html {
         min-width: 100%;
         margin: 0;
         font-size: 62.5%;
         overflow-x: hidden;
       }
+      .menu .nav-list {
+        margin: 0px 0.5rem;
+      }
+      .navbar a {
+        padding: .25rem .5rem;
+      }
       
-      .navbar{
-        /* justify-content: flex-start; */
-      }
-      .home-link, .home-title{
-        display: none;
-      }
+      
+      
       
       .button-first, .button-secondary{
         display: inline-block;
@@ -412,8 +386,9 @@ header {
       
       
       .page-ol-container {
-        padding-inline-start: 1em;
-        padding: 2.5%;
+        
+        padding-inline-start: 0rem;
+        padding: 3em;
       }
       .page-header{
         font-size: 2rem;
@@ -424,13 +399,19 @@ header {
       }
       .create-button{
         /* margin: 1rem auto; */
-        padding: 2rem 4rem;
-        position:absolute;
-        right: 0;
+        padding: 1.25rem 2.5rem;
+        
       }
+      
       .pub-date {
         font-size: 1rem;
       }
       
         
+    }
+    
+    @media all and (min-width:1000px){
+      :root {
+        font-size: 100%;
+      }
     }

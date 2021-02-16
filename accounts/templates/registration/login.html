@@ -23,28 +23,35 @@
     {% endif %}
 {% endif %}
 
-<div class="text-wrap">
-  <h2 class="msg">Welcome</h2>
-  <p>Sign in to continue</p>
-</div>
   
 <div class='login-form-wrapper'>
   
   <!-- <a class="help1" href="{% url 'signup' %}">Need a Account?</a> -->
   
-  <form method="post" action="{% url 'login' %}">
+  <form class="login-form" method="post" action="{% url 'login' %}">
+    
+  <div class="text-wrap">
+    <h2 class="msg">Hello.</h2>
+    <h2 class="msg">Welcome Back</h2>
+    <!-- <p>Sign in to continue</p> -->
+  </div>
     {% csrf_token %}
     <!-- <p>{{ form.username.label_tag }}</p> -->
-    <p>{{ form.username }}</p>
+    {{ form.username }}
     <!-- <p>{{ form.password.label_tag }}</p> -->
-    <p>{{ form.password }}</p>
+    {{ form.password }}
+    <a class="help-link help" href="{% url 'password_reset' %}">Need help?</a>
     <!-- Submit Button -->
     <div>
-      <input class="login-btn" type="submit" value="Login">
+      <button class="login-btn">Login</button>
     </div>
+    <div class="ca-wrapper">
+      <a class="help-link create" href="{% url 'signup' %}">Create an account</a><span> to use Inspire for free!</span>
+    </div>
+    
   </form>
-
-  <a class="help2" href="{% url 'password_reset' %}">Need help?</a>
+  
+  
   
 </div>
 

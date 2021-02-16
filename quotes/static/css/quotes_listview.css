@@ -82,22 +82,31 @@ form button{
 }
 
 
-@media all and (max-width: 750px) and (min-width: 285px){
-  .quote-banner-container1{
-    padding-right: 5rem;
-  }
-  .quote-ol-container {
-    margin-top: 5rem;
-    padding-left: 1.35rem;
-    padding-right: 2.45rem;
-  }
-  .quote-link {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  .fa-times{
-    font-size: 1.6rem;
-  }
-  
-  
-}
+    @media all and (max-width: 750px) and (min-width: 285px){
+      .quote-banner-container1{
+        padding-right: 5rem;
+      }
+      .quote-ol-container {
+        padding: 50px 5%;
+      }
+      .quote-list{
+        margin: 1.35rem 0px;
+      }
+      .quote-link {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      .fa-times{
+        font-size: 1.6rem;
+      }
+      
+      
+    }
+    @media all and (max-width: 460px) {
+      .quote-banner-container1{
+        height: 40vh;
+        width: 100%;
+        padding: 0% 5%;
+      }
+      
+    }
