@@ -1,130 +1,63 @@
+body{
+  background-color: #f0f0f0;
+}
 main{
+  font-family: 'Montserrat', sans-serif; 
+}
+
+form{
+  max-width: 85%;
+  margin: 0 auto;
   padding: 5%;
-  color: #000;
-  background-color: white;
-  font-family: 'PT Sans', sans-serif; 
+  position: relative;
 }
-
-.msg {
-  font-size: 3rem;
-  word-spacing: .075rem;
-  padding-left: 5%;
+.text-wrap{
+  margin-bottom: 7.5rem;
+  font-size: 1.8rem;
 }
-.error-msg{
-  text-align: left;
-}
-.login-form-wrapper{
-  font-family: 'Roboto', sans-serif; 
-  font-size: 1rem;
-  
-  
-}
-.login-form{
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-}
-form label {
-  font-size: 0.88rem;
-  text-transform: uppercase;
-
-}
-
 #id_username, #id_password{
-  background-color: rgb(240, 240, 240);
   border: none;
-  border-radius: 4px;
-  padding: 1rem 1.5rem;
-  margin-top: 1.5rem;
-  width: 250px;
-}
-#id_username{
-  margin-top: 5rem;
-}
-#id_username:focus, #id_password:focus {
-  outline: rgb(77, 200, 221) !important;
-}
-
-.help1{
   display: block;
-  padding: 0.5rem;
-  text-decoration: none;
-  color: white;
-  padding: 0.25rem .5rem;
-  cursor: pointer;
-  width: 50%;
-  margin: 0 auto;
-  background-color: #00a82d;
-  border-radius: 2px;
-  color: white;
-  white-space: nowrap;
-  transition: background-color 150ms ease-in-out;
+  padding: 1em 2em;
+  margin-bottom: 2rem;
+  outline: none !important;
 }
-.help1:hover{
-  background-color: #10ca42;
+#id_username:focus, #id_password:focus{
+  background-color: #f0fafa;
 }
-
-.help-link{
+.login-wrapper{
+  margin: 2rem 0;
   
-  display: inline-block;
-  text-decoration: none;
-  color: #868e96;
-  transition: color 100ms ease-in;
+  
 }
-.help-link:hover{
-  text-decoration: underline;
-  color: #0c5ca2;
-}
-.ca-wrapper{
-  color: #868e96;
-}
-.create{
-  text-decoration: underline;
-  margin-top: 3rem;
-  color: #1c7ed6;;
-  text-decoration-color: initial;
-}
-.help{
-  margin: 1.5rem;
-  display: block;
-}
-h2.msg{
-  text-align: center;
-}
-
-.login-btn {
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-top: 5rem;
-  width: 250px;
-  padding: 1.2rem 3.75rem;
-  cursor: pointer;
-  background-color: #05386B;
-  color: white;
+.login-btn{
   border: none;
-  border-radius: 4px;
-  transition: background-color 150ms ease-in-out;
+  background-color: #80aeae;
+  color: #fff;
+  padding: 1em 3em;
+  cursor: pointer;
+  transition: background-color 100ms ease-in-out;
 }
 .login-btn:hover{
-  background-color: #4e95dc;
+  background-color: hsl(180, 15%, 40%);
+}
+a{
+  text-decoration: none;
+}
+.help{
+  color: black;
+  opacity: .65;
+}
+.create-account{
+  color: rgb(60, 138, 138);
+}
+.create-account:hover{
+  color: hsl(180, 39%, 25%);
+}
+a:hover{
+  text-decoration: underline;
 }
 
 .copy-right{
-  display: none;
+  opacity: .5;
 }
-input{
-  margin: 0 auto;
-}
-
-    @media only screen and (min-width: 750px) and (max-width: 1250px){
-      main{
-        margin-top: 10%;
-      }
-      .login-form-wrapper{
-        width: 90%;
-        height: 40rem;
-        margin: 0 auto;
-      }
-      h2.msg{
-        text-align: left;
-      }

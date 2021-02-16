@@ -20,7 +20,7 @@ body{
 .bg-light{
   min-width: 100%;
   padding-top: 4.5rem;
-  padding-bottom: 7.5px;
+  padding-bottom: 5px;
   padding-left: 5%;
 }
 .msg-wrap{
@@ -58,7 +58,7 @@ body{
 .pen{
   display: block;
   max-width: 30%;
-  margin-left: 65%;
+  margin-left: 67%;
 }
 .what-section, .why-section{
   min-width: 100%;
@@ -91,7 +91,6 @@ body{
   text-align: center;
 }
 .why-section{
-  
   background-color: #7eb9f9;
 }
 .quote-wrapper {
@@ -323,7 +322,7 @@ body{
 .title-test{
   max-width: 100%;
   padding: 2rem;
-  background-color: rgb(245, 245, 245);
+  background-color: #fff;
   color: #000;
   font-size: 1rem;
   margin: 0;
