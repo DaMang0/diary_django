@@ -15,15 +15,17 @@
   <div class="head-container">
     <h4 class="type">Journal</h4>
     <h1 class="head-title">Better than, yesterday</h1>
-    <h6 class="head-detail">By Mathew Ho on Friday, 08 February 2021</h6>
+    <h6 class="head-detail">By Mathew Ho on {% now "l, d F Y" %}</h6>
   </div>
-  
+  <div class="msg-container">
+    <p class="banner-msg">What is your story today?</p>
+  </div>
 </div>
 
 
 
 <!-- Create New Article  -->
-<a class="article-create create-link" href="{% url 'article-create' %}"><button class="create-button"><span>New</span></button></a>
+<a class="article-create create-link" href="{% url 'article:create' %}"><button class="create-button"><span>New</span></button></a>
 
 <!-- Print out all article -->
 
@@ -38,7 +40,9 @@
     {% for article in article_list %}
   
   <li class="article-list">
-    <a class="article-link" href="{% url 'article-detail' article.slug %}">{{ article.title.capitalize }}</a><br>
+    <a class="article-link" href="{% url 'article:detail' article.slug %}">{{ article.title.capitalize }}</a><br>
+    <a href="{% url 'article:update' article.slug %}">Update</a>
+    
     <small class="article-pub pub-date">{{ article.pub_date|date:"D. M d Y" }}</small>
   </li>
   <br>

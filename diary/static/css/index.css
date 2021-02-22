@@ -1,6 +1,9 @@
 /* MOBILE FIRST DESIGN */
+.la-heart     { color: #ffabba;}
+.la-brain     { color: #ffb37b;}
+.la-smile-wink{ color: rgb(255, 220, 33);}
+
 html{
-  font-size: 62.5%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,12 +19,22 @@ body{
 .sec-1{
   background-color: #222;
   color: white;
+  
 }
-.bg-light{
+.bg-black{
   min-width: 100%;
   padding-top: 4.5rem;
   padding-bottom: 5px;
   padding-left: 5%;
+}
+.gratitude-list-link{
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: auto;
+}
+.gratitude-list-link:hover{
+  text-decoration: underline;
 }
 .msg-wrap{
   /* position: relative;
@@ -30,39 +43,58 @@ body{
   /* margin-left: 5%; */
 }
 
-.bg-light-title{
+.bg-black-title{
   font-size: 2.8rem;
-  font-weight: 600;
+  font-weight: 800;
   padding-right: 1em;
+  border-bottom: 3px solid white;
+  display: inline-block;
 }
-
-.bg-light-msg{
-  color: 	#eaeaea;
-  line-height: 1.1;
-  /* font-family: 'Rajdhani', sans-serif; */
-  text-transform: uppercase;
-  letter-spacing: .081rem;
-  font-size: 1.3rem;
+.bg-black-msg{
+  color: 	#fff;
+  
+  font-size: 1.7rem;
+  line-height: 2rem;
+  letter-spacing: normal;
   font-weight: 400;
   position: relative;
   text-align: left;
+  max-width: 70%;
+  
 }
-.bg-light-msg{
-  font-size: 1.1rem;
-  line-height: 1.875rem;
-  letter-spacing: normal;
-  max-width: 60%;
-  /* padding-bottom: 1.3rem; */
+.bg-black-msg:not(:first-of-type){
+  border-left: 4px solid maroon;
+  padding-left: 1rem;
 }
-
+.bg-black-msg:first-of-type{
+  color: rgba(255, 255, 46, .85);
+}
 .pen{
   display: block;
   max-width: 30%;
   margin-left: 67%;
+  border-radius: 2px;
 }
+.aaa{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 2%;
+  background-color: #f2f2f2;
+}
+.aaa-div{
+  padding:  0 2rem;
+}
+.aaa-div > h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+
 .what-section, .why-section{
   min-width: 100%;
-  padding: 5%;
+  padding: 10% 5%;
 }
 .what-section{
   background: #FFD36A;
@@ -73,14 +105,21 @@ body{
   text-align: left;
 }
 .what-title{
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-family: 'Source Serif Pro', serif;
 }
 .what-text{
-  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  max-width: 60ch;
-  line-height: 1.8;
+  max-width: 80%;
+  line-height: 1.7;
+}
+.platform{
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2em 1em;
+  font-weight: 800;
 }
 .split{
   display: flex;
@@ -89,6 +128,7 @@ body{
 .feature-section{
   margin: 10rem 0;
   text-align: center;
+  color: rgb(75, 76, 77);
 }
 .why-section{
   background-color: #7eb9f9;
@@ -103,14 +143,20 @@ body{
 }
 
 .feat{
-  font-size: .8rem;
-  letter-spacing: .135rem;
-  font-weight: 400;
-  color: rgb(136, 136, 136);
+  padding: 1rem 2rem;
+  /* background-color: #444; */
+  border: 4px solid #444;
+  font-size: 1rem;
+  display: inline-block;
+  font-weight: 600;
+  color: #444;
+  
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  
 }
 .icon-wrapper{
   margin: 0 auto;
-  
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -120,6 +166,21 @@ body{
 .icon-inner{
   margin: 0 2rem;
   width: 30%;
+}
+
+.icon-msg{
+  font-size: 1.3rem;
+  color: rgb(75, 76, 77);
+}
+
+/* Three icons */
+.fas{
+  transition: transform 400ms ease-in-out;
+  padding-bottom: 2rem;
+}
+/* icon hover */
+.fas:hover{
+  transform: scale(1.5);
 }
 .why-wrapper{
   margin: 5rem auto;
@@ -133,21 +194,18 @@ body{
 .why-header{
   font-size: 1.4rem;
   font-weight: 700;
-  color: rgb(75, 76, 77);
-  opacity: .5;
-  transition: opacity 200ms ease;
+  color: #000;
 }
 .why-header:hover{
-  opacity: 1;
+  
   cursor: pointer;
 }
 .why-msg{
   margin: 0 auto;
   max-width: 65%;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
   text-align: center;
-  color: black;
   word-spacing: 0.091rem;
 
 }
@@ -193,19 +251,19 @@ body{
   transform: scale(1.35);
 }
 
-
-.get-start-container{
-  display: flex;
-  justify-content: space-between;
-}
 .already-link{
+  display: block;
+  text-align: right;
   font-size: 1rem;
   text-decoration: none;
-  color: inherit;
+  color: #000;
+  opacity: .75;
+  padding: .85rem 0;
+  
 }
 .already-link:hover{
   text-decoration: underline;
-  opacity: .55;
+  opacity: 1;
 }
 .get-start--link{
   text-decoration: none;
@@ -213,36 +271,33 @@ body{
 }
 .get-start--btn{
   cursor: pointer;
-  display: inline;
+  display: inline-block;
+  
   font-size: 1.1rem;
-  color: #f5f5f5;
+  color: #fff;
   background-color: #707070;
   border: none;
   border-radius: 3px;
   padding: 1.25rem 2.5rem;
   
   
-  transition-property: background-color, border;
-  transition: all 350ms ease;
-  /* #07d672 */
 
-  background: linear-gradient(to right, #fff 50%, #707070 50%);
+  background: linear-gradient(to right, #fff 50%, #444 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition-property: background-position, color;
-  transition: all 200ms ease-out;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
 }
 
 .get-start--btn:hover{
   background-position: left bottom;
   color: #000; 
 }
-.get-start--btn:active{
-  opacity: 1;
-}
+
 .bg-color{
   
-  padding: 5%;
+  padding: 15% 2.5%;
   overflow: auto;
   border-radius: 3px;
 }
@@ -257,21 +312,23 @@ body{
 
 .bg-red{
   background-color: rgb(236, 236, 236);
+  background-color: #fff;
 }
 .bg-green{
   background-color: #fff;
+  background-color: rgb(236, 236, 236);
   
 }
 .bg-color-header{
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.8;
 }
 .bg-color-msg{
   word-spacing: .035rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.4;
 }
 .design, 
 .traveling, 
@@ -322,7 +379,7 @@ body{
 .title-test{
   max-width: 100%;
   padding: 2rem;
-  background-color: #fff;
+  background-color: #cecece;
   color: #000;
   font-size: 1rem;
   margin: 0;
@@ -365,28 +422,66 @@ body{
 .responsive-text-wrapper{
   text-align: right;
 }
-@media only screen and (min-width: 750px) and (max-width: 1250px){
-  
-  
-  
-  .bg-light-title{
-    font-size: 5.75rem;
-  }
-  
-  
-  
-  .quote-container{
-    padding: 6%;
-  }
-  .what-title{
+
+  @media only screen and (min-width: 751px) and (max-width:1250px){
     
-    font-size: 3.5rem;
-    /* line-height: 1.08rem; */
-    letter-spacing: 0.076rem;
-    font-weight: 600;
-  }
-  .bg-color-msg{
-    font-size: 1.1rem;
+    .bg-black-msg{
+      font-size: 1.3rem;
+    }
     
+    .what-text{
+      width: 60%;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+    .what-text, .bg-color-msg{
+      font-size: 1.1rem;
+    }
+    
+  }  
+   
+
+  @media only screen and (min-width: 1251px){
+    
+    .aaa-div{
+      padding: 0 20rem;
+    }
+    .bg-black-title{
+      font-size: 4rem;
+    }
+    .bg-black-msg{
+      font-size: 1.6rem;
+    }
+    .pen{
+      max-width: 22vw;
+    }
+    .aaa-div > h2{
+      font-size: 1.5rem;
+    }
+    .what-section, .why-section{
+      padding-left: 20%;
+      padding-right: 15%;
+    }
+    .what-text, .bg-color-msg{
+      font-size: 1.2rem;
+    }
+    .why-inner{
+      margin: 10rem 0;
+    }
+    .why-msg, .icon-msg{
+      font-size: 1.1rem;
+    }
+    .happy-quote{
+      margin: 10rem;
+    }
+    .bg-color{
+      padding: 5% 25%;
+    }
+    .what-text{
+      width: 60%;
+      margin-bottom: 2rem;
+    }
+    
+    
+
   }
-} 

@@ -1,3 +1,22 @@
 .article-submit-button{
   margin-left: 2px;
 }
+body main{
+  text-align: center;
+}
+#id_title{
+  font-size: 1.6rem;
+  padding: 1em 5em;
+  border: none;
+  background-color: bisque;
+  color: black;
+}
+#id_title:focus{
+  outline: none;
+}
+form{
+  margin: 0 auto;
+  display: inline-block;
+  
+  
+}

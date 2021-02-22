@@ -35,18 +35,23 @@
 
 <body>
 
-  {% if messages %}
-  {% for m in messages %}
-  {{ m }}{{ request.user.username }}
-  {% endfor %}
-  {% endif %}
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+    <li id="message_{{ forloop.counter }}"
+      {% if message.tags %} class="{{ message.tags }}"
+        {% endif %}>
+      {{ message }}
+    </li>
+    {% endfor %}
+  </ul>
+{% endif %}
 
   <header>
-    <!-- <nav>
-      <li class="nav-list-first"><a id="main-link" class="item" href="{% url 'article-index' %}">InSpire</a></li>
-    </nav> -->
     <nav class="navbar">
-      <a class="home-link" id="main-link" href="{% url 'article-index' %}"><div class="home-title">Inspire</div></a>
+
+
+      <a class="home-link" id="main-link" href="{% url 'article:index' %}"><div class="home-title">Inspire</div></a>
       <a href="#" class="toggle-button">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -54,19 +59,14 @@
       </a>
       <div class="nav-div-container">
         <ul class="menu">
+          {% if request.user.is_authenticated %}
           <li class="nav-list">
-            <a class="item1" href="#" id="gratitude-link">Gratitude<br>List</a>
+            <a class="item1" href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<br>List</a>
           </li>
+          {% endif %}
           <li class="nav-list">
-            <a class="item1" href="{% url 'article-list' %}" id="journal-link">My<br>Journal</a>
+            <a class="item1" href="{% url 'article:list' %}" id="journal-link">My<br>Journal</a>
           </li>
-          
-          <!-- <li class="nav-list">
-            <a class="item1"  href="{% url 'quotes:index' %}"id="quote-link">Quote<br>List</a>
-          </li> -->
-          <!-- <li class="nav-list">
-            <a class="item1" href="{% url 'value:index' %}" id="value-link">My<br>Values</a>
-          </li> -->
           <!-- ADMIN -->
           {% if request.user.is_superuser %}
           <li class="nav-list">
@@ -96,17 +96,24 @@
     </nav>
     </header>
 
+
+
   <main>
     {% block content %}
     {% endblock %}
   </main>
+
+
 
   <footer>
     {% block footer %}
     {% endblock %}
   </footer>
   
-  <p class="copy-right"><span class="copy-symbol">&copy </span>Inspire 2021</p>
-</body>
 
+
+  <p class="copy-right"><span class="copy-symbol">&copy </span>Inspire 2021</p>
+
+
+</body>
 </html>

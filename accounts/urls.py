@@ -15,7 +15,7 @@ urlpatterns = [
 
     path('login/', account_views.LoginFormView.as_view(), name='login'),
     path('logout/', views.LogoutView.as_view(), name='logout'),
-    path('signup/', account_views.SignUpView.as_view(), name='signup2'),
+    # path('signup/', account_views.SignUpView.as_view(), name='signup2'),
     path('custom_signup/', account_views.CustomSignUp, name='signup'),
     # User Change Password
 

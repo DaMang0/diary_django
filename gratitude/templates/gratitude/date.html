@@ -1,0 +1,22 @@
+{% extends 'diary/base.html' %}
+
+{% block css %}
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+  <p>Date Page</p> 
+  {% if todays_list %}
+    <ul>
+      {% for gratitude_list in todays_list %}
+      <li>{{ gratitude_list.title }}</li>
+    
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>No Entry So Far.</p>
+  {% endif %}
+
+{% endblock %}

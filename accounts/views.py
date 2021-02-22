@@ -13,19 +13,19 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create your views here.
-def SignUp(request):
-  if request.method == 'POST':
-    form = SignUpForm(request.POST)
-    if form.is_valid():
-      form.save()
-      username = form.cleaned_data.get('username')
-      Rpassword = form.cleaned_data.get('password')
-      user = authenticate(username=username, password=Rpassword)
-      login(request, user)
-      return redirect('article-list')
-  else:
-    form = UserCreationForm()
-  return render(request, 'registration/signup.html', {'form': form})
+# def SignUp(request):
+#   if request.method == 'POST':
+#     form = SignUpForm(request.POST)
+#     if form.is_valid():
+#       form.save()
+#       username = form.cleaned_data.get('username')
+#       Rpassword = form.cleaned_data.get('password')
+#       user = authenticate(username=username, password=Rpassword)
+#       login(request, user)
+#       return redirect('article:list')
+#   else:
+#     form = UserCreationForm()
+#   return render(request, 'registration/signup.html', {'form': form})
 
 def CustomSignUp(request):
   if request.method == 'POST':
@@ -38,15 +38,15 @@ def CustomSignUp(request):
   context = {'form': form}
   return render(request, 'registration/custom_register.html', context)
 
-class SignUpView(SuccessMessageMixin, CreateView):
-  form_class = SignUpForm
-  template_name = 'registration/signup.html'
-  success_url = reverse_lazy('login')
-  # success_message = "%(username)s was created successfully"
+# class SignUpView(SuccessMessageMixin, CreateView):
+#   form_class = SignUpForm
+#   template_name = 'registration/signup.html'
+#   success_url = reverse_lazy('login')
+#   # success_message = "%(username)s was created successfully"
 
-  def get_success_message(self, cleaned_data):
-    print(cleaned_data)
-    return "Account Created!"
+#   def get_success_message(self, cleaned_data):
+#     print(cleaned_data)
+#     return "Account Created!"
 
 
 class LoginFormView(SuccessMessageMixin, LoginView):

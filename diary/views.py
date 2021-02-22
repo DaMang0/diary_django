@@ -3,10 +3,19 @@ from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import Article, RichTextArticle
 from django.urls import reverse_lazy
-
+from datetime import date
 class ArticleIndex(TemplateView):
   model = Article
   template_name = 'diary/index.html'
+
+  def get_context_data(self, **kwargs):
+
+    today = date.today()
+    context = super().get_context_data(**kwargs)
+    context['year'] = today.year
+    context['month'] = today.month
+    context['day'] = today.day
+    return context
 
 class ArticleListView(ListView):
   model = Article
