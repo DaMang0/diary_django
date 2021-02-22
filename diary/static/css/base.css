@@ -47,14 +47,11 @@ body::-webkit-scrollbar-thumb {
   margin: 0px;
 }
 .home-title{
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  padding: 1rem;
+  font-weight: 800;
+  padding: 1em;
 }
-/* .home-title:hover{
-  color: rgb(185, 145, 96);
-} */
 .nav-list {
   list-style: none;
 

@@ -52,29 +52,22 @@
 
 
       <a class="home-link" id="main-link" href="{% url 'article:index' %}"><div class="home-title">Inspire</div></a>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
+      
       <div class="nav-div-container">
+
         <ul class="menu">
           {% if request.user.is_authenticated %}
           <li class="nav-list">
             <a class="item1" href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<br>List</a>
           </li>
-          {% endif %}
           <li class="nav-list">
             <a class="item1" href="{% url 'article:list' %}" id="journal-link">My<br>Journal</a>
           </li>
-          <!-- ADMIN -->
-          {% if request.user.is_superuser %}
-          <li class="nav-list">
-            <a class="item1" href="{% url 'admin:index' %}" id="admin-link">ADMIN</a>
-          </li>
           {% endif %}
         </ul>
+
       </div>
+
       <div class="button-div">
         <!-- IF LOG IN  -->
         {% if request.user.is_authenticated %}

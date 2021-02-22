@@ -46,14 +46,17 @@ body{
 .bg-black-title{
   font-size: 2.8rem;
   font-weight: 800;
-  padding-right: 1em;
+  padding: 0 .25em;
+  padding-right: .5em;
+  background-color: white;
+  color: #264f7b;
   border-bottom: 3px solid white;
+  border-radius: 2px;
   display: inline-block;
 }
 .bg-black-msg{
   color: 	#fff;
   
-  font-size: 1.7rem;
   line-height: 2rem;
   letter-spacing: normal;
   font-weight: 400;
@@ -65,9 +68,12 @@ body{
 .bg-black-msg:not(:first-of-type){
   border-left: 4px solid maroon;
   padding-left: 1rem;
+  font-size: 1.25rem;
 }
 .bg-black-msg:first-of-type{
-  color: rgba(255, 255, 46, .85);
+  color: #FFBC1B;
+  font-weight: 600;
+  font-size: 2rem;
 }
 .pen{
   display: block;

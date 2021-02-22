@@ -1,22 +1,26 @@
 {% extends 'diary/base.html' %}
+{% load static %}
 
 {% block css %}
+<link rel="stylesheet" href="{% static 'gratitude/date.css' %}">
 {% endblock %}
 
 {% block title %}
 {% endblock %}
 
 {% block content %}
-  <p>Date Page</p> 
+  
+<h2 class="date-page-header">What do you feel grateful for today?</h2>
   {% if todays_list %}
     <ul>
+      
       {% for gratitude_list in todays_list %}
       <li>{{ gratitude_list.title }}</li>
     
     {% endfor %}
     </ul>
   {% else %}
-    <p>No Entry So Far.</p>
+    <p>You have no entry for today.</p>
   {% endif %}
 
 {% endblock %}
