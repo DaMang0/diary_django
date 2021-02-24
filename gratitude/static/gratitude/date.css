@@ -2,26 +2,96 @@ main {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
 }
-.date-page-header{
-  font-size: 1.6rem;
-  text-align: center;
-  font-weight: 600;
-  margin-top: 5rem;
-  letter-spacing: 0.08rem;
-}
-body main ul {
-  list-style: decimal;
-  border-top: 5px solid #dfc970;
+form{
   width: 50vw;
   margin: 0 auto;
+  position: relative;
+}
+.days-container > a {
+  display: block;
+  text-decoration: none;
+}
+.days-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+label, input{
+  display: block;
+}
+.title-label{
+  margin-top: 4rem;
+  margin-bottom: .4rem;
+  font-size: 1.1rem;
+  
+}
+#id_title{
+  font-size: 1.25rem;
+  color: black;
+  padding: 1.25rem 1.5rem;
+  width: 50vw;
+  border-radius: 4px;
+  border: 2px solid rgba(16, 143, 221, .7);
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.submit-btn{
+  padding: .5em 2em;
+  border: none;
+  border-radius: 9999px;
+  background-color: rgb(29, 161, 242);
+  transition-duration: 150ms;
+  transition-property: background-color, transform;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  right: 0;
+}
+.submit-btn:hover{
+  background-color: rgb(13, 135, 211);
+  transform: scale(1.1);
+}
+
+.la-plus{
+  font-size: 1.6rem;
+  color: white;
+}
+
+body main ul {
+  list-style: decimal;
+  margin: 0 auto;
+  padding: 0 5rem;
+  padding-left: 15%;
 }
 body main li:first-of-type{
   margin-top: 2.5rem;
 }
 body main li {
-  font-size: 1.2rem;
-  padding: 2em 1em;
-  border-bottom: 1px solid rgb(240, 240, 240);
-  
-  
+  font-size: 1.15rem;
+  /* padding: 1.25em 1em; */
+  padding-bottom: 2em;
+  padding-left: 2.5em;
+}
+.list-title{
+  border-bottom: 5px solid#fde481;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+.date-wrap{
+  display: flex;
+  align-items: center;
+}
+
+.date-date{
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 4px;
+}
+.date-month{
+  font-weight: 600;
+}
+.date-month, .date-year{
+  margin: 0;
 }

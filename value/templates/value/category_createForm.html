@@ -1,9 +1,0 @@
-<form method="post">{% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Submit">
-</form>
-  {% for object in object_list %}
-<ul>
-  <li>{{ object.name }}</li>
-  {% endfor %}
-</ul>

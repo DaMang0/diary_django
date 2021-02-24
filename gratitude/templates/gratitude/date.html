@@ -9,18 +9,61 @@
 {% endblock %}
 
 {% block content %}
-  
-<h2 class="date-page-header">What do you feel grateful for today?</h2>
+<form method="POST">{% csrf_token %}
+  <p class="url-path">URL path: {{ request.path }}</p>
+  <div class="days-container">
+    <a href="{% url 'gratitude:date' yesteryear yestermonth yesterday %}">Previous Day</a>
+    <a href="{% url 'gratitude:date' year month day %}">TODAY.</a>
+    <a href="{% url 'gratitude:date' tomorrowyear tomorrowmonth tomorrowday %}">Next Day</a>
+  </div>
+  <label class="title-label" for="id_title">What do you feel grateful for?</label>
+  {{ form.title }}
+  <button class="submit-btn" type="submit"><i class="las la-plus"></i></button>
+</form>
+
   {% if todays_list %}
     <ul>
       
+      <div class='date-wrap'>
+
+        <div class="date-container-1">
+          <p class="date-date">{{ custom_page_date.day }}</p>
+        </div>
+
+        <div class="date-container-2">
+          <p class="date-month">{{ custom_page_date.month }}</p>
+          <p class="date-year">{{ custom_page_date.year }}</p>
+        </div>
+
+      </div>
+
+      <h2 class="list-title">Gratitude List</h2>
       {% for gratitude_list in todays_list %}
       <li>{{ gratitude_list.title }}</li>
     
     {% endfor %}
     </ul>
   {% else %}
-    <p>You have no entry for today.</p>
+  <div class='date-wrap'>
+
+    <div class="date-container-1">
+      <p class="date-date">19</p>
+    </div>
+
+    <div class="date-container-2">
+      <p class="date-month">Feb</p>
+      <p class="date-year">2020</p>
+    </div>
+
+  </div>
+  <p>You have no entry for today.</p>
   {% endif %}
+
+{% endblock %}
+
+{% block footer %}
+  <script>
+    document.getElementById('id_title').setAttribute('placeholder', "I'm grateful today to have food on the table.")
+  </script>
 
 {% endblock %}
