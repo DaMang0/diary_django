@@ -10,6 +10,11 @@ form{
 .days-container > a {
   display: block;
   text-decoration: none;
+  color: rgb(0, 124, 201);
+  padding-bottom: 2px;
+}
+.days-container > a:hover {
+  text-decoration: underline;
 }
 .days-container{
   display: flex;
@@ -25,11 +30,10 @@ label, input{
   
 }
 #id_title{
-  font-size: 1.25rem;
-  color: black;
+  font-size: 1.1rem;
   padding: 1.25rem 1.5rem;
   width: 50vw;
-  border-radius: 4px;
+  border-radius: 35px;
   border: 2px solid rgba(16, 143, 221, .7);
   outline: none;
   margin-bottom: 1rem;
@@ -70,6 +74,10 @@ body main li {
   /* padding: 1.25em 1em; */
   padding-bottom: 2em;
   padding-left: 2.5em;
+  
+}
+.gratitude-item::first-letter{
+  text-transform: capitalize;
 }
 .list-title{
   border-bottom: 5px solid#fde481;

@@ -10,13 +10,13 @@
 
 {% block content %}
 <form method="POST">{% csrf_token %}
-  <p class="url-path">URL path: {{ request.path }}</p>
+  
   <div class="days-container">
-    <a href="{% url 'gratitude:date' yesteryear yestermonth yesterday %}">Previous Day</a>
-    <a href="{% url 'gratitude:date' year month day %}">TODAY.</a>
-    <a href="{% url 'gratitude:date' tomorrowyear tomorrowmonth tomorrowday %}">Next Day</a>
+    <a href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Previous Day</a>
+    <a href="{% url 'gratitude:date' today.year today.month today.day %}">TODAY.</a>
+    <a href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next Day</a>
   </div>
-  <label class="title-label" for="id_title">What do you feel grateful for?</label>
+  <!-- <label class="title-label" for="id_title">What do you feel grateful for?</label> -->
   {{ form.title }}
   <button class="submit-btn" type="submit"><i class="las la-plus"></i></button>
 </form>
@@ -39,7 +39,16 @@
 
       <h2 class="list-title">Gratitude List</h2>
       {% for gratitude_list in todays_list %}
-      <li>{{ gratitude_list.title }}</li>
+      <li class="gratitude-item">{{ gratitude_list.title }}</li>
+      <a href="{% url 'gratitude:update' gratitude_list.pk %}">Edit</a>
+      
+      <form action="/gratitude/delete/{{gratitude_list.pk}}/" method="post">{% csrf_token %}
+        
+        <button class="delete-btn" onclick="return confirm('Are you sure you want to delete this list?')">
+          <i class="fas fa-times"></i>
+        </button>
+      </form>
+      
     
     {% endfor %}
     </ul>
@@ -47,12 +56,12 @@
   <div class='date-wrap'>
 
     <div class="date-container-1">
-      <p class="date-date">19</p>
+      <p class="date-date">{{ custom_page_date.day }}</p>
     </div>
 
     <div class="date-container-2">
-      <p class="date-month">Feb</p>
-      <p class="date-year">2020</p>
+      <p class="date-month">{{ custom_page_date.month }}</p>
+      <p class="date-year">{{ custom_page_date.year }}</p>
     </div>
 
   </div>
@@ -63,7 +72,7 @@
 
 {% block footer %}
   <script>
-    document.getElementById('id_title').setAttribute('placeholder', "I'm grateful today to have food on the table.")
+    document.getElementById('id_title').setAttribute('placeholder', "I'm grateful...")
   </script>
 
 {% endblock %}

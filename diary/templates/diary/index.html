@@ -12,34 +12,59 @@
 <!-- Main Section -->
 {% block content %}
 
-<section class="sec-1">
-  <div class="bg-black">
-    <div class="msg-wrap">
-      <a class="gratitude-list-link" href="{% url 'gratitude:date' year month day %}">Today's Gratitude List</a>
-      <h2 class="bg-black-title">FOCUS ON THE GOOD.</h2>
-      <p class="bg-black-msg">What do you feel grateful for today.</p>
-      <p class="bg-black-msg">A platform where you can focus solely on yourself and the things you love.</p>
-      <p class="bg-black-msg">Keep track and focus on good things in life.</p>
-      
-      <!-- <p class="bg-light-msg" style="color: yellow;">A Product that is built really well.</p>
-      <p class="bg-light-msg" style="color: yellow;">To make customer feel delighted, otherwise why would they use it again.</p>
-      <p class="bg-light-msg" style="color: yellow;">Delightfulness based on how much they use it.</p>
-      <p class="bg-light-msg" style="color: yellow;">Implement Streaks</p> -->
-      
+<section class="main-section">
+  <div>
+    <div>
+      <h3 class="main-title">FOCUS ON THE GOOD.</h3>
     </div>
     <img class="pen" src="{% static 'images/pen-bg.jpg' %}" alt="pencil background">
   </div>
 </section>
 
-<div>
-  <h2 class="platform">Your platform, that it.</h2>
-</div>
+<section class="new-container">
+  <div class="new-text-wrapper">
+    <h4 class="new-text">Don't have a car?</h4>
+    <h4 class="new-text">Get a flexible rental with Lyft Express Drive</h4>
+  </div>
+  <div class="new-icon-container">
+    <ul class="new-icon-list">
+      <li class="new-icon-item">
+        <i class="las la-otter"></i>
+        <div class="new-icon-text-wrapper">
+          <p class="new-icon-title">Gratitude List</p>
+          <p class="new-icon-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aliquam!</p>
+        </div>
+      </li>
+      <li class="new-icon-item">
+        <i class="las la-otter"></i>
+        <div class="new-icon-text-wrapper">
+          <p class="new-icon-title">Journal</p>
+          <p class="new-icon-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aliquam!</p>
+        </div>
+      </li>
+      <li class="new-icon-item">
+        <i class="las la-otter"></i>
+        <div class="new-icon-text-wrapper">
+          <p class="new-icon-title">More to come</p>
+          <p class="new-icon-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aliquam!</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="last-div">
+    <p class="last-div-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo, quis perspiciatis cum ratione alias minus veritatis amet tempora esse.</p>
+  </div>
+</section>
 
-<section class="what-section">
-  <div class="what-container">
-    <h2 class="what-title">What is Inspire?</h2>
-    <p class="what-text">Inspire is a platform built to help you focus on what matters most to you.</p>
-    <a href="{% url 'signup' %}" class="get-start--btn get-start--link">Get a free account</a>
+
+<section class="orange-section">
+  <div class="orange-container">
+    <h2 class="orange-bg-title">Wait.. what is Mind LAB?</h2>
+    <p class="orange-bg-text">Mind Lab is a platform built to help you focus on what matters most to you.</p>
+    <div class="get-start-container">
+      <a href="{% url 'signup' %}" class="get-start--btn get-start--link">Get a free account</a>
+    </div>
+    
     
   </div>   
 </section>
@@ -48,29 +73,33 @@
   <!-- <h2 class="platform">Your platform, that it.</h2> -->
 </div>
 
-
-
-<section class="double-white-sec">
-  <div class="double-white-wrapper">
-    <!-- <div>
-      <h2 class="title-test title-test-1">A platform made for you, that it.</h2>
-    </div> -->
-    <div>
-      <ul class="no-list title-test title-test-2">
-        <li class="no-item">No Spam.</li>
-        <li class="no-item">No Program</li>
-        <li class="no-item">No Coaching</li>
-        <li class="no-item">No Junk</li>
-      </ul>
-      
-    </div>
-  
+<section class="second-new-section">
+  <div>
+    <h3>Mind LAB</h3>
+    <ul>
+      <li>
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Earn with your mind.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laborum dignissimos illo et.</p>
+      </li>
+      <li>
+        <i class="fas fa-brain"></i>
+        <h3>You become what you feed your mind.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laborum dignissimos illo et.</p>
+      </li>
+      <li>
+        <i class="fas fa-lightbulb"></i>
+        <h3>Happiness is a choice.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laborum dignissimos illo et.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
+
 <section class="feature-section">
   <div class="feature-container">
-    <h2 class="feat">Benefits</h2>
+    <h2 class="feat-title">Benefits</h2>
     <div class="why-wrapper">
 
       <div class="why-inner">
@@ -117,18 +146,33 @@
   </div>
 </section>
 
-<div class="happy-quote-container">
-  <p class="happy-quote">Happiness is a skill you can develop.</p>
-</div>
-
-
-<section class="why-section">
-  <div class="why-container">
-    <h2 class="what-title">Why Inspire Works?</h2>
-    <h2 class="what-text">Inspire can help you refocus on what you have instead of what you lack. Write down few things you're grateful for each day will increase your awareness on the positive outcome and never again lose sight of the all the things you care for.</h2>
+<section class="blue-section">
+  <div class="blue-container">
+    <h2 class="blue-bg-title">Why Inspire Works?</h2>
+    <h2 class="blue-bg-text">Inspire can help you refocus on what you have instead of what you lack. Write down few things you're grateful for each day will increase your awareness on the positive outcome and never again lose sight of the all the things you care for.</h2>
     <a href="#">Learn more.</a>
   </div>
 </section>
+
+
+<div class="platform-container">
+  <h2 class="platform">Your platform, that it.</h2>
+</div>
+
+<div class="double-white-container">
+  <ul class="no-list title-test title-test-2">
+    <li class="no-item">No Spam.</li>
+    <li class="no-item">No Program</li>
+    <li class="no-item">No Coaching</li>
+    <li class="no-item">No Junk</li>
+  </ul>
+  
+</div>
+
+
+
+
+
 
 
 

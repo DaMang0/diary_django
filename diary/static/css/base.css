@@ -21,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 100%;
+  height: calc(100% - 10px);
   overflow-x: hidden;
 }
 
@@ -348,19 +349,7 @@ body::-webkit-scrollbar-thumb {
   height: 7vh;
   text-decoration: none;
 }
-.copy-right{
-  width: 200px;
-  color: #000;
-  opacity: .4;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 2vw;
-  text-align: center;
-  
-}
+
 
     
     @media all and (min-width:750px){

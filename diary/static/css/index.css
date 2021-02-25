@@ -8,6 +8,9 @@ html{
   padding: 0;
   box-sizing: border-box;
 }
+header{
+  display: none;
+}
 main{
   margin: 0;
   padding: 0;
@@ -16,116 +19,130 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: black;
 }
-.sec-1{
-  background-color: #222;
-  color: white;
-  
-}
-.bg-black{
-  min-width: 100%;
-  padding-top: 4.5rem;
-  padding-bottom: 5px;
-  padding-left: 5%;
-}
-.gratitude-list-link{
-  text-decoration: none;
-  color: white;
-  display: block;
-  width: auto;
-}
-.gratitude-list-link:hover{
-  text-decoration: underline;
-}
-.msg-wrap{
-  /* position: relative;
-  top: 4.5rem; */
-  text-transform: none;
-  /* margin-left: 5%; */
-}
-
-.bg-black-title{
-  font-size: 2.8rem;
-  font-weight: 800;
-  padding: 0 .25em;
-  padding-right: .5em;
-  background-color: white;
-  color: #264f7b;
-  border-bottom: 3px solid white;
-  border-radius: 2px;
-  display: inline-block;
-}
-.bg-black-msg{
-  color: 	#fff;
-  
-  line-height: 2rem;
-  letter-spacing: normal;
-  font-weight: 400;
+.main-section{
   position: relative;
-  text-align: left;
-  max-width: 70%;
-  
+  background-color: rgb(246, 239, 232);
+  min-height: 100vh; 
 }
-.bg-black-msg:not(:first-of-type){
-  border-left: 4px solid maroon;
-  padding-left: 1rem;
-  font-size: 1.25rem;
-}
-.bg-black-msg:first-of-type{
-  color: #FFBC1B;
-  font-weight: 600;
-  font-size: 2rem;
+.main-title{
+  margin: 0;
 }
 .pen{
+  position: absolute;
+  bottom: 0;
   display: block;
   max-width: 30%;
-  margin-left: 67%;
+  /* margin-left: 67%; */
+  right: 10px;
   border-radius: 2px;
 }
-.aaa{
+
+.new-container{
+  background-color: #f3f3f5;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 1rem;
+}
+.new-text-wrapper{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.new-text{
+  color: #373a3c;;
+  font-size: 2rem;
+  line-height: 23px;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+.new-icon-list{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+}
+.new-icon-item{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5% 2%;
-  background-color: #f2f2f2;
 }
-.aaa-div{
-  padding:  0 2rem;
+.new-icon-item > i {
+  align-self: flex-start;
+  font-size: 5rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-top: 10px;
 }
-.aaa-div > h2 {
-  font-size: 1rem;
+.new-icon-title, .new-icon-text{
+  line-height: 22px;
+}
+.new-icon-title{
+  font-size: 1.45rem;
   font-weight: 600;
 }
-
-
-
-.what-section, .why-section{
-  min-width: 100%;
-  padding: 10% 5%;
+.new-icon-text{
+  font-size: 1.1rem;
 }
-.what-section{
+.last-div{
+  padding: 0 1rem;
+  padding-top: 1rem;
+}
+.last-div > p {
+  font-size: 1.2rem;
+  line-height: 17px;
+}
+.orange-section{
   background: #FFD36A;
 }
-.what-container, .why-container{
+.blue-section{
+  background-color: #7eb9f9;
+}
+.orange-section, .blue-section{
+  min-width: 100%;
+  padding: 4rem 1rem;
+}
+
+.orange-container, .blue-container{
   font-size: 1rem;
   margin: 0 auto;
+  padding: 0 1rem;
   text-align: left;
 }
-.what-title{
-  font-size: 2.6rem;
-  font-family: 'Source Serif Pro', serif;
+.orange-bg-title, .blue-bg-title{
+  font-size: 1.8rem;
 }
-.what-text{
+.orange-bg-text, .blue-bg-text{
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 400;
   max-width: 80%;
   line-height: 1.7;
 }
+.second-new-section{
+  padding: 1.5rem 1rem;
+}
+.second-new-section ul {
+  
+  padding: 0 1rem;
+  list-style: none;
+}
+.second-new-section .fas {
+  font-size: 5rem;
+}
+.second-new-section p {
+  padding-bottom: 2rem;
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom: 1px solid #efeff1;
+}
+
+
+.platform-container{
+  padding: 2rem;
+  background-color: #f3f3f5;
+}
 .platform{
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   text-align: center;
-  padding: 2em 1em;
-  font-weight: 800;
+  letter-spacing: .04rem;
+  font-weight: 600;
+  margin: 0;
 }
 .split{
   display: flex;
@@ -136,30 +153,16 @@ body{
   text-align: center;
   color: rgb(75, 76, 77);
 }
-.why-section{
-  background-color: #7eb9f9;
-}
-.quote-wrapper {
-  margin: 5rem auto ;
-  text-align: left;
-}
 
-.double-white-sec{
-  margin: 2.5rem 0;
-}
-
-.feat{
+.feat-title{
   padding: 1rem 2rem;
-  /* background-color: #444; */
   border: 4px solid #444;
   font-size: 1rem;
   display: inline-block;
   font-weight: 600;
   color: #444;
-  
   background-color: #f2f2f2;
   border-radius: 3px;
-  
 }
 .icon-wrapper{
   margin: 0 auto;
@@ -167,27 +170,16 @@ body{
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  
 }
 .icon-inner{
   margin: 0 2rem;
   width: 30%;
 }
-
 .icon-msg{
   font-size: 1.3rem;
   color: rgb(75, 76, 77);
 }
 
-/* Three icons */
-.fas{
-  transition: transform 400ms ease-in-out;
-  padding-bottom: 2rem;
-}
-/* icon hover */
-.fas:hover{
-  transform: scale(1.5);
-}
 .why-wrapper{
   margin: 5rem auto;
 }
@@ -216,26 +208,6 @@ body{
 
 }
 
-.happy-quote{
-  margin: 5rem 0;
-  line-height: 2.5rem;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 600;
-  font-style: italic;
-}
-.happy-quote::before{
-  content: open-quote;
-}
-.happy-quote::after{
-  content: close-quote;
-}
-.happy-quote::before, .happy-quote::after{
-  display: inline-block;
-  vertical-align: bottom;
-  color: #FFD36A;
-  font-size: 3em;
-}
 
 .brain-split-container{
   text-align: right;
@@ -245,17 +217,6 @@ body{
   align-self: center;
 }
 
-
-.fa-brain{
-  color: rgb(242, 158, 158);
-  transition-property: transform, color;
-  transition-duration: 350ms;
-  transition-timing-function: ease-in-out;
-}
-.fa-brain:hover {
-  color: rgb(255, 132, 132);
-  transform: scale(1.35);
-}
 
 .already-link{
   display: block;
@@ -270,6 +231,10 @@ body{
 .already-link:hover{
   text-decoration: underline;
   opacity: 1;
+}
+.get-start-container{
+  display: flex;
+  justify-content: flex-end;
 }
 .get-start--link{
   text-decoration: none;
@@ -346,10 +311,6 @@ body{
   position: relative;
   top: 20%;
 }
-.platform{
-  position: relative;
-  top: 25%;
-}
 .traveling{
   position: relative;
   top: 35%;
@@ -407,7 +368,7 @@ body{
 .no-item{
   padding: 0.25rem .5rem;
 }
-.double-white-sec{
+.double-white-container{
   max-width: 100%;
   margin: 0 auto;
 }
@@ -430,17 +391,12 @@ body{
 }
 
   @media only screen and (min-width: 751px) and (max-width:1250px){
-    
-    .bg-black-msg{
-      font-size: 1.3rem;
-    }
-    
-    .what-text{
+    .orange-bg-text{
       width: 60%;
       padding-bottom: 2rem;
       margin-bottom: 2rem;
     }
-    .what-text, .bg-color-msg{
+    .orange-bg-text, .bg-color-msg{
       font-size: 1.1rem;
     }
     
@@ -449,26 +405,15 @@ body{
 
   @media only screen and (min-width: 1251px){
     
-    .aaa-div{
-      padding: 0 20rem;
-    }
-    .bg-black-title{
-      font-size: 4rem;
-    }
-    .bg-black-msg{
-      font-size: 1.6rem;
-    }
     .pen{
       max-width: 22vw;
     }
-    .aaa-div > h2{
-      font-size: 1.5rem;
-    }
-    .what-section, .why-section{
+    
+    .orange-section, .blue-section{
       padding-left: 20%;
       padding-right: 15%;
     }
-    .what-text, .bg-color-msg{
+    .orange-bg-text, .bg-color-msg{
       font-size: 1.2rem;
     }
     .why-inner{
@@ -477,13 +422,10 @@ body{
     .why-msg, .icon-msg{
       font-size: 1.1rem;
     }
-    .happy-quote{
-      margin: 10rem;
-    }
     .bg-color{
       padding: 5% 25%;
     }
-    .what-text{
+    .orange-bg-text{
       width: 60%;
       margin-bottom: 2rem;
     }
