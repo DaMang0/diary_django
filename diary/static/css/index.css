@@ -5,7 +5,7 @@ html{
   box-sizing: border-box;
 }
 header{
-  display: none;
+  display: block;
 }
 main{
   margin: 0;
@@ -18,14 +18,13 @@ body{
 .main-section{
   position: relative;
   background-color: hsl(38, 30%, 95%);
-  
+  padding: 15rem 1rem;
   min-height: 80vh; 
 }
-.main-text-wrap{
-  padding: 4rem 2rem;
-}
+
 .main-web-title{
-  font-weight: 900;
+  font-weight: 700;
+  font-size: 1.5rem;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -35,8 +34,49 @@ body{
   letter-spacing: -1.5px;
   padding-bottom: 1rem;
 }
-.already-link{
+.main-text{
+  font-size: 1.6rem;
+  margin: 0;
+  padding-bottom: 4rem;
+  /* line-height: 22px; */
+}
+.mind-lab{
+  color: #2565aa;
+}
+.signup-container{
+  padding-top: 1rem;
+}
+.get-start--link{
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #595959;
+  border: none;
+  border-radius: 3px;
+  padding: 1.25rem 2.5rem;
   
+  background: linear-gradient(to right, rgb(214, 214, 214) 50%, #444 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition-property: background-position, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+.get-start--link:hover{
+  background-position: left bottom;
+  color: #000; 
+}
+.already-link{
+  position: absolute;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+  display: block;
   text-decoration: none;
   color: #2565aa;
 }
@@ -105,6 +145,7 @@ body{
 }
 .orange-section{
   background: #FFD36A;
+  height: 30vh;
 }
 .blue-section{
   background-color: #7eb9f9;
@@ -134,8 +175,7 @@ body{
   padding: 1.5rem 1rem;
 }
 .second-new-section ul {
-  
-  padding: 0 1rem;
+  padding: 2rem 1rem;
   list-style: none;
 }
 .second-new-section .fas {
@@ -164,36 +204,6 @@ body{
   display: flex;
 }
 
-
-
-
-
-.get-start--link{
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #fff;
-  background-color: #707070;
-  border: none;
-  border-radius: 3px;
-  padding: 1.25rem 2.5rem;
-  
-  
-
-  background: linear-gradient(to right, rgb(214, 214, 214) 50%, #444 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition-property: background-position, color;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
-}
-
-.get-start--btn:hover{
-  background-position: left bottom;
-  color: #000; 
-}
 
 .bg-color{
   

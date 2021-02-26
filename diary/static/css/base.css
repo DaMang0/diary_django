@@ -37,6 +37,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .navbar{
+  
   font-family: 'Poppins', sans-serif;
   display: flex;
   position: relative;
