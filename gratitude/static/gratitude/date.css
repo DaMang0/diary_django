@@ -79,6 +79,22 @@ body main li {
 .gratitude-item::first-letter{
   text-transform: capitalize;
 }
+.gratitude-item > a {
+  text-decoration: none;
+  color: inherit;
+}
+.gratitude-item > a:hover {
+  text-decoration: underline;
+}
+.delete-btn {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+.fa-times{
+  font-size: 1.6rem;
+  opacity: .75;
+}
 .list-title{
   border-bottom: 5px solid#fde481;
   font-size: 1.6rem;

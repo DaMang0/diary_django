@@ -1,15 +1,20 @@
-.article-submit-button{
-  margin-left: 2px;
+* {
+  box-sizing: border-box;
 }
+
 body main{
   text-align: center;
 }
+label{
+  display: block;
+}
 #id_title{
-  font-size: 1.6rem;
-  padding: 1em 5em;
+  font-size: 1.4rem;
+  padding: 1em 2em;
   border: none;
-  background-color: bisque;
+  background-color: #e3e3e3;
   color: black;
+  width: 50vw;
 }
 #id_title:focus{
   outline: none;
@@ -18,5 +23,14 @@ form{
   margin: 0 auto;
   display: inline-block;
   
-  
+}
+
+
+.article-submit-button{
+  padding: .5em 2em;
+  border-radius: 4px;
+  border: none;
+}
+.article-submit-button:hover{
+  background-color: #c4c4c4;
 }

@@ -39,8 +39,8 @@
 
       <h2 class="list-title">Gratitude List</h2>
       {% for gratitude_list in todays_list %}
-      <li class="gratitude-item">{{ gratitude_list.title }}</li>
-      <a href="{% url 'gratitude:update' gratitude_list.pk %}">Edit</a>
+      <li class="gratitude-item"><a href="{% url 'gratitude:update' gratitude_list.pk %}">{{ gratitude_list.title }}</a></li>
+      <!-- <a href="{% url 'gratitude:update' gratitude_list.pk %}">Edit</a> -->
       
       <form action="/gratitude/delete/{{gratitude_list.pk}}/" method="post">{% csrf_token %}
         

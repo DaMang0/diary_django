@@ -1,0 +1,10 @@
+form{
+  margin-left: auto;
+  margin-right: auto;
+}
+form > p > input {
+  font-size: 1.3rem;
+  padding: 1rem;
+  min-width: 50vw;
+  max-width: 50vw;
+}

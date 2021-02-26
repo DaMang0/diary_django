@@ -14,16 +14,36 @@
 
 <section class="main-section">
   <div>
-    <div>
-      <h3 class="main-title">FOCUS ON THE GOOD.</h3>
+    <div class="main-text-wrap">
+      <h1 class="main-web-title">Mind Lab</h1>
+      <h3 class="main-slogan">Focus on the good.</h3>
+      <h4>Mind Lab makes it easy for you to keep track of good things in life.</h4>
+      <div>
+        <p>READY WHEN YOU ARE</p>
+        <a href="{% url 'signup' %}" class="get-start--btn get-start--link">Get a free account</a>
+        <div>
+          <a class="already-link" href="{% url 'login' %}">Already have an account?</a>
+        </div>
+      </div>
+      
     </div>
     <img class="pen" src="{% static 'images/pen-bg.jpg' %}" alt="pencil background">
   </div>
 </section>
 
-<section class="new-container">
+<section class="orange-section">
+  <div class="orange-container">
+    <h2 class="orange-bg-title">Wait.. what is Mind LAB?</h2>
+    <p class="orange-bg-text">Mind Lab is a platform built to help you focus on what matters most to you.</p>
+    
+    
+    
+  </div>   
+</section>
+
+<section class="new-section">
   <div class="new-text-wrapper">
-    <h4 class="new-text">Don't have a car?</h4>
+    <h4 class="new-text">Don't know how?</h4>
     <h4 class="new-text">Get a flexible rental with Lyft Express Drive</h4>
   </div>
   <div class="new-icon-container">
@@ -32,21 +52,21 @@
         <i class="las la-otter"></i>
         <div class="new-icon-text-wrapper">
           <p class="new-icon-title">Gratitude List</p>
-          <p class="new-icon-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aliquam!</p>
+          <p class="new-icon-text">Let gratitude change you and your brain.</p>
         </div>
       </li>
       <li class="new-icon-item">
         <i class="las la-otter"></i>
         <div class="new-icon-text-wrapper">
           <p class="new-icon-title">Journal</p>
-          <p class="new-icon-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aliquam!</p>
+          <p class="new-icon-text">Capture & Visualize ideas, recording your experience and feelings, self reflection and more..</p>
         </div>
       </li>
       <li class="new-icon-item">
         <i class="las la-otter"></i>
         <div class="new-icon-text-wrapper">
           <p class="new-icon-title">More to come</p>
-          <p class="new-icon-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aliquam!</p>
+          <p class="new-icon-text">Now you can do it all in one place.</p>
         </div>
       </li>
     </ul>
@@ -57,17 +77,7 @@
 </section>
 
 
-<section class="orange-section">
-  <div class="orange-container">
-    <h2 class="orange-bg-title">Wait.. what is Mind LAB?</h2>
-    <p class="orange-bg-text">Mind Lab is a platform built to help you focus on what matters most to you.</p>
-    <div class="get-start-container">
-      <a href="{% url 'signup' %}" class="get-start--btn get-start--link">Get a free account</a>
-    </div>
-    
-    
-  </div>   
-</section>
+
 
 <div>
   <!-- <h2 class="platform">Your platform, that it.</h2> -->
@@ -75,7 +85,8 @@
 
 <section class="second-new-section">
   <div>
-    <h3>Mind LAB</h3>
+    <h2 class="feat-title">Benefits</h2>
+   
     <ul>
       <li>
         <i class="fas fa-dollar-sign"></i>
@@ -97,59 +108,13 @@
 </section>
 
 
-<section class="feature-section">
-  <div class="feature-container">
-    <h2 class="feat-title">Benefits</h2>
-    <div class="why-wrapper">
-
-      <div class="why-inner">
-        <h3 class="why-header">Journaling</h3>
-        <p class="why-msg">Capture & Visualize ideas, recording your experience and feelings, self reflection and more..</p>
-        
-      </div>
-      <div class="why-inner">
-        <h3 class="why-header">Gratitude List</h3>
-        <p class="why-msg">Let gratitude change you and your brain.</p>
-      </div>
-
-      <div class="why-inner">
-        <h3 class="why-header">More To Come</h3>
-        <p class="why-msg">Now you can do it all in one place.</p>
-        
-      </div>
-
-    </div>
-  
-    
-  </div>
-</section>
 
 
-<section class="icon-section">
-  <div class="icon-wrapper">
-
-    <div class="icon-inner">
-      <i class="fas la-heart" style="font-size: 5rem;"></i>
-      <p class="icon-msg">Feel more positive emotions.</p>
-    </div>
-  
-    <div class="icon-inner">
-      <i class="fas la-brain" style="font-size: 5rem;"></i>
-      <p class="icon-msg">Improve cognitive performance.</p>
-    </div>
-    
-    <div class="icon-inner">
-      <i class="fas la-smile-wink" style="font-size: 5rem;"></i>
-      <p class="icon-msg">Better mind better life.</p>
-    </div>
-    
-  </div>
-</section>
 
 <section class="blue-section">
   <div class="blue-container">
     <h2 class="blue-bg-title">Why Inspire Works?</h2>
-    <h2 class="blue-bg-text">Inspire can help you refocus on what you have instead of what you lack. Write down few things you're grateful for each day will increase your awareness on the positive outcome and never again lose sight of the all the things you care for.</h2>
+    <h2 class="blue-bg-text">Inspire can help you refocus on what you have instead of what you lack. Write down few things you're grateful for each day will increase your awareness on the positive outcome and never again lose sight of the all the things you care for. gratitude is essential for Happiness.</h2>
     <a href="#">Learn more.</a>
   </div>
 </section>
