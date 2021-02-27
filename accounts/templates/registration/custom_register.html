@@ -13,7 +13,7 @@
 </head>
 <body>
   <header>
-
+    
   </header>
   <main>
     <div class="big-wrap">
@@ -26,10 +26,12 @@
       
 
       <div class="form-wrap">
-        <div>
-          <i class="fas fa-user-alt"></i>
+        <div class="bg-neon-container">
+          <div>
+            <i class="fas fa-user-alt"></i>
+          </div>
+          <h2 class="form-title">Start your free journal of Inspire</h2>
         </div>
-        <h2 class="form-title">Start your free journal of Inspire</h2>
         
         <form class="form-box" method="post" action="{% url 'signup' %}">{% csrf_token %}
           {% if form.errors %}

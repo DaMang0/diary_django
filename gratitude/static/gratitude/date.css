@@ -1,9 +1,13 @@
+body{
+  background-color: rgba(42, 42, 46, 1);
+}
+
 main {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
 }
-form{
-  width: 50vw;
+form.create-form{
+  width: 65vw;
   margin: 0 auto;
   position: relative;
 }
@@ -18,63 +22,69 @@ form{
 }
 .days-container{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+.days-container > a {
+  color: hsla(169, 45%, 35%, 100%);;
 }
 label, input{
   display: block;
 }
-.title-label{
-  margin-top: 4rem;
-  margin-bottom: .4rem;
-  font-size: 1.1rem;
-  
-}
 #id_title{
+  color: hsl(0, 0%, 50%);
   font-size: 1.1rem;
-  padding: 1.25rem 1.5rem;
-  width: 50vw;
-  border-radius: 35px;
-  border: 2px solid rgba(16, 143, 221, .7);
+  padding: .7rem 1.1rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid rgba(71, 145, 131, 1);
   outline: none;
   margin-bottom: 1rem;
 }
-
+#id_title:focus{
+  border-color: rgb(68, 181, 160);
+}
 .submit-btn{
   padding: .5em 2em;
   border: none;
   border-radius: 9999px;
-  background-color: rgb(29, 161, 242);
+  background-color: rgba(71, 145, 131, 1);
   transition-duration: 150ms;
-  transition-property: background-color, transform;
+  transition-property: background-color;
   transition-timing-function: ease-in-out;
   position: absolute;
   right: 0;
 }
 .submit-btn:hover{
-  background-color: rgb(13, 135, 211);
-  transform: scale(1.1);
+  background-color: rgb(68, 181, 160);
 }
-
 .la-plus{
-  font-size: 1.6rem;
+  font-size: 1.4em;
   color: white;
+  transition: color 150ms ease-in-out;
 }
-
-body main ul {
+.gratitude-ul{
   list-style: decimal;
   margin: 0 auto;
-  padding: 0 5rem;
-  padding-left: 15%;
-}
-body main li:first-of-type{
-  margin-top: 2.5rem;
-}
-body main li {
-  font-size: 1.15rem;
-  /* padding: 1.25em 1em; */
-  padding-bottom: 2em;
-  padding-left: 2.5em;
+  padding: 0 10rem;
   
+  background-color: white;
+}
+.list-container{
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+  padding-left: 4rem;
+}
+.la-angle-right{
+  align-self: center;
+  opacity: .4;
+}
+.gratitude-item{
+  font-size: 1.1rem;
+  display: inline-block;
+  padding: 1rem;
+}
+.gratitue-item:first-of-type{
+  margin-top: 2.5rem;
 }
 .gratitude-item::first-letter{
   text-transform: capitalize;
@@ -96,12 +106,18 @@ body main li {
   opacity: .75;
 }
 .list-title{
-  border-bottom: 5px solid#fde481;
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 0.08rem;
+  color: rgb(80, 80, 80);
+  border-bottom: 5px solid #fde481;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.155rem;
   display: inline-block;
-  padding-bottom: 1rem;
+  padding-bottom: 5px;
+  transition: color 200ms ease-in-out;
+}
+.list-title:hover{
+  color: rgb(30, 30, 30);
 }
 .date-wrap{
   display: flex;
@@ -118,4 +134,9 @@ body main li {
 }
 .date-month, .date-year{
   margin: 0;
+}
+.no-entry-msg{
+  font-size: 2.5rem;
+  /* padding-left: 15rem; */
+  text-align: center;
 }

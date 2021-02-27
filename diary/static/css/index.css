@@ -7,6 +7,7 @@ html{
 header{
   display: block;
 }
+
 main{
   margin: 0;
   padding: 0;
@@ -15,9 +16,11 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: black;
 }
+
 .main-section{
   position: relative;
   background-color: hsl(38, 30%, 95%);
+  background: #f6efe8;
   padding: 15rem 1rem;
   min-height: 80vh; 
 }

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root{
+  font-size: 62.5%;
+}
 *{
-  list-style: none;
-  font-size: 100%;
   box-sizing: border-box;
-  margin: 0;
 }
 body{
   background-color: rgb(27, 39, 49);
@@ -14,45 +14,46 @@ body > main {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
-.big-wrap{
-  display: flex;
-  margin: 5%;
-  margin-left: 10%;
-}
+
 .text-wrap{
-  margin-top: 12rem;
+  display: block;
+  padding: 1rem;
+  text-align: center;
 }
 
 .text-title{
-  
   font-size: 3.75rem;
   font-weight: 700;
   letter-spacing: 0.03rem;
-  /* line-height: 2rem; */
 }
 .text-msg{
   font-size: 1.2rem;
-  
   line-height: 2rem;
-  
 }
 .form-wrap{
   padding: 1rem;
   font-size: 1rem;
-  /* background: #fff; */
   text-align: center;
-  margin: 5% auto 1rem;
-  width: 80vw;
-  height: 720px;
-  /* border-radius: 8px; */
-  /* box-shadow: 2px 3px 5px rgb(170, 170, 170); */
+  margin: 2rem auto 1rem;
+  display:block;
+  width: 320px;
+  height: 475px;
+  overflow: auto;
+}
+.bg-neon-container{
+  color: black;
+  background: #88ffd1;
+  
+  margin: 0 auto;
+  padding: 1rem;
 }
 .fa-user-alt{
-  font-size: 1.45rem;
-  padding: 1rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 .form-title{
   font-size: 1.2rem;
+  
 }
 
 .field-wrap{
@@ -69,7 +70,7 @@ body > main {
   transition: background-color 150ms ease-in-out;
 }
 .register-btn:hover{
-  background-color: #24e959;
+  background-color: #15bf43;
 }
 .already{
   font-size: 0.75rem;
@@ -88,8 +89,14 @@ body > main {
 /* All input fields  */
 form input {
   padding: 1rem 3rem;
+  width: auto;
   
 }
+#id_first_name, #id_last_name {
+  margin: 0.2rem 0rem;
+
+}
+
 form input:focus{
   outline: none !important;
   border-width: 2px;
@@ -98,8 +105,7 @@ form input:focus{
 }
 
 .name-wrap{
-  display: flex;
-  justify-content: center;
+  display: block;
   margin: 1rem auto 1rem auto;
 }
 .name-wrap input{
@@ -111,52 +117,14 @@ form input:focus{
 .cc-container{
   margin-top: 1rem;
 }
+.no-cc-required{
+  color: rgb(201, 201, 201);
+  text-align: center;
+  padding: 20px 5px 5px;
+}
 
-@media all and (max-width: 750px) and (min-width: 250px) {
-  html{
-    font-size: 62.5%;
-  }
-  
-  .big-wrap{
-    display: block;
-    margin: 2%;
-  }
-  .text-wrap{
-    display: block;
-    padding: 1rem;
-    text-align: center;
-  }
-  .text-title{
-    font-size: 4rem;
-  }
-  .text-msg{
-    font-size: 1.5rem;
-    
-    padding: 1rem;
-    
-  }
-  .form-wrap{
-    display:block;
-    width: 320px;
-    height: 475px;
-    overflow: auto;
-  }
-  .form-wrap input {
-    width: auto;
-  }
-  .name-wrap {
-    display: block;
-  }
-  #id_first_name, #id_last_name {
-    margin: 0.2rem 0rem;
-
-  }
-  
-  .no-cc-required{
-    color: rgb(201, 201, 201);
-    text-align: center;
-    padding: 20px 5px 5px;
-    
-    
+@media all and (min-width:750px){
+  :root {
+    font-size: 100%;
   }
 }
