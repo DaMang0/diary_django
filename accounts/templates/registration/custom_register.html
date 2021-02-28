@@ -19,7 +19,7 @@
     <div class="big-wrap">
 
       <div class='text-wrap'>
-        <h1 class="text-title">Inspire</h1>
+        <h1 class="text-title">Mind Lab</h1>
         <!-- <h2 class="text-msg">Inspire helps you connect and share with the people in your life.</h2> -->
         <p class="text-msg">The best time to start is now.</p>
       </div>
@@ -39,25 +39,26 @@
           {% endif %}
           <div class="field-wrap">
             <!-- <p class="username-label form-label">{{ form.username.label_tag }}</p> -->
+            {{  form.username.label_tag }}
             {{ form.username }}
           </div>
           <div class="field-wrap">
-            <!-- <p class="email-label form-label">{{ form.email.label_tag }}</p> -->
+            {{ form.email.label_tag }}
             {{ form.email }}
           </div>
           <div class="field-wrap">
-            <!-- <p class="password1-label form-label">{{ form.password1.label_tag }}</p> -->
+            {{ form.password1.label_tag }}
             {{ form.password1 }}
           </div>
           <div class="field-wrap">
-            <!-- <p class="password2-label form-label">{{ form.password2.label_tag }}</p> -->
+            {{ form.password2.label_tag }}
             {{ form.password2 }}
           </div>
     
           <div class='name-wrap'>
-            <!-- <p class="fname-label form-label">{{ form.first_name.label_tag }}</p> -->
+            {{ form.first_name.label_tag }}
               {{ form.first_name }}
-            <!-- <p class="lname-label form-label">{{ form.last_name.label_tag }}</p> -->
+            {{ form.last_name.label_tag }}
               {{ form.last_name }}
           </div>
           
@@ -68,19 +69,21 @@
             <p class="no-cc-required">No credit card & payment required.</p>
           </div>
           
-          <!-- <input type="submit" value="Create"> -->
+          <div class="policy-container">
+            <p class="policy-text">by signing up you agree to our terms data policy and cookies policy</p>
+          </div>
         </form>
       </div>
     </div>
   </main>
   <footer>
     <script>
-      document.getElementById('id_username').setAttribute('placeholder', "Username")
-      document.getElementById('id_email').setAttribute('placeholder', "Email address")
-      document.getElementById('id_password1').setAttribute('placeholder', "Password")
-      document.getElementById('id_password2').setAttribute('placeholder', "Confirmation Password")
-      document.getElementById('id_first_name').setAttribute('placeholder', "First name")
-      document.getElementById('id_last_name').setAttribute('placeholder', "Surname")
+      document.getElementById('id_username').setAttribute('placeholder', "*")
+      document.getElementById('id_email').setAttribute('placeholder', "xxx@abc.com")
+      document.getElementById('id_password1').setAttribute('placeholder', "*")
+      document.getElementById('id_password2').setAttribute('placeholder', "Confirm Password")
+      // document.getElementById('id_first_name').setAttribute('placeholder', "First name")
+      // document.getElementById('id_last_name').setAttribute('placeholder', "Surname") 
     </script>
   </footer>
 </body>

@@ -11,23 +11,27 @@
 
 <!-- Main Section -->
 {% block content %}
-
+<aside>Mind Lab</aside>
 <section class="main-section">
   <div>
     <div class="main-text-wrap">
-      <h1 class="main-web-title">READY WHEN YOU ARE</h1>
+      <!-- <h1 class="main-web-title">READY WHEN YOU ARE</h1> -->
       <h3 class="main-slogan">Focus on the good.</h3>
       <h4 class="main-text"><span class="mind-lab">Mind Lab</span> makes it easy for you to keep track of good things in life.</h4>
-      <div class="signup-container">
-        <!-- <p>READY WHEN YOU ARE</p> -->
-        <a href="{% url 'signup' %}" class="get-start--link">Get a free account</a>
-        <a class="already-link" href="{% url 'login' %}">Already have an account?</a>
-          
+      <img class="appreciation-svg" src="{% static 'images/appreciation_blue.svg' %}" alt="">
+      <div class="appreciation-container">
         
       </div>
-      
+      <div class="signup-container">
+        <!-- <p>READY WHEN YOU ARE</p> -->
+        <a class="already-link" href="{% url 'login' %}">Already have an account?</a>
+        <a href="{% url 'signup' %}" class="get-start--link">Get a free account</a>
+        
+      </div>
     </div>
-    <img class="pen" src="{% static 'images/pen-bg.jpg' %}" alt="pencil background">
+    
+    <!-- <img class="pen" src="{% static 'images/pen-bg.jpg' %}" alt="pencil background">z -->
+
   </div>
 </section>
 
@@ -44,7 +48,7 @@
 <section class="new-section">
   <div class="new-text-wrapper">
     <!-- <h4 class="new-text">Leave behind all the negativity</h4> -->
-    <h4 class="new-text">How Mind Lab Works?</h4>
+    <h4 class="new-text">What can you do on Mind Lab?</h4>
   </div>
   <div class="new-icon-container">
     <ul class="new-icon-list">
@@ -52,13 +56,13 @@
         <i class="las la-otter"></i>
         <div class="new-icon-text-wrapper">
           <p class="new-icon-title">Gratitude List</p>
-          <p class="new-icon-text">Let gratitude change you and your brain.</p>
+          <p class="new-icon-text">Let gratitude change you and your brain, achieve the most of your ability.</p>
         </div>
       </li>
       <li class="new-icon-item">
         <i class="las la-otter"></i>
         <div class="new-icon-text-wrapper">
-          <p class="new-icon-title">Journal</p>
+          <p class="new-icon-title">Journaling</p>
           <p class="new-icon-text">Capture & Visualize ideas, recording your experience and feelings, self reflection and more..</p>
         </div>
       </li>
@@ -66,13 +70,13 @@
         <i class="las la-otter"></i>
         <div class="new-icon-text-wrapper">
           <p class="new-icon-title">More to come</p>
-          <p class="new-icon-text">Now you can do it all in one place.</p>
+          <p class="new-icon-text">Connect all your positive experience in one place.</p>
         </div>
       </li>
     </ul>
   </div>
   <div class="last-div">
-    <p class="last-div-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo, quis perspiciatis cum ratione alias minus veritatis amet tempora esse.</p>
+    <p class="last-div-text">Zero learning curve, it's that easy to use even a child can use it.</p>
   </div>
 </section>
 
@@ -86,22 +90,22 @@
 <section class="second-new-section">
   <div>
     <!-- <h2 class="benefit-title">Benefits</h2> -->
-    <h3>Why?</h3>
-    <ul>
+    <h3 class="why-header">Why does it work?</h3>
+    <ul class="why-icon-list">
       <li>
         <i class="fas fa-brain"></i>
-        <h3>Stronger & Healthier mindset.</h3>
-        <p>We become what we feed our mind, better mind means better life.</p>
+        <h3 class="why-icon-title">Stronger & Healthier mindset.</h3>
+        <p class="why-icon-msg">We become what we feed our mind, better mind means better life.</p>
       </li>
       <li>
         <i class="fas fa-dollar-sign"></i>
-        <h3>Earn with your mind.</h3>
-        <p>Our mind is the most important tool— let's look after it.</p>
+        <h3 class="why-icon-title">Earn with your mind.</h3>
+        <p class="why-icon-msg">Your mind is the most important tool— let's make it stronger and look after it.</p>
       </li>
       <li>
         <i class="fas fa-lightbulb"></i>
-        <h3>Happiness is a choice!</h3>
-        <p>In short: what determines happiness is under your control.</p>
+        <h3 class="why-icon-title">Happiness is a choice!</h3>
+        <p class="why-icon-msg">In short: what determines happiness is under your control.</p>
       </li>
     </ul>
   </div>
@@ -114,9 +118,11 @@
 <section class="blue-section">
   <div class="blue-container">
     <h2 class="blue-bg-title">Don't know how?</h2>
-    <p class="blue-bg-text">We know it's easy for us to get overwhelm by all the negative emotions, Mind Lab can help you refocus on what you have instead of what you think you lack.</p>
+    <p class="blue-bg-text">We know it's easy for us to get overwhelm by all the negative emotions, Mind Lab is here to provide a platform to help you refocus on what you have instead of what you think you lack.</p>
     <p class="blue-bg-text">Simply create an account and type in few things you're grateful for each day can greatly improve your overall experience of happiness and never again lose sight of all the things we have.</p>
-    <a href="#">Learn more.</a>
+    <div class="start-for-free-container">
+      <a href="{% url 'signup' %}" class="start-for-free-btn">Start for Free</a>
+    </div>
   </div>
 </section>
 
