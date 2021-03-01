@@ -41,7 +41,7 @@
   
   <li class="article-list">
     <a class="article-link" href="{% url 'article:detail' article.slug %}">{{ article.title.capitalize }}</a><br>
-    <a href="{% url 'article:update' article.slug %}">Update</a>
+    <!-- <a href="{% url 'article:update' article.slug %}">Update</a> -->
     
     <small class="article-pub pub-date">{{ article.pub_date|date:"D. M d Y" }}</small>
   </li>

@@ -11,7 +11,14 @@
 
 <!-- Main Section -->
 {% block content %}
-<aside>Mind Lab</aside>
+<aside>What are you grateful for today?</aside>
+<nav class="index-test-nav">
+  <div><a class="mind-lab-logo" href="#">Mind Lab</a></div>
+  <div class="nav-signup-div">
+    <li class="signup-item"><a class="signup-link login-first" href="{% url 'login' %}">Login</a></li>
+    <li class="signup-item"><a class="signup-link signup-first" href="{% url 'signup' %}">Get started</a></li>
+  </div>
+</nav>
 <section class="main-section">
   <div>
     <div class="main-text-wrap">
@@ -37,7 +44,7 @@
 
 <section class="orange-section">
   <div class="orange-container">
-    <h2 class="orange-bg-title">Wait.. what is Mind LAB?</h2>
+    <h2 class="orange-bg-title">Wait.. what is Mind Lab?</h2>
     <p class="orange-bg-text">Is a platform built to help you focus on what matters most to you.</p>
     
     

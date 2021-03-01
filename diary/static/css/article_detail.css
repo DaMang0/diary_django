@@ -1,12 +1,14 @@
-
+body, html{
+  background-color: black;
+}
 body > main {
   font-family: 'Merriweather', serif;
   margin: 0rem 5%;
 }
-
 .article-container{
   font-size: 1.4rem;
-  background-image: linear-gradient(to right top, #fff7ec, #fff8ee, #fff9f0, #fffaf3, #fffbf5, #fffbf5, #fffbf5, #fffbf5, #fffaf3, #fff9f0, #fff8ee, #fff7ec);
+  background: white;
+  color: black;
   padding: 4em 1em;
   text-align: center;
   
@@ -17,11 +19,10 @@ body > main {
   color: rgba(114, 114, 114, 0.85);
   text-align: center;
 }
-
-.detail-article-body {
-  color: black;
-} 
-
+.article-detail-body{
+  font-size: 1.1rem;
+}
+.article-de
 .icon-container{
   margin-top: 2vh;
   margin-left: 50%;
