@@ -37,22 +37,25 @@
           {% if form.errors %}
             <p>{{ form.errors }}</p>
           {% endif %}
-          <div class="field-wrap">
-            <!-- <p class="username-label form-label">{{ form.username.label_tag }}</p> -->
-            {{  form.username.label_tag }}
-            {{ form.username }}
+          <div class="split">
+            <div class="field-wrap">
+              {{ form.email.label_tag }}
+              {{ form.email }}
+            </div>
+            <div class="field-wrap">
+              {{ form.username.label_tag }}
+              {{ form.username }}
+            </div>
           </div>
-          <div class="field-wrap">
-            {{ form.email.label_tag }}
-            {{ form.email }}
-          </div>
-          <div class="field-wrap">
-            {{ form.password1.label_tag }}
-            {{ form.password1 }}
-          </div>
-          <div class="field-wrap">
-            {{ form.password2.label_tag }}
-            {{ form.password2 }}
+          <div class="split">
+            <div class="field-wrap">
+              {{ form.password1.label_tag }}
+              {{ form.password1 }}
+            </div>
+            <div class="field-wrap">
+              {{ form.password2.label_tag }}
+              {{ form.password2 }}
+            </div>
           </div>
     
           <div class='name-wrap'>
@@ -78,9 +81,9 @@
   </main>
   <footer>
     <script>
-      document.getElementById('id_username').setAttribute('placeholder', "*")
+      // document.getElementById('id_username').setAttribute('placeholder', "*")
       document.getElementById('id_email').setAttribute('placeholder', "xxx@abc.com")
-      document.getElementById('id_password1').setAttribute('placeholder', "*")
+      // document.getElementById('id_password1').setAttribute('placeholder', "*")
       document.getElementById('id_password2').setAttribute('placeholder', "Confirm Password")
       // document.getElementById('id_first_name').setAttribute('placeholder', "First name")
       // document.getElementById('id_last_name').setAttribute('placeholder', "Surname") 

@@ -15,7 +15,7 @@
   <div class="head-container">
     <h4 class="type">Journal</h4>
     <h1 class="head-title">Better than, yesterday</h1>
-    <h6 class="head-detail">By Mathew Ho on {% now "l, d F Y" %}</h6>
+    <h6 class="head-detail">By Mathew Ho on <span class="head-detail-date">{% now "l, d F Y" %}</span></h6>
   </div>
   <div class="msg-container">
     <p class="banner-msg">What is your story today?</p>
@@ -36,7 +36,7 @@
   
   <ol class="article-ol-container page-ol-container">
     <p class="latest-entry-title">Latest journal entries</p>
-    <h1 class="article-container-title">What is your story today?</h1>
+    <!-- <h1 class="article-container-title">What is your story today?</h1> -->
     {% for article in article_list %}
   
   <li class="article-list">

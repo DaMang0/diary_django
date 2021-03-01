@@ -11,12 +11,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100&family=Barlow&family=Crimson+Text&family=Source+Serif+Pro:wght@400;600&family=Domine&family=Lato&family=Merriweather&family=PT+Sans:wght@400;700&family=Raleway:wght@400;600;900&family=Poppins:wght@400;600;700&family=Roboto&family=Signika+Negative&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100&family=Barlow&family=Crimson+Text&family=Source+Serif+Pro:wght@400;600&family=Domine&family=Lato&family=Merriweather&family=PT+Sans:wght@400;700&family=Raleway:wght@400;600;900&family=Poppins:wght@400;600;700&family=Roboto&family=Signika+Negative&display=swap" rel="stylesheet">
   <!-- 
   
   font-family: 'Barlow', sans-serif;
   font-family: 'Crimson Text', serif;
   font-family: 'Domine', serif;
+  font-family: 'Inter', sans-serif;f
   font-family: 'Lato', sans-serif;
   font-family: 'Merriweather', serif;
   font-family: 'Montserrat', sans-serif;
@@ -29,6 +30,7 @@
   font-family: 'Signika Negative', sans-serif;
   font-family: 'Source Serif Pro', serif;
   -->
+  <!-- <meta name="theme-color" content="#4285f4"> -->
   <title>{% block title %}{% endblock %}</title>
   
 </head>
@@ -58,10 +60,10 @@
         <ul class="menu">
           {% if request.user.is_authenticated %}
           <li class="nav-list">
-            <a class="item1" href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<br>List</a>
+            <a class="item1" href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<!--<br>List--></a>
           </li>
           <li class="nav-list">
-            <a class="item1" href="{% url 'article:list' %}" id="journal-link">My<br>Journal</a>
+            <a class="item1" href="{% url 'article:list' %}" id="journal-link"><!--My<br>-->Journal</a>
           </li>
           {% endif %}
         </ul>

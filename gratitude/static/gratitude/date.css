@@ -1,82 +1,111 @@
-body{
-  background-color: rgba(42, 42, 46, 1);
-}
-
 main {
-  font-family: Montserrat, sans-serif;
+  color: #222;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
+.gratitude-color-bg-container{
+  height: 35vh;
+  background-color: rgb(245, 245, 245);
+}
 form.create-form{
-  width: 65vw;
+  max-width: 100vw;
   margin: 0 auto;
   position: relative;
-}
-.days-container > a {
-  display: block;
-  text-decoration: none;
-  color: rgb(0, 124, 201);
-  padding-bottom: 2px;
-}
-.days-container > a:hover {
-  text-decoration: underline;
-}
-.days-container{
   display: flex;
-  justify-content: space-between;
-}
-.days-container > a {
-  color: hsla(169, 45%, 35%, 100%);;
-}
-label, input{
-  display: block;
 }
 #id_title{
-  color: hsl(0, 0%, 50%);
-  font-size: 1.1rem;
-  padding: .7rem 1.1rem;
-  width: 100%;
-  border-radius: 4px;
-  border: 2px solid rgba(71, 145, 131, 1);
-  outline: none;
-  margin-bottom: 1rem;
+  color: hsl(0, 0%, 20%);
+  font-size: 1.4rem;
+  padding: 1rem;
+  width: 80%;
+  border: 3px solid rgba(71, 145, 131, 1);
+  border-color: #333;
+  border-right: none;
+  outline: none !important;
 }
 #id_title:focus{
-  border-color: rgb(68, 181, 160);
+  border-color: #000;
+  outline: none !important;
+}
+#id_title:required{
+  box-shadow: none !important;
+}
+#id_title:invalid{
+box-shadow: none !important;
 }
 .submit-btn{
-  padding: .5em 2em;
   border: none;
-  border-radius: 9999px;
-  background-color: rgba(71, 145, 131, 1);
-  transition-duration: 150ms;
+  width: 20%;
+  padding: .7rem 1.1rem;
+  background-color: #333;
+  transition-duration: 50ms;
   transition-property: background-color;
   transition-timing-function: ease-in-out;
-  position: absolute;
-  right: 0;
 }
 .submit-btn:hover{
-  background-color: rgb(68, 181, 160);
+  background-color: #000;
 }
 .la-plus{
   font-size: 1.4em;
   color: white;
   transition: color 150ms ease-in-out;
 }
+.days-container{
+  display: flex;
+  justify-content: space-between;
+}
+.days-container > a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: inherit;
+}
 .gratitude-ul{
   list-style: decimal;
   margin: 0 auto;
-  padding: 0 10rem;
-  
+  padding: 2rem;
+  padding-top: 0;
   background-color: white;
+}
+.date-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.date-date{
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 4px;
+  display: inline-block;
+}
+.date-month{
+  font-weight: 600;
+}
+.date-month, .date-year{
+  margin: 0;
+}
+.list-title{
+  color: rgb(80, 80, 80);
+  margin: 4rem 0;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .96px;
+  display: inline-block;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #fde481;
+  transition: color 200ms ease-in-out;
+}
+.list-title:hover{
+  color: rgb(30, 30, 30);
 }
 .list-container{
   display: flex;
-  border-bottom: 1px solid #e6e6e6;
-  padding-left: 4rem;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 .la-angle-right{
   align-self: center;
-  opacity: .4;
 }
 .gratitude-item{
   font-size: 1.1rem;
@@ -90,12 +119,15 @@ label, input{
   text-transform: capitalize;
 }
 .gratitude-item > a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .96px;
+  line-height: 1.2;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
-.gratitude-item > a:hover {
-  text-decoration: underline;
-}
+
 .delete-btn {
   background-color: inherit;
   border: none;
@@ -105,36 +137,8 @@ label, input{
   font-size: 1.6rem;
   opacity: .75;
 }
-.list-title{
-  color: rgb(80, 80, 80);
-  border-bottom: 5px solid #fde481;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 0.155rem;
-  display: inline-block;
-  padding-bottom: 5px;
-  transition: color 200ms ease-in-out;
-}
-.list-title:hover{
-  color: rgb(30, 30, 30);
-}
-.date-wrap{
-  display: flex;
-  align-items: center;
-}
 
-.date-date{
-  font-size: 3rem;
-  font-weight: 500;
-  margin-right: 4px;
-}
-.date-month{
-  font-weight: 600;
-}
-.date-month, .date-year{
-  margin: 0;
-}
+
 .no-entry-msg{
   font-size: 2.5rem;
   /* padding-left: 15rem; */

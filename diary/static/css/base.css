@@ -54,12 +54,14 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
   padding: 1em;
+  white-space: nowrap;
 }
 .nav-list {
   list-style: none;
 
 }
 .navbar a {
+  font-size: 1rem;
   color: black;
   background-color: transparent;
   padding: 1rem;
@@ -264,34 +266,31 @@ body::-webkit-scrollbar-thumb {
 }
 
 .create-button {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
   position:absolute;
   right: 0;
   border-radius: 0px;
-  background-color: rgb(66, 108, 116);
+  background-color: rgb(35, 35, 35);
   border: none;
   color: white;
   text-align: center;
   font-size: 1.2rem;
-  padding: 1.5em 5em;
+  padding: 1em 2.5em;
   transition: all 200ms;
   cursor: pointer;
-  
 }
-
 .create-button:hover{
   color: inherit;
   opacity: 0.8;
 }
-
 .create-button span {
-  background-color: rgb(66, 108, 116);
   color: white;
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 200ms;
 }
-
 .create-button span:after {
   content: '\00bb';
   position: absolute;
@@ -300,11 +299,9 @@ body::-webkit-scrollbar-thumb {
   right: -1.4rem;
   transition: 200ms;
 }
-
 .create-button:hover span {
   padding-right: 1.25rem;
 }
-
 .create-button:hover span:after {
   opacity: 1;
   right: 0;
