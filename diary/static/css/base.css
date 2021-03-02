@@ -6,7 +6,9 @@
 :root{
   font-size: 62.5%;
 }
-*{
+*,
+*::after,
+*::before{
   box-sizing: border-box;
 }
 html {
@@ -15,8 +17,9 @@ html {
   margin: 0;
   overflow-x: hidden;
 }
-
 body { 
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
   color: #000;  
   background: #fbfbfd;
   margin: 0;
@@ -25,7 +28,6 @@ body {
   height: calc(100% - 10px);
   overflow-x: hidden;
 }
-
 body::-webkit-scrollbar {
   width: 0.8em;
 }
@@ -35,235 +37,89 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: rgb(180, 180, 180);
 }
-
-
-.navbar{
-  
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  position: relative;
-  top: 0px;
+.header-outer{
   max-width: 100%;
-  height: 10vh;
+  padding: 0 1rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.3);
+}
+.header-inner{
+  display: flex;
+  width: 100%;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  margin: 0px;
 }
-.home-title{
-  font-size: 1.7rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  padding: 1em;
-  white-space: nowrap;
-}
-.nav-list {
-  list-style: none;
-
-}
-.navbar a {
-  font-size: 1rem;
-  color: black;
-  background-color: transparent;
-  padding: 1rem;
-  display: inline-block;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-decoration: none;
-}
-
-.menu{
+.nav-container{
+  width: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  list-style: none;
+  
 }
-.menu .nav-list{
-  margin: 0px 0.5rem;
-}
-.item1{
-  font-size: .85rem;
-  margin-right: 1.5em;
-}
-.item2{
-  font-size: 1.2rem;
-}
-
-.button-div{
-  display: flex;
+.header-inner a {
+  color: #222;
+  margin-left: 1.75rem;
   position: relative;
-  right: 0.1rem;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
-  
-}
-
-.button-first {
-  word-wrap: break-word;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-flow: column nowrap;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  padding: 1em 2em;
-  background-color: #05386B;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  transition-property: background-color, opacity;
-  transition: all 200ms ease 0ms;
-}
-.button-first:hover {
   text-decoration: none;
-  background-color: #0f5296;
-  opacity: 85%;
-}
-  
-.button-secondary {
-  word-wrap: break-word;
   white-space: nowrap;
-  color: rgb(13, 15, 25);
-  font-family: 'Poppins', sans-serif;
-  padding: 1em 2em;
-  width: 100%;
-  background-color: rgb(6, 226, 119);
-  border: 1px solid rgb(6, 226, 119);
-  border-radius: 4px;
-  cursor: pointer;
-  transition-property: background-color, border;
-  transition: all 200ms ease;
-  
-  /* float: none; */
-
 }
-.button-secondary:hover {
+.header-inner a:hover{
   text-decoration: none;
-  background-color: rgb(6, 151, 81);
-  border: 1px solid rgb(6, 151, 81);
 }
-.toggle-button{
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
+.header-inner a:hover::after{
+  transform: scaleX(1);
 }
-.toggle-button .bar{
-  height: 3px;
+.header-inner a::after{
+  transition: 250ms ease;
+  content: "";
+  display: block;
   width: 100%;
-  background-color: black;
-  border-radius: 8px;
+  height: 2px;
+  background-color: currentcolor;
+  transform: scalex(0);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
 }
 
-/* Nav Home */
-#main-link {
-  font-weight: 600;
-  text-align: center;
-  transition-property: text-shadow;
-  transition-duration: 350ms;
+.fa-lock{
+  font-size: .8rem;
+  padding-right: 2px;
 }
-/* #main-link:hover {
-  text-shadow: 120px 0px #fff;
-} */
-
-/* Article Nav */
-#journal-link::after {
+/* #quote-link::after,
+#value-link::after,
+#journal-link::after,
+#gratitude-link::after{
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 0.3rem;
+}
+#journal-link::after {
   background-color: #7eb9f9;
 }
-#journal-link:hover::after {
-  transform: scaleX(1);
-}
-
-/* Gratitude Nav */
 #gratitude-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.3rem;
   background-color: #FFD36A;
 }
-#gratitude-link:hover::after {
-  transform: scaleX(1);
-}
-
-/* Quote Nav */
 #quote-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.3rem;
   background-color: rgb(0, 150, 55);
 }
-#quote-link:hover::after {
-  transform: scaleX(1);
-}
-
-/* Value Nav */
 #value-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.3rem;
   background-color: rgb(255, 120, 29);
 }
-#value-link:hover::after {
+#journal-link:hover::after,
+#gratitude-link:hover::after,
+#value-link:hover::after,
+#quote-link:hover::after, {
   transform: scaleX(1);
-}
-.item1{
-  transition-duration: 200ms;
-  transition-property: color;
-  position: relative;
-}
-.item1::after{
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 200ms ease;
-}
+} */
 
 
-/* Admin Nav */
-#admin-link {
-  color: #fff;
-}
-#admin-link:hover {
-  color: rgb(255, 34, 34);
-}
-
-  /* Article + Quotes + Values Page Header  */
-.page-header {
-  font-family: 'Domine', serif;
-  color: #05386B;
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin: 1em 0.75em;
-  cursor: default;
-}
-.page-header::before {
-  content: open-quote;
-  color: rgb(160, 160, 160);
-}
-.page-header::after {
-  content: close-quote;
-  color: rgb(160, 160, 160);
-}
 
 .create-button {
   font-family: Montserrat, sans-serif;
@@ -305,48 +161,6 @@ body::-webkit-scrollbar-thumb {
 .create-button:hover span:after {
   opacity: 1;
   right: 0;
-}
-
-.page-ol-container {
-  list-style-position: inside;
-  list-style-type: lower-roman;
-  list-style: none;
-  /* color: rgb(215, 0, 0); */
-}
-
-.pub-date {
-  color: rgba(165, 165, 165, 1);
-  /* font-size: 0.75rem; */
-  font-family: 'Chakra Petch', sans-serif;
-  /* font-style: italic; */
-  
-}
-
-.test-nav {
-  display: flex;
-  padding: 25px;
-  border-radius: 20px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.test-nav > a {
-  font-family: 'Domine', serif;
-  font-size: 24px;
-  color: coral;
-  font-weight: bold;
-  display: flex;
-  border: 2px solid coral;
-  border-radius: 7px;
-  background-color: white;
-  width: 15%;
-  opacity: 90%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 7vh;
-  text-decoration: none;
 }
 
 

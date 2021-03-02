@@ -49,47 +49,29 @@
   </ul>
 {% endif %}
 
-  <header>
-    <nav class="navbar">
+  <header class="header-outer">
+    <div class="header-inner">
 
-
-      <a class="home-link" id="main-link" href="{% url 'article:index' %}"><div class="home-title">Mind Lab</div></a>
-      
-      <div class="nav-div-container">
-
-        <ul class="menu">
-          {% if request.user.is_authenticated %}
-          <li class="nav-list">
-            <a class="item1" href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<!--<br>List--></a>
-          </li>
-          <li class="nav-list">
-            <a class="item1" href="{% url 'article:list' %}" id="journal-link"><!--My<br>-->Journal</a>
-          </li>
-          {% endif %}
-        </ul>
-
+      <div class="logo-container">
+        <a class="home-link" id="main-link" href="{% url 'article:index' %}">Mind Lab</a>
       </div>
 
-      <div class="button-div">
-        <!-- IF LOG IN  -->
+      <nav class="nav-container">
+        <a href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<!--<br>List--></a>
+        <a href="{% url 'article:list' %}" id="journal-link"><!--My<br>-->Journal</a>
+
         {% if request.user.is_authenticated %}
-        <a class="item2" href="{% url 'user-profile' %}"><button class="button-first">Profile</button></a>
-        <a class="item2" href="{% url 'logout' %}"><button onclick="return confirm('Are you sure you want to logout?')" class="button-first">Logout</button></a>
-        
+        <a href="{% url 'user-profile' %}">Profile</a>
+        <a id="logout-link" onclick="return confirm('Are you sure you want to logout?')" href="{% url 'logout' %}"><i class="fas fa-lock"></i>Logout</a>
         {% else %}
         <!-- IF NOT SIGN IN  -->
-        <a class="item2" href="{% url 'signup' %}">
-          <button class="button-secondary">Sign Up</button>
-        </a>
-        <a class="item2" href="{% url 'login' %}">
-          <button class="button-first">Login</button>
-        </a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Login</a>
         {% endif %}
-      </div>
-        
-      
-    </nav>
-    </header>
+      </nav>
+
+    </div>
+  </header>
 
 
 

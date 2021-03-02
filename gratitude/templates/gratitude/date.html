@@ -25,7 +25,8 @@
             <p class="date-date">{{ custom_page_date.day }}</p>
           </div>
           <div class="date-container-2">
-            <p class="date-month">{{ custom_page_date.month }}</p>
+            <!-- <p class="date-month">{{ custom_page_date.month }}</p> -->
+            <p class="date-month">{{ month_name }}</p>
             <p class="date-year">{{ custom_page_date.year }}</p>
           </div>
         </div>
@@ -42,6 +43,7 @@
       <div class="list-container">
         <i class="las la-angle-right"></i>
         <li class="gratitude-item"><a href="{% url 'gratitude:update' gratitude_list.pk %}">{{ gratitude_list.title }}</a></li>
+        <p class="gratitude-item-time-created">{{ gratitude_list.time_created|date:"G:i" }}</p>
       </div>
       
       
@@ -82,7 +84,7 @@
 
 {% block footer %}
   <script>
-    // document.getElementById('id_title').setAttribute('placeholder', "I'm grateful...")
+    document.getElementById('id_title').setAttribute('placeholder', "I'm grateful...")
   </script>
 
 {% endblock %}

@@ -12,6 +12,8 @@ form.create-form{
   margin: 0 auto;
   position: relative;
   display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 #id_title{
   color: hsl(0, 0%, 20%);
@@ -55,16 +57,21 @@ box-shadow: none !important;
   justify-content: space-between;
 }
 .days-container > a {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: 700;
   text-decoration: none;
   color: inherit;
+}
+.days-container > a:hover {
+  text-decoration: underline;
 }
 .gratitude-ul{
   list-style: decimal;
   margin: 0 auto;
   padding: 2rem;
-  padding-top: 0;
+  padding-bottom: 15rem;
   background-color: white;
+  
 }
 .date-wrap{
   display: flex;
@@ -72,23 +79,28 @@ box-shadow: none !important;
   align-items: center;
 }
 .date-date{
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 500;
   margin-right: 4px;
   display: inline-block;
 }
 .date-month{
   font-weight: 600;
+  text-align: left;
+}
+.date-year{
+  letter-spacing: 3.7px;
 }
 .date-month, .date-year{
+  font-size: 1.5rem;
   margin: 0;
 }
 .list-title{
   color: rgb(80, 80, 80);
   margin: 4rem 0;
   cursor: pointer;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 500;
   letter-spacing: .96px;
   display: inline-block;
   padding-bottom: 1rem;
@@ -112,6 +124,10 @@ box-shadow: none !important;
   display: inline-block;
   padding: 1rem;
 }
+/* Capitalize the first letter of every gratitude list entry */
+.gratitude-item::first-letter{
+  text-transform: uppercase;
+}
 .gratitue-item:first-of-type{
   margin-top: 2.5rem;
 }
@@ -120,14 +136,22 @@ box-shadow: none !important;
 }
 .gratitude-item > a {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: .96px;
-  line-height: 1.2;
+  line-height: 1.4;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
+.gratitude-item > a:hover{
+  color: black;
+}
 
+.gratitude-item-time-created{
+  margin: 0;
+  font-size: 1rem;
+  opacity: .6;
+}
 .delete-btn {
   background-color: inherit;
   border: none;
@@ -138,9 +162,34 @@ box-shadow: none !important;
   opacity: .75;
 }
 
-
+/* Message if the page does not have any gratitude list entry yet */
 .no-entry-msg{
   font-size: 2.5rem;
   /* padding-left: 15rem; */
   text-align: center;
+}
+
+
+@media only screen and (min-width: 750px) {
+  .gratitude-ul{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .days-container > a, .gratitude-item > a{
+    font-size: 1.2rem;
+  }
+  .list-title{
+    font-size: 1.4rem;
+  }
+  .gratitude-item-time-created{
+    font-size: .8rem;
+    /* display: block; */
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .gratitude-ul{
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
 }

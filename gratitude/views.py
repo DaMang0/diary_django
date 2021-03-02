@@ -5,6 +5,7 @@ from .models import Gratitude_List
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 import datetime
+import calendar
 from .forms import Gratitude_ListForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -25,6 +26,7 @@ def Date(request, year, month, day):
   custom_year = path.split('-')[0][-4:]
   custom_month = path.split('-')[1]
   custom_day = path.split('-')[2][:-1]
+  month_name = calendar.month_name[int(custom_month)]
 
   # Check if all custom date variables contain decimal ONLY
   if custom_year.isdecimal() and custom_month.isdecimal() and custom_year.isdecimal:
@@ -46,7 +48,7 @@ def Date(request, year, month, day):
   user = get_object_or_404(User, pk=request.user.id)
   todays_list = user.gratitude_list_set.all().filter(date_created__year=year, date_created__month=month, date_created__day=day)
   # yesterdays_list = user.gratitude_list_set.all().filter(date_created__year=year, date_created__month=month, date_created__day=path)
-  context = {'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
+  context = {'month_name' :month_name, 'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
   return render(request, 'gratitude/date.html', context)
 
 

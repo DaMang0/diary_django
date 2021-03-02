@@ -34,7 +34,7 @@
 <div class="article-wrapper">
   {% if article_list %}
   
-  <ol class="article-ol-container page-ol-container">
+  <ol class="article-ol-container">
     <p class="latest-entry-title">Latest journal entries</p>
     <!-- <h1 class="article-container-title">What is your story today?</h1> -->
     {% for article in article_list %}
@@ -43,7 +43,7 @@
     <a class="article-link" href="{% url 'article:detail' article.slug %}">{{ article.title.capitalize }}</a><br>
     <!-- <a href="{% url 'article:update' article.slug %}">Update</a> -->
     
-    <small class="article-pub pub-date">{{ article.pub_date|date:"D. M d Y" }}</small>
+    <small class="article-pub">{{ article.pub_date|date:"D. M d Y" }}</small>
   </li>
   <br>
 

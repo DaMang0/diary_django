@@ -43,6 +43,11 @@ body main {
   padding-top: 5rem;
   text-align: unset;
 }
+.article-ol-container{
+  list-style-position: inside;
+  list-style-type: lower-roman;
+  list-style: none;
+}
 .latest-entry-title{
   font-size: 1.2rem;
   font-weight: 600;
@@ -79,7 +84,8 @@ body main {
 .article-link:hover{
   color: #555;
 }
-.article-pub{
+.article-pub-date{
+  font-family: 'Chakra Petch', sans-serif;
   font-size: 1rem;
   letter-spacing: .96px;
   color: #333;
