@@ -16,8 +16,11 @@ year = today.year
 month = today.month
 day = today.day
 
+
+
 @login_required(login_url='login')
 def Date(request, year, month, day):
+
   form = Gratitude_ListForm(request.POST or None)
   # Getting the current URL path
   path = request.path
@@ -27,6 +30,8 @@ def Date(request, year, month, day):
   custom_month = path.split('-')[1]
   custom_day = path.split('-')[2][:-1]
   month_name = calendar.month_name[int(custom_month)]
+  streak_count = 0
+  compare_date = today + datetime.timedelta(1)
 
   # Check if all custom date variables contain decimal ONLY
   if custom_year.isdecimal() and custom_month.isdecimal() and custom_year.isdecimal:
@@ -38,6 +43,7 @@ def Date(request, year, month, day):
     yesterday = today
     tomorrow = today
   
+
   if form.is_valid():
     gratitude = form.save(commit=False)
     gratitude.user = request.user
@@ -47,8 +53,25 @@ def Date(request, year, month, day):
 
   user = get_object_or_404(User, pk=request.user.id)
   todays_list = user.gratitude_list_set.all().filter(date_created__year=year, date_created__month=month, date_created__day=day)
+
+  
+  for xlist in list(user.gratitude_list_set.all().filter(date_created__lte=today).order_by('-date_created')):
+    
+    
+    delta = compare_date - xlist.date_created
+    
+    if delta.days == 1:
+      streak_count += 1
+    elif delta.days == 0:
+      pass
+    else:
+      break
+    compare_date = xlist.date_created
+
+    
+
   # yesterdays_list = user.gratitude_list_set.all().filter(date_created__year=year, date_created__month=month, date_created__day=path)
-  context = {'month_name' :month_name, 'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
+  context = {'streak_count': streak_count, 'month_name' :month_name, 'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
   return render(request, 'gratitude/date.html', context)
 
 

@@ -37,8 +37,11 @@
           <a href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next Day</a>
         </div>
       </div>
-
+      
       <h2 class="list-title">Gratitude List</h2>
+      {% if streak_count and streak_count > 0 %}
+      <p class="streak-count">You are on a {{ streak_count }} days streak!!</p>
+      {% endif %}
       {% for gratitude_list in todays_list %}
       <div class="list-container">
         <i class="las la-angle-right"></i>

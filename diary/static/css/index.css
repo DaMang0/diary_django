@@ -7,6 +7,9 @@ html{
 header{
   display: none;
 }
+.header-outer{
+  display: none;
+}
 .mind-lab-logo{
   padding: 1.25rem 1rem;
   color: #222;
@@ -27,13 +30,15 @@ main{
 body{
   font-family: 'Montserrat', sans-serif;
   color: black;
+  background-color: rgb(252, 252, 252);
 }
 .index-test-nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
-  background: #f6efe8;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.3);
   cursor: default;
 }
 .nav-signup-div {
@@ -57,14 +62,13 @@ body{
   transition: background-color 100ms ease-in-out;
 }
 .signup-first:hover{
-  background-color: #facb5d;
+  background-color: #f1c356;
 }
 
 .main-section{
   position: relative;
-  background-color: hsl(38, 30%, 95%);
-  background: #f6efe8;
-  padding: 15rem 1rem 5rem; 
+  /* background: #f6efe8; */
+  padding: 15rem 1rem 0; 
 }
 .main-text-wrap{
   text-align: center;
@@ -85,14 +89,14 @@ body{
   font-size: 1.6rem;
   margin: 0;
   padding-bottom: 4rem;
-  /* line-height: 22px; */
+  font-weight: 500;
 }
 .mind-lab{
   color: #2565aa;
   text-decoration: underline;
 }
 .signup-container{
-  margin: 4rem auto;
+  margin: 6rem auto;
   text-align: center;
   position: relative;
 }
@@ -111,11 +115,12 @@ body{
   color: #fff;
   background-color: #595959;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
+  background-color: #00bd28;
   
-  padding: 1.25rem 2.5rem;
+  padding: 1.2rem 1.5rem;
   margin-left: 1rem;
-  background: linear-gradient(to right, #2565aa 50%, #444 50%);
+  background: linear-gradient(to right, hsl(133, 100%, 30%) 50%, #00bd28 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition-property: background-position;
@@ -133,12 +138,22 @@ body{
 .already-link:hover{
   text-decoration: none;
 }
-
+.responsive-section{
+  background-color: #fff;
+}
+.responsive-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.webdev-template{
+  width: 800px;
+  height: auto;
+}
 .new-section{
-  background-color: #f3f3f5;
   margin-left: auto;
   margin-right: auto;
-  padding: 4rem 1rem;
+  padding: 8rem 1rem;
 }
 .new-text-wrapper{
   padding-left: 1rem;
@@ -152,12 +167,11 @@ body{
   padding-bottom: 1rem;
 }
 .new-icon-list{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 0;
+  padding: 5rem 0;
 }
 .new-icon-item{
   display: flex;
+  margin-bottom: 3rem;
 }
 .new-icon-item > i {
   align-self: flex-start;
@@ -166,50 +180,50 @@ body{
   padding-right: 2rem;
   padding-top: 10px;
 }
-.new-icon-title, .new-icon-text{
+.new-icon-title, 
+.new-icon-text{
   line-height: 22px;
 }
 .new-icon-title{
-  font-size: 1.45rem;
+  font-size: 2.2rem;
   font-weight: 600;
 }
 .new-icon-text{
-  font-size: 1.2rem;
-}
-.last-div{
-  padding: 0 1rem;
-  padding-top: 1rem;
-}
-.last-div-text {
-  
   font-size: 1.4rem;
-  line-height: 17px;
+}
+
+.last-div-text {
+  font-size: 1.4rem;
+  line-height: 40px;
 }
 .orange-section{
   background: #FFD36A;
-  
 }
 .blue-section{
   background-color: #7eb9f9;
 }
-.orange-section, .blue-section{
-  min-width: 100%;
+.orange-section, 
+.blue-section{
   padding: 4rem 1rem;
+
 }
 
-.orange-container, .blue-container{
+.orange-container, 
+.blue-container{
   font-size: 1rem;
   margin: 0 auto;
   padding: 0 1rem;
   text-align: left;
 }
-.orange-bg-title, .blue-bg-title{
-  font-size: 1.8rem;
+.orange-bg-title, 
+.blue-bg-title{
+  font-size: 2rem;
   padding: 0 1rem;
 }
-.orange-bg-text, .blue-bg-text{
+.orange-bg-text, 
+.blue-bg-text{
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 400;
   padding: 0 1rem;
   
@@ -242,6 +256,7 @@ body{
 }
 .why-header{
   padding: 1rem;
+  font-size: 4rem;
 }
 .why-icon-list {
   padding: 2rem 1rem;
@@ -251,16 +266,29 @@ body{
   font-size: 5rem;
 }
 .why-icon-msg {
+  display: inline-block;
   padding-bottom: 2rem;
   font-size: 15px;
   font-weight: 400;
   border-bottom: 1px solid #efeff1;
 }
+.why-icon-title{
+  font-size: 3rem;
+}
+.why-icon-msg{
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.why-icon-msg, 
+.new-icon-text{
+  color:hsl(0, 0%, 50%);
+  
+}
 
 
 .platform-container{
   padding: 2rem;
-  background-color: #f3f3f5;
+  /* background-color: #f3f3f5; */
 }
 .platform{
   font-size: 1.25rem;
@@ -293,69 +321,96 @@ body{
   max-width: 100%;
   margin: 0 auto;
 }
-.simplicity-div, 
-.traveling-div{
-  display: flex;
-  justify-content: flex-start;
-}
-.responsive-div{
-  display: flex;
-  justify-content: flex-end;
-}
-.bg-color-text-wrapper{
-  width: 50%;
-}
-.responsive-text-wrapper{
-  text-align: right;
-}
+
 
   @media only screen and (min-width: 750px) {
     .appreciation-svg{
       width: 650px;
     }
     .main-slogan{
-      font-size: 4rem;
+      font-size: 5rem;
     }
     .signup-container{
       margin-top: 9rem;
     }
     .signup-link{
-      margin-right: 2rem;
+      margin-left: 2rem;
+    }
+    .orange-container, .blue-container{
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
     }
     .blue-bg-text, 
-    .orange-bg-text, 
-    .last-div-text{
+    .orange-bg-text{
       font-size: 1rem;
       width: 60ch;
     }
+    .new-text-wrapper{
+      text-align: center;
+    }
     .why-header{
       font-size: 2rem;
+      text-align: center;
     }
-    .why-icon-msg{
-      font-size: 1.1rem;
+    .why-icon-msg, 
+    .new-icon-text{
+    font-size: 1rem;
+    line-height: 2;
     }
-  }
+    .new-icon-item{
+      display: block;
+    }
+    .new-icon-list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .new-icon-title, .why-icon-title{
+      font-size: 2rem;
+    }
+    .new-icon-text{
+      padding: 0 1rem;
+    }
+    
+    .second-new-section{
+      padding: 2rem;
+    }
+  
+}
+  
 
   @media only screen and (min-width: 1000px) {
+    .main-slogan{
+      font-size: 7rem;
+    }
     .get-start--link{
-      padding: 2.5rem 5rem;
+      padding: 2rem 4rem;
     }
-    .orange-section, .blue-section{
-      padding-top: 7rem;
-      padding-bottom: 7rem;
+    .orange-section, 
+    .blue-section{
+      padding: 10rem 0;
     }
-    .orange-container, .blue-container{
-      padding-left: 10rem;
+    .orange-container, 
+    .blue-container{
+      padding-left: 5rem 10rem;
     }
-    .new-section, .second-new-section{
-      padding-left: 7rem;
-      padding-right: 7rem;
-      padding: 7rem;
+    .new-section{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
+    
+    .new-icon-item > i{
+      font-size: 10rem;
+    }
+    
     .second-new-section{
-      min-height: 100vh;
+      min-height: 90vh;
     }
     .start-for-free-container{
       padding-right: 10rem;
     }
+    
   }

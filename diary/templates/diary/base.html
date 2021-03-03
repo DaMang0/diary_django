@@ -53,20 +53,20 @@
     <div class="header-inner">
 
       <div class="logo-container">
-        <a class="home-link" id="main-link" href="{% url 'article:index' %}">Mind Lab</a>
+        <a class="home-link" class="main-link" href="{% url 'article:index' %}">Mind Lab</a>
       </div>
 
       <nav class="nav-container">
-        <a href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<!--<br>List--></a>
-        <a href="{% url 'article:list' %}" id="journal-link"><!--My<br>-->Journal</a>
 
         {% if request.user.is_authenticated %}
+        <a href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<!--<br>List--></a>
+        <a href="{% url 'article:list' %}" id="journal-link"><!--My<br>-->Journal</a>
         <a href="{% url 'user-profile' %}">Profile</a>
         <a id="logout-link" onclick="return confirm('Are you sure you want to logout?')" href="{% url 'logout' %}"><i class="fas fa-lock"></i>Logout</a>
+
         {% else %}
-        <!-- IF NOT SIGN IN  -->
-        <a href="{% url 'signup' %}">Sign Up</a>
         <a href="{% url 'login' %}">Login</a>
+        <a id="signup-link" href="{% url 'signup' %}">Sign Up</a>
         {% endif %}
       </nav>
 

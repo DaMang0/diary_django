@@ -1,5 +1,5 @@
 body{
-  background-color: #f0f0f0;
+  /* background: #f6efe8; */
 }
 main{
   font-family: 'Montserrat', sans-serif; 
@@ -24,6 +24,7 @@ form{
 }
 #id_username:focus, #id_password:focus{
   background-color: #f0fafa;
+  
 }
 .login-wrapper{
   margin: 2rem 0;
@@ -41,9 +42,7 @@ form{
 .login-btn:hover{
   background-color: hsl(180, 15%, 40%);
 }
-a{
-  text-decoration: none;
-}
+
 .help{
   color: black;
   opacity: .65;
@@ -55,7 +54,7 @@ a{
   color: hsl(180, 39%, 25%);
 }
 a:hover{
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .copy-right{

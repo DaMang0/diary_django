@@ -15,8 +15,13 @@
 <nav class="index-test-nav">
   <div><a class="mind-lab-logo" href="#">Mind Lab</a></div>
   <div class="nav-signup-div">
+    {% if request.user.is_authenticated %}
+    <li class="signup-item"><a class="signup-link login-first" href="{% url 'gratitude:date' year month day %}">Login</a></li>
+    <li class="signup-item"><a class="signup-link signup-first" href="{% url 'signup' %}">Get started</a></li>
+    {% else %}
     <li class="signup-item"><a class="signup-link login-first" href="{% url 'login' %}">Login</a></li>
     <li class="signup-item"><a class="signup-link signup-first" href="{% url 'signup' %}">Get started</a></li>
+    {% endif %}
   </div>
 </nav>
 <section class="main-section">
@@ -32,7 +37,7 @@
       <div class="signup-container">
         <!-- <p>READY WHEN YOU ARE</p> -->
         <a class="already-link" href="{% url 'login' %}">Already have an account?</a>
-        <a href="{% url 'signup' %}" class="get-start--link">Get a free account</a>
+        <a href="{% url 'signup' %}" class="get-start--link">Get started for free</a>
         
       </div>
     </div>
@@ -42,48 +47,52 @@
   </div>
 </section>
 
+<!-- <section class="responsive-section">
+  <div class="responsive-inner">
+    <img class="webdev-template" src="{% static 'images/canvas_design.png' %}" alt="Laptop and mobile phone template">
+  </div>
+</section> -->
+
 <section class="orange-section">
   <div class="orange-container">
     <h2 class="orange-bg-title">Wait.. what is Mind Lab?</h2>
     <p class="orange-bg-text">Is a platform built to help you focus on what matters most to you.</p>
-    
-    
-    
   </div>   
 </section>
 
 <section class="new-section">
-  <div class="new-text-wrapper">
-    <!-- <h4 class="new-text">Leave behind all the negativity</h4> -->
-    <h4 class="new-text">What can you do on Mind Lab?</h4>
-  </div>
-  <div class="new-icon-container">
-    <ul class="new-icon-list">
-      <li class="new-icon-item">
-        <i class="las la-otter"></i>
-        <div class="new-icon-text-wrapper">
-          <p class="new-icon-title">Gratitude List</p>
-          <p class="new-icon-text">Let gratitude change you and your brain, achieve the most of your ability.</p>
-        </div>
-      </li>
-      <li class="new-icon-item">
-        <i class="las la-otter"></i>
-        <div class="new-icon-text-wrapper">
-          <p class="new-icon-title">Journaling</p>
-          <p class="new-icon-text">Capture & Visualize ideas, recording your experience and feelings, self reflection and more..</p>
-        </div>
-      </li>
-      <li class="new-icon-item">
-        <i class="las la-otter"></i>
-        <div class="new-icon-text-wrapper">
-          <p class="new-icon-title">More to come</p>
-          <p class="new-icon-text">Connect all your positive experience in one place.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="last-div">
-    <p class="last-div-text">Zero learning curve, it's that easy to use even a child can use it.</p>
+  <div>
+    <div class="new-text-wrapper">
+      <!-- <h4 class="new-text">Leave behind all the negativity</h4> -->
+      <h3 class="new-text">What can you do on Mind Lab?</h3>
+      <p class="last-div-text">Zero learning curve, it's that easy to use even a child can use it.</p>
+    </div>
+    <div class="new-icon-container">
+      <ul class="new-icon-list">
+        <li class="new-icon-item">
+          <i class="las la-otter"></i>
+          <div class="new-icon-text-wrapper">
+            <p class="new-icon-title">Gratitude List</p>
+            <p class="new-icon-text">Let gratitude change you and your brain, achieve the most of your ability.</p>
+          </div>
+        </li>
+        <li class="new-icon-item">
+          <i class="las la-otter"></i>
+          <div class="new-icon-text-wrapper">
+            <p class="new-icon-title">Journaling</p>
+            <p class="new-icon-text">Capture & Visualize ideas, recording your experience and feelings, self reflection and more..</p>
+          </div>
+        </li>
+        <li class="new-icon-item">
+          <i class="las la-otter"></i>
+          <div class="new-icon-text-wrapper">
+            <p class="new-icon-title">More to come</p>
+            <p class="new-icon-text">Connect all your positive experience in one place.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
   </div>
 </section>
 

@@ -13,7 +13,9 @@ urlpatterns = [
     # path('<int:pk>/', account_views.UserAccount.as_view(), name='account-detail'),
     
 
-    path('login/', account_views.LoginFormView.as_view(), name='login'),
+    path('login/', account_views.LoginFormView.as_view(), name='login',
+    kwargs={'redirect_authenticated_user': True}),
+    
     path('logout/', views.LogoutView.as_view(), name='logout'),
     # path('signup/', account_views.SignUpView.as_view(), name='signup2'),
     path('custom_signup/', account_views.CustomSignUp, name='signup'),
