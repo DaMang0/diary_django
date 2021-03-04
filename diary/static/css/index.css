@@ -4,6 +4,9 @@ html{
   padding: 0;
   box-sizing: border-box;
 }
+*{
+  line-height: 1.6;
+}
 header{
   display: none;
 }
@@ -31,7 +34,9 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: black;
   background-color: rgb(252, 252, 252);
+  background-color: rgb(250, 250, 250);
 }
+
 .index-test-nav{
   display: flex;
   justify-content: space-between;
@@ -151,6 +156,7 @@ body{
   height: auto;
 }
 .new-section{
+  background-color: #fff;
   margin-left: auto;
   margin-right: auto;
   padding: 8rem 1rem;
@@ -162,7 +168,6 @@ body{
 .new-text{
   color: #373a3c;;
   font-size: 2rem;
-  line-height: 23px;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -180,10 +185,7 @@ body{
   padding-right: 2rem;
   padding-top: 10px;
 }
-.new-icon-title, 
-.new-icon-text{
-  line-height: 22px;
-}
+
 .new-icon-title{
   font-size: 2.2rem;
   font-weight: 600;
@@ -193,8 +195,8 @@ body{
 }
 
 .last-div-text {
-  font-size: 1.4rem;
-  line-height: 40px;
+  font-size: 1rem;
+  color: hsl(0, 0%, 50%);
 }
 .orange-section{
   background: #FFD36A;
@@ -226,8 +228,6 @@ body{
   font-size: 1.4rem;
   font-weight: 400;
   padding: 0 1rem;
-  
-  line-height: 1.7;
 }
 .start-for-free-container{
   text-align: right;
@@ -255,6 +255,7 @@ body{
   padding: 1.5rem 1rem;
 }
 .why-header{
+  color: #373a3c;
   padding: 1rem;
   font-size: 4rem;
 }
@@ -277,7 +278,6 @@ body{
 }
 .why-icon-msg{
   font-size: 1.6rem;
-  line-height: 1.6;
 }
 .why-icon-msg, 
 .new-icon-text{
@@ -336,10 +336,11 @@ body{
     .signup-link{
       margin-left: 2rem;
     }
+    
     .orange-container, .blue-container{
       margin-left: auto;
       margin-right: auto;
-      width: 60%;
+      width: 80%;
     }
     .blue-bg-text, 
     .orange-bg-text{
@@ -356,10 +357,10 @@ body{
     .why-icon-msg, 
     .new-icon-text{
     font-size: 1rem;
-    line-height: 2;
     }
     .new-icon-item{
       display: block;
+      width: 30%;
     }
     .new-icon-list{
       display: flex;
@@ -388,16 +389,24 @@ body{
     .get-start--link{
       padding: 2rem 4rem;
     }
-    .orange-section, 
-    .blue-section{
+    
+    .orange-section{
       padding: 10rem 0;
+    }
+    .blue-section{
+      padding: 5rem 0 10rem;
     }
     .orange-container, 
     .blue-container{
       padding-left: 5rem 10rem;
+      width: 60%;
+    }
+    .why-icon-list{
+      padding-left: 8rem;
     }
     .new-section{
-      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
       margin-left: auto;
       margin-right: auto;
     }
@@ -405,12 +414,11 @@ body{
     .new-icon-item > i{
       font-size: 10rem;
     }
+   
     
     .second-new-section{
       min-height: 90vh;
     }
-    .start-for-free-container{
-      padding-right: 10rem;
-    }
+    
     
   }
