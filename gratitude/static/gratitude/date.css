@@ -108,11 +108,16 @@ box-shadow: none !important;
   font-size: 1.5rem;
   margin: 0;
 }
-.streak{
-  text-align: left;
-  font-size: 1.25rem;
-  color: #555;
+.flex{
+  display: flex;
 }
+.date_and_streak_container{
+  justify-content: space-between;
+  font-size: 1.25rem;
+  color: #888;
+  padding: 1rem 0;
+}
+
 .list-title{
   color: rgb(80, 80, 80);
   margin: 4rem 0;
