@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+/* 
+font-family: 'Caveat', cursive;
+ */
 main {
   margin-top: 2rem;
   color: #222;
@@ -46,7 +50,7 @@ box-shadow: none !important;
   transition-timing-function: ease-in-out;
 }
 .submit-btn:hover{
-  background-color: #222;
+  background-color: #111;
 }
 .la-plus{
   font-size: 1.4em;
@@ -60,11 +64,19 @@ box-shadow: none !important;
 .days-container > a {
   font-size: 2rem;
   font-weight: 700;
+  font-family: 'Caveat', cursive;
+  width: 70px;
+  text-align: center;
   text-decoration: none;
   color: inherit;
+  color: #fff;
+  background-color: #333;
+  padding: .5rem 1rem;
+  border-radius: 4px;
 }
 .days-container > a:hover {
-  text-decoration: underline;
+  /* background-color: #555; */
+  color: rgb(103, 255, 240);
 }
 .gratitude-ul{
   list-style: decimal;
@@ -96,6 +108,11 @@ box-shadow: none !important;
   font-size: 1.5rem;
   margin: 0;
 }
+.streak{
+  text-align: left;
+  font-size: 2rem;
+  color: #555;
+}
 .list-title{
   color: rgb(80, 80, 80);
   margin: 4rem 0;
@@ -111,9 +128,7 @@ box-shadow: none !important;
 .list-title:hover{
   color: rgb(30, 30, 30);
 }
-.streak-count{
-  color: maroon;
-}
+
 .list-container{
   position: relative;
   display: flex;
@@ -129,7 +144,9 @@ box-shadow: none !important;
   align-self: center;
 }
 
-
+.la-angle-right, .fa-ellipsis-v, .gratitude-item-time-created{
+  color: #a3a3a3;
+}
 
 .gratitude-item{
   font-size: 1.1rem;
@@ -148,22 +165,17 @@ box-shadow: none !important;
 .gratitude-item::first-letter{
   text-transform: capitalize;
 }
-/* .gratitude-item-time-created {
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: .96px;
-  line-height: 1.4;
-  text-decoration: none;
-  color: inherit; 
-} */
-.gratitude-item-time-created:hover{
+.gratitude-item-time-created, .fa-ellipsis-v{
+  transition: color 100ms ease-in-out;
+}
+.gratitude-item-time-created:hover, .fa-ellipsis-v:hover{
   color: black;
+  cursor: pointer;
 }
 .gratitude-item-time-created{
   display: inline-block;
   margin: 0;
   font-size: 1rem;
-  opacity: .6;
 }
 .gratitude-item-edit-link{
   cursor: pointer;
@@ -171,7 +183,6 @@ box-shadow: none !important;
   position: absolute;
   right: 2rem;
   text-decoration: none;
-  color: #b5b5b5;
 }
 
 .delete-btn {
@@ -207,8 +218,9 @@ box-shadow: none !important;
     padding-left: 6rem;
     padding-right: 6rem;
   }
-  .days-container > a, .gratitude-item > a{
-    font-size: 1.2rem;
+  .days-container > a{
+    font-size: 2rem;
+    width: 100px;
   }
   .list-title{
     font-size: 1.4rem;

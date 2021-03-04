@@ -19,7 +19,6 @@
     <ul class="gratitude-ul">
       
       <div class='date-container'>
-        
         <div class="date-wrap">
           <div class="date-container-1">
             <p class="date-date">{{ custom_page_date.day }}</p>
@@ -31,17 +30,19 @@
           </div>
         </div>
 
-        <div class="days-container">
-          <a href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Previous Day</a>
-          
-          <a href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next Day</a>
+        {% if streak_count and streak_count > 0 %}
+        <div>
+          <p class="streak">{{ streak_count }} days streak!!</p>
         </div>
+        {% endif %}
       </div>
       
-      <h2 class="list-title">Gratitude List</h2>
-      {% if streak_count and streak_count > 0 %}
-      <p class="streak-count">You are on a {{ streak_count }} days streak!!</p>
-      {% endif %}
+      <!-- <h2 class="list-title">Gratitude List</h2> -->
+      <div class="days-container">
+        <a class="previous-day" href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
+        
+        <a class="next-day" href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
+      </div>
       {% for gratitude_list in todays_list %}
       <div class="list-container">
         <i class="las la-angle-right"></i>
@@ -75,9 +76,9 @@
       </div>
 
       <div class="days-container">
-        <a href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Previous Day</a>
+        <a href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
         <!-- <a href="{% url 'gratitude:date' today.year today.month today.day %}">TODAY.</a> -->
-        <a href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next Day</a>
+        <a href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
       </div>
     </div>
   </ul>
