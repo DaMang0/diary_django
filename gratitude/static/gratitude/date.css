@@ -19,7 +19,9 @@ main {
   display: flex;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: transform 200ms ease-in-out;
 }
+
 #id_title{
   color: hsl(0, 0%, 20%);
   font-size: 1.4rem;
