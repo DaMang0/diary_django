@@ -81,8 +81,8 @@ box-shadow: none !important;
 .gratitude-ul{
   list-style: decimal;
   margin: 0 auto;
-  padding: 2rem;
-  padding-bottom: 15rem;
+  padding: 2rem 1rem;
+  padding-bottom: 10rem;
   /* background-color: white; */
   
 }
@@ -149,11 +149,12 @@ box-shadow: none !important;
 }
 
 .gratitude-item{
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   display: inline-block;
   justify-content: space-between;
   padding: 1rem;
   padding-left: 4rem;
+  padding-right: 4rem;
 }
 /* Capitalize the first letter of every gratitude list entry */
 .gratitude-item::first-letter{
@@ -215,8 +216,8 @@ box-shadow: none !important;
     width: 90%;
   }
   .gratitude-ul{
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
   .days-container > a{
     font-size: 2rem;
