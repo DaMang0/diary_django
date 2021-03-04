@@ -42,9 +42,9 @@
       
       <!-- <h2 class="list-title">Gratitude List</h2> -->
       <div class="days-container">
-        <a class="previous-day" href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
+        <a class="previous-day-link" href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
         
-        <a class="next-day" href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
+        <a class="next-day-link" href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
       </div>
       {% for gratitude_list in todays_list %}
       <div class="list-container">

@@ -75,10 +75,14 @@ box-shadow: none !important;
   background-color: #333;
   padding: .5rem 1rem;
   border-radius: 4px;
+  transition: transform 100ms ease-in-out;
 }
-.days-container > a:hover {
-  /* background-color: #555; */
-  color: rgb(103, 255, 240);
+
+.previous-day-link:hover{
+  transform: translateX(-10px);
+}
+.next-day-link:hover{
+  transform: translateX(10px);
 }
 .gratitude-ul{
   list-style: decimal;
