@@ -116,7 +116,8 @@ box-shadow: none !important;
 }
 .list-container{
   display: flex;
-  border-bottom: 1px solid #dcdcdc;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
 }
