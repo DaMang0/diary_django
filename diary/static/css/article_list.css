@@ -42,6 +42,7 @@ body main {
 .article-wrapper{
   padding-top: 5rem;
   text-align: unset;
+  background-color: #fff;
 }
 .article-ol-container{
   list-style-position: inside;
@@ -49,7 +50,7 @@ body main {
   list-style: none;
 }
 .latest-entry-title{
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   letter-spacing: -0.025rem;
   border-radius: 2px;
@@ -59,6 +60,7 @@ body main {
   padding: .5rem 1.5rem;
 }
 .article-list {
+  background-color: #fff;
   font-size: 1rem;
   border-bottom: 1px solid #bbb;
   text-transform: capitalize;
@@ -72,24 +74,20 @@ body main {
 
 .article-link {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
   text-transform: capitalize;
   line-height: 1.2;
   letter-spacing: .96px;
   text-decoration: none;
+  padding-left: 0rem;
   color: inherit;
   transition: color 150ms ease-in-out;
 }
 .article-link:hover{
   color: #555;
 }
-.article-pub-date{
-  font-family: 'Chakra Petch', sans-serif;
-  font-size: 1rem;
-  letter-spacing: .96px;
-  color: #333;
-}
+
 .type, .head-detail{
   font-size: 1rem;
 }

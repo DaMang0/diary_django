@@ -53,6 +53,7 @@ def Date(request, year, month, day):
 
   user = get_object_or_404(User, pk=request.user.id)
   todays_list = user.gratitude_list_set.all().filter(date_created__year=year, date_created__month=month, date_created__day=day)
+  todays_list_count = todays_list.count()
 
   
   for xlist in list(user.gratitude_list_set.all().filter(date_created__lte=today).order_by('-date_created')):
@@ -71,7 +72,7 @@ def Date(request, year, month, day):
     
 
   # yesterdays_list = user.gratitude_list_set.all().filter(date_created__year=year, date_created__month=month, date_created__day=path)
-  context = {'streak_count': streak_count, 'month_name' :month_name, 'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
+  context = {'todays_list_count': todays_list_count, 'streak_count': streak_count, 'month_name' :month_name, 'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
   return render(request, 'gratitude/date.html', context)
 
 

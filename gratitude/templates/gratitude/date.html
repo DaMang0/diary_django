@@ -31,8 +31,11 @@
         </div>
 
         {% if streak_count and streak_count > 0 %}
-        <div>
-          <p class="streak">{{ streak_count }} days streak!!</p>
+        <div class="flex date_and_streak_container">
+          
+          <p class="todays_list_count">{{ todays_list_count }} lists</p>
+          
+          <p class="streak">{{ streak_count }} days streak!</p>
         </div>
         {% endif %}
       </div>
