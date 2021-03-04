@@ -115,19 +115,28 @@ box-shadow: none !important;
   color: maroon;
 }
 .list-container{
+  position: relative;
   display: flex;
+  justify-content: flex-start;
   border: none;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background-color: #fdfdfd;
+  box-shadow: -5px 7px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   margin-bottom: 1rem;
 }
 .la-angle-right{
   align-self: center;
 }
+
+
+
 .gratitude-item{
   font-size: 1.1rem;
   display: inline-block;
+  justify-content: space-between;
   padding: 1rem;
+  padding-left: 4rem;
 }
 /* Capitalize the first letter of every gratitude list entry */
 .gratitude-item::first-letter{
@@ -139,24 +148,32 @@ box-shadow: none !important;
 .gratitude-item::first-letter{
   text-transform: capitalize;
 }
-.gratitude-item > a {
+/* .gratitude-item-time-created {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: .96px;
   line-height: 1.4;
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-.gratitude-item > a:hover{
+  color: inherit; 
+} */
+.gratitude-item-time-created:hover{
   color: black;
 }
-
 .gratitude-item-time-created{
+  display: inline-block;
   margin: 0;
   font-size: 1rem;
   opacity: .6;
 }
+.gratitude-item-edit-link{
+  cursor: pointer;
+  align-self: center;
+  position: absolute;
+  right: 2rem;
+  text-decoration: none;
+  color: #b5b5b5;
+}
+
 .delete-btn {
   background-color: inherit;
   border: none;

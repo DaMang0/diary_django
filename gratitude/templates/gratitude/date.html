@@ -45,8 +45,12 @@
       {% for gratitude_list in todays_list %}
       <div class="list-container">
         <i class="las la-angle-right"></i>
-        <li class="gratitude-item"><a href="{% url 'gratitude:update' gratitude_list.pk %}">{{ gratitude_list.title }}</a></li>
-        <p class="gratitude-item-time-created">{{ gratitude_list.time_created|date:"G:i" }}</p>
+        <li class="gratitude-item">
+          <p>{{ gratitude_list.title }}</p>
+          <p class="gratitude-item-time-created">{{ gratitude_list.time_created|date:"G:i" }}</p>
+        </li>
+        <a class="gratitude-item-edit-link" href="{% url 'gratitude:update' gratitude_list.pk %}"><i class="fas fa-ellipsis-v"></i></i></a>
+        
       </div>
       
       
