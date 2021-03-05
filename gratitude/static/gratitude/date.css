@@ -41,7 +41,9 @@ main {
   transition-property: border-color;
   transition-timing-function: ease-in-out;
 }
-
+#id_title:focus{
+  outline: none !important;
+}
 #id_title:required{
   box-shadow: none !important;
 }
@@ -92,11 +94,7 @@ main {
   transition: transform 100ms ease-in-out;
 }
 
-.previous-day-link:hover{
-  transform: translateX(-10px);
-}
 .days-container > a:hover {
-  /* background-color: #555; */
   opacity: .85;
 }
 .gratitude-ul{
