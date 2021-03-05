@@ -12,7 +12,7 @@
 <div class="gratitude-color-bg-container"></div>
 <form class="create-form" method="POST">{% csrf_token %}
   {{ form.title }}
-  <button class="submit-btn" type="submit"><i class="las la-plus"></i></button>
+  <button class="submit-btn" type="submit">ADD<!--<i class="las la-plus">--></button> 
 </form>
 
   {% if todays_list %}
