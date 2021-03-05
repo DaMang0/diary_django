@@ -61,7 +61,10 @@ main {
   transition-timing-function: ease-in-out;
 }
 .submit-btn:hover{
-  background-color: rgb(47, 214, 142);
+  opacity: .7;
+}
+.submit-btn:active{
+  opacity: 1;
 }
 .la-plus{
   font-size: 1.4em;
@@ -87,7 +90,7 @@ main {
 }
 .days-container > a:hover {
   /* background-color: #555; */
-  color: rgb(96, 255, 186);
+  opacity: .85;
 }
 .gratitude-ul{
   list-style: decimal;
