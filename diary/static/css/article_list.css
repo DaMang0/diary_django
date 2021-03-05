@@ -26,11 +26,12 @@ body main {
   letter-spacing: -0.05rem;
   line-height: 4rem;
   cursor: pointer;
-  transition: opacity 300ms ease-in-out;
+  transition-property: opacity, transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  opacity: .45;
 }
-.head-title:hover{
-  opacity: .55;
-}
+
 .head-detail{
   font-size: 0.87rem;
   font-weight: 400;
@@ -98,7 +99,10 @@ body main {
   padding: 2rem;
   margin: 50px 4%;
 }
-
+.art-banner-container1:hover .head-title{
+  transform: translateX(20px);
+  opacity: 1;
+}
 @media only screen and (min-width: 750px){
   :root{
   font-size: 100%;
