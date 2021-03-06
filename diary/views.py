@@ -38,7 +38,7 @@ class ArticleDetail(DetailView):
 
 class ArticleDelete(DeleteView):
   model = Article
-  success_url = reverse_lazy('article-list')
+  success_url = reverse_lazy('article:list')
   template_name = 'diary/article_delete.html'
 
   def get_object(self):

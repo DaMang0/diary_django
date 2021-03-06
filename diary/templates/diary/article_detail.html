@@ -10,10 +10,10 @@
 {% block content %}
 <article class="article-container">
   
-  <p class="article-detail-title">{{ object.pub_date|date:"M d Y" }} <span style="color: rgb(114, 114, 114);"> / </span> {{ object.title.capitalize }}</p>
+  <p class="article-detail-title"><span class="by">By </span>{{ object.pub_date|date:"M d Y" }} <spanBy style="color: rgb(114, 114, 114);"> / </spanBy> {{ object.title.capitalize }}</p>
   <br>
   <p class="article-detail-body">{{ object.body|safe }}</p>
-  <br><br><br>
+  
 </article>
   <!-- <p class="detail-pub-date">Date created: {{ object.pub_date|date:"M d Y" }}</p> -->
   

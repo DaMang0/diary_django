@@ -12,10 +12,15 @@ body main {
 .art-banner-container1{
   position: relative;
   height: 35vh;
-  background-color: #f5f5f5;
+  background-color: #eee;
   max-width: 100%;
   padding: 2rem;
-  
+  transition: background-color, 200ms ease-in-out;
+}
+
+.art-banner-container1:hover .head-title{
+  transform: translateX(20px);
+  opacity: 1;
 }
 .type{
   font-weight: 600;
@@ -26,10 +31,10 @@ body main {
   letter-spacing: -0.05rem;
   line-height: 4rem;
   cursor: pointer;
-  transition-property: opacity, transform;
+  transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
-  opacity: .45;
+  opacity: 1;
 }
 
 .head-detail{
@@ -73,13 +78,14 @@ body main {
 
 .article-link {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-transform: capitalize;
   line-height: 1.2;
   letter-spacing: .96px;
   text-decoration: none;
   padding-left: 0rem;
+  padding-bottom: 5px;
   color: inherit;
   transition: color 150ms ease-in-out;
 }
@@ -87,6 +93,7 @@ body main {
   color: #555;
 }
 .article-pub{
+  font-size: 10px;
   opacity: .7;
 }
 .type{
@@ -99,10 +106,7 @@ body main {
   padding: 2rem;
   margin: 50px 4%;
 }
-.art-banner-container1:hover .head-title{
-  transform: translateX(20px);
-  opacity: 1;
-}
+
 @media only screen and (min-width: 750px){
   :root{
   font-size: 100%;
@@ -118,7 +122,7 @@ body main {
     margin-bottom: 4rem;
   }
   .article-link{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   
 }

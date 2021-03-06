@@ -1,60 +1,55 @@
-body, html{
-  
-}
-body > main {
+body{
   font-family: 'Inter', serif;
-  margin: 0rem 5%;
+  color: #444;
+}
+.by{
+  font-weight: 200;
 }
 .article-container{
   font-size: 1.4rem;
   background: white;
-  color: black;
-  padding: 4em 1em;
-  text-align: center;
-  
-}
-.article-detail-title {
-  font-size: 0.7em;
-  font-weight: 600;
-  color: rgba(114, 114, 114, 0.85);
-  text-align: center;
-}
-.article-detail-body{
-  font-size: 1rem;
-  text-align: left;
-}
-.article-de
-.icon-container{
-  margin-top: 2vh;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-top: 10rem;
+  padding: 3rem;
 }
 
+.article-detail-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #aaa;
+}
+.article-detail-body{
+  font-size: 1.1rem;
+  font-family: 'Crimson Text', serif;
+  line-height: 1.6;
+  width: 60ch;
+}
+.icon-container{
+  text-align: right;
+  padding-top: 1rem;
+}
 .icon{
   border: none;
   background-color: inherit;
 }
 .fa-pen-square, .fa-trash-alt{
-  font-size: 2rem;
+  font-size: 3rem;
   border: none;
   cursor: pointer;
+  opacity: .3;
 }
 
-@media all and (min-width: 750px){
-  
-  .icon-container{
-    position: absolute;
-    left: 50%;
-    right: 50%;
 
+
+@media all and (min-width: 750px){
+  .article-container{
+    padding-left: 25%;
+    padding-right: 25%;
+    min-height: 50vh;
   }
-  .fa-pen-square, .fa-trash-alt{
-    font-size: 5rem;
+  .article-container > p {
+    font-size: 1rem;
   }
-  .article-detail-body{
-    font-size: .8rem;
-    line-height: 1.6;
-  }
+  
 }
 
 

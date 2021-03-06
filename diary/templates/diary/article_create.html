@@ -10,8 +10,20 @@
 <form action="" method="POST">
   {% csrf_token %}
   {{ form.media }}
-  {{ form.as_p }}
-  <br>
-  <input class="article-submit-button" type="submit" value="Submit">
+  {{ form.title }}
+  {{ form.body }}
+  
+  <input class="article-submit-btn" type="submit" value="Submit">
 </form>
+{% endblock content %}
+
+{% block footer %}
+<script>
+  document.getElementById('id_title').setAttribute('placeholder', 'Title:')  
+  var ckeditor_widget = document.getElementsByClassName("django-ckeditor-widget");
+  ckeditor_widget.removeAttribute("style");
+  var ckeditor_body = document.getElementById("cke_id_body");
+  ckeditor_body.removeAttribute("style");
+  // document.getElementsByClassName("django-ckeditor-widget").removeAttribute("style")
+</script>
 {% endblock %}

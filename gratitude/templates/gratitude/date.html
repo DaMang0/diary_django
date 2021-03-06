@@ -5,14 +5,13 @@
 <link rel="stylesheet" href="{% static 'gratitude/date.css' %}">
 {% endblock %}
 
-{% block title %}
-{% endblock %}
+{% block title %}Gratitude{% endblock %}
 
 {% block content %}
 <div class="gratitude-color-bg-container"></div>
 <form class="create-form" method="POST">{% csrf_token %}
   {{ form.title }}
-  <button class="submit-btn" type="submit">ADD<!--<i class="las la-plus">--></button> 
+  <button class="submit-btn" type="submit"><i class="las la-plus"></i></button>
 </form>
 
   {% if todays_list %}
@@ -96,6 +95,8 @@
 {% block footer %}
   <script>
     document.getElementById('id_title').setAttribute('placeholder', "I'm grateful...")
+    // var gratitude_input_field = document.getElementById('id_title');
+    // gratitude_input_field.id = 'gratitude_input_field'
   </script>
 
 {% endblock %}
