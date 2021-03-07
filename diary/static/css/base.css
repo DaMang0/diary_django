@@ -59,10 +59,10 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   
 }
-.header-inner a {
+.nav-container > a {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   color: #222;
   margin-left: 2.5rem;
@@ -93,8 +93,13 @@ body::-webkit-scrollbar-thumb {
   font-size: .8rem;
   padding-right: 2px;
 }
-.home-link{
+#home-link{
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #222;
 }
 #signup-link{
   color: hsl(16, 83%, 55%);

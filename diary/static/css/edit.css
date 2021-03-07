@@ -1,7 +1,79 @@
-body{
-  background-color: #555;
-  width: 50%;
+* {
+  box-sizing: border-box;
+}
+
+form{
+  min-width: 100vw;
+  padding: 2rem;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15rem;
+}
+
+#id_title{
+  font-size: 3.75rem;
+  padding: 1rem 0;
+  border: none;
+  background-color: transparent;
+  color: #555;
+  width: 75%;
+  display: block;
+  transition: background-color 100ms ease-in-out;
+}
+#id_title:hover{
+  background-color: #f2f2f2;
+}
+#id_title:focus{
+  outline: none;
+}
+#id_title:required{
+  box-shadow: none !important;
+}
+#id_title:invalid{
+  box-shadow: none !important;
+}
+.django-ckeditor-widget, #cke_id_body{
+  width: 100%;
+  border: none;
+}
+#cke_1_top{
+  opacity: .5;
+  border: none;
+}
+#cke_1_top:hover{
+  opacity: 1;
+}
+#cke_1_bottom{
+  display: none;
+}
+.btn{
+  display: block;
+  padding: 1rem 2.4rem;
+  border-radius: 3px;
+  transition-property: color, background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  margin-bottom: 5px;
+}
+
+.article-update-btn{
+  color: #eee;
+  background-color: rgb(22, 193, 245);
+  border: none;
+}
+.article-update-btn:hover{
+  border: 1px solid rgb(22, 193, 245);
+  background-color: #fff;
+  color: rgb(22, 193, 245);
+}
+.back-btn{
+  color: #eee;
+  background-color: #333;
+  border: none;
+}
+.back-btn:hover{
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+  outline: none !important;
+  box-shadow: none !important;
 }

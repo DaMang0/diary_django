@@ -22,6 +22,7 @@ class ArticleListView(ListView):
   context_object_name = 'article_list'
   template_name = 'diary/article_list.html'
   queryset = Article.objects.all().order_by('-pub_date')
+  # queryset = Article.objects.all().order_by('-modified')
 
 class ArticleCreate(CreateView):
   model = Article

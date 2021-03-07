@@ -10,12 +10,14 @@
 </head>
 <body>
   <div>
-    <form method="post">
+    <form action="" method="POST">
+
       {% csrf_token %}
       {{ form.media }}
-      {{ form.as_p }}
-      <br>
-      <input type="submit" value="Update">
+      {{ form.title }}
+      {{ form.body }}
+      <input class="article-update-btn btn" type="submit" value="Update">
+      <input class="back-btn btn" type=button value="Go Back" onClick="javascript:history.go(-1);">
     </form>
   </div>
 </body>
