@@ -1,14 +1,12 @@
 * {
   box-sizing: border-box;
 }
-
 form{
   min-width: 100vw;
   padding: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
-
 #id_title{
   font-size: 3.75rem;
   padding: 1rem 0;
@@ -33,7 +31,7 @@ form{
 }
 .django-ckeditor-widget, #cke_id_body{
   width: 100%;
-  border: none;
+  /* border: none; */
 }
 #cke_1_top{
   opacity: .5;
@@ -54,26 +52,21 @@ form{
   transition-timing-function: ease-in-out;
   margin-bottom: 5px;
 }
-
 .article-update-btn{
-  color: #eee;
-  background-color: rgb(22, 193, 245);
+  color: #fff;
+  background-color: hsl(194, 92%, 45%);
   border: none;
 }
 .article-update-btn:hover{
-  border: 1px solid rgb(22, 193, 245);
-  background-color: #fff;
-  color: rgb(22, 193, 245);
+  background-color: hsl(194, 92%, 35%);
 }
 .back-btn{
-  color: #eee;
+  color: #fff;
   background-color: #333;
   border: none;
 }
 .back-btn:hover{
-  border: 1px solid #333;
-  background-color: #fff;
-  color: #333;
+  background-color: #222;
   outline: none !important;
   box-shadow: none !important;
 }

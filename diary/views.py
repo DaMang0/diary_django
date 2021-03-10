@@ -20,18 +20,18 @@ class ArticleIndex(TemplateView):
 class ArticleListView(ListView):
   model = Article
   context_object_name = 'article_list'
-  template_name = 'diary/article_list.html'
+  template_name = 'diary/list.html'
   queryset = Article.objects.all().order_by('-pub_date')
   # queryset = Article.objects.all().order_by('-modified')
 
 class ArticleCreate(CreateView):
   model = Article
   fields = ['title', 'body']
-  template_name = 'diary/article_create.html'
+  template_name = 'diary/create.html'
 
 class ArticleDetail(DetailView):
   model = Article
-  template_name = 'diary/article_detail.html'
+  template_name = 'diary/detail.html'
 
   def get_object(self):
     slug_ = self.kwargs.get("slug")
@@ -40,7 +40,7 @@ class ArticleDetail(DetailView):
 class ArticleDelete(DeleteView):
   model = Article
   success_url = reverse_lazy('article:list')
-  template_name = 'diary/article_delete.html'
+  template_name = 'diary/delete.html'
 
   def get_object(self):
     slug_ = self.kwargs.get("slug")
@@ -49,7 +49,7 @@ class ArticleDelete(DeleteView):
 class ArticleUpdate(UpdateView):
   model = Article
   fields = ['title', 'body']
-  template_name = "diary/article_update_form.html"
+  template_name = "diary/update.html"
 
   def get_object(self):
     slug_ = self.kwargs.get("slug")

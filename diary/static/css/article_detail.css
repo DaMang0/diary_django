@@ -13,10 +13,10 @@ body{
 }
 .article-container > p {
   font-family: 'Crimson Text', serif;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
-.article-detail-title {
-  font-size: 1.8rem;
+.article-container > p.article-detail-title {
+  font-size: 2rem;
   font-weight: 500;
   color: #222;
   margin-bottom: 2.5rem;
@@ -67,16 +67,17 @@ body{
         font-size: 100%;
       }
       .article-container{
-        padding-left: 25%;
-        padding-right: 25%;
-        margin-top: 2rem;
-        min-height: 50vh;
+        width: 60ch;
+        margin: 0 auto;
+        /* margin-top: 2rem; */
+        /* min-height: 50vh; */
       }
       .article-container > p {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
+        
       }
       .article-container > p.article-detail-title{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
       }
       
     }

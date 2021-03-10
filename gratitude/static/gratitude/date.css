@@ -21,22 +21,20 @@ main {
 
 #id_title{
   color: hsl(0, 19%, 18%);
-  font-size: 1.4rem;
-  padding: 1rem;
+  font-size: 1.8rem;
+  background:#eee;
+  padding: .5rem 1rem;
   width: 80%;
-  border: 3px solid #333;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 12px;
+  border: none;
   transition-duration: 150ms;
-  transition-property: border-color;
+  transition-property: border-color, background-color;
   transition-timing-function: ease-in-out;
 }
-#id_title:hover{
-  background:#f9f9f9;
-}
+
 #id_title:focus{
   outline: none !important;
-  border-color: rgb(132, 211, 200);
+  /* border-color: rgb(132, 211, 200); */
 }
 #id_title:required{
   box-shadow: none !important;
@@ -47,19 +45,20 @@ main {
 .submit-btn{
   font-family: 'Caveat', cursive;
   font-weight: 700;
+  margin-left: 5px;
   color: white;
   border-color: transparent;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 12px;
   width: 20%;
   padding: 1rem;
-  background-color: #333;
+  background-color: hsl(169, 100%, 44%);
+  opacity: .85;
   transition-duration: 150ms;
   transition-property: background-color, border-color;
   transition-timing-function: ease-in-out;
 }
 .submit-btn:hover{
-  background-color: #111;
+  background-color: hsl(169, 100%, 40%);
   
 }
 .submit-btn:active{
@@ -95,7 +94,7 @@ main {
 .gratitude-ul{
   list-style: decimal;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 0rem 2rem 1rem;
   padding-bottom: 10rem;
   /* background-color: white; */
   
@@ -262,4 +261,5 @@ main {
     padding-left: 10rem;
     padding-right: 10rem;
   }
+  
 }

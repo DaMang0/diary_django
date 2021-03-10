@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 body{
-  background-color: rgb(27, 39, 49);
+  background-color: rgb(57, 57, 57);
   color: #f7f7f7;
 }
 body > main {
@@ -19,7 +19,11 @@ main{
   margin-left: auto;
   margin-right: auto;
 }
-
+.errorlist{
+  color: #dd3131;
+  text-align: center;
+  padding-left: 0;
+}
 .text-wrap{
   display: block;
   padding: 1rem;
@@ -45,18 +49,19 @@ main{
   overflow: auto;
 }
 .bg-neon-container{
+  display: none;
   color: black;
-  width: 350px;
-  background: #88ffd1;
+  width: 100%;
+  background: #FFD36A;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem;
   border-radius: 3px;
 }
 .fa-user-alt{
   font-size: 1.5rem;
 }
 .form-title{
-  margin: 1rem auto 0;
+  /* margin: 1rem auto 0; */
   font-size: 1.2rem;
 }
 .field-wrap{
@@ -123,15 +128,17 @@ form input:focus{
 .cc-container{
   margin-top: 1rem;
 }
-.no-cc-required{
-  color: rgb(201, 201, 201);
+.no-cc-required, .policy-text{
+  color: #a5a5a5;
   text-align: center;
-  padding: 20px 5px 5px;
 }
 
 @media all and (min-width:750px){
   :root {
     font-size: 100%;
+  }
+  .bg-neon-container{
+    width: 50%;
   }
   .split{
     display: flex;

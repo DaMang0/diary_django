@@ -10,6 +10,7 @@ body main {
 }
 
 .art-banner-container1{
+  display: none;
   position: relative;
   height: 35vh;
   background-color: #eee;
@@ -78,8 +79,8 @@ body main {
 
 .article-link {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-transform: capitalize;
   line-height: 1.2;
   letter-spacing: .96px;

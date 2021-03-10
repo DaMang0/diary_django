@@ -72,7 +72,6 @@ body{
 
 .main-section{
   position: relative;
-  /* background: #f6efe8; */
   padding: 15rem 1rem 0; 
 }
 .main-text-wrap{
@@ -104,6 +103,7 @@ body{
   margin: 6rem auto;
   text-align: center;
   position: relative;
+  
 }
 .appreciation-svg{
   width: 325px;
@@ -167,7 +167,7 @@ body{
 }
 .new-text{
   color: #373a3c;;
-  font-size: 2rem;
+  font-size: 4rem;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -253,6 +253,7 @@ body{
 }
 .second-new-section{
   padding: 1.5rem 1rem;
+  background-color: #faf7f2;
 }
 .why-header{
   color: #373a3c;
@@ -271,10 +272,11 @@ body{
   padding-bottom: 2rem;
   font-size: 15px;
   font-weight: 400;
-  border-bottom: 1px solid #efeff1;
+  /* border-bottom: 1px solid #efeff1; */
 }
 .why-icon-title{
   font-size: 3rem;
+  font-weight: 600;
 }
 .why-icon-msg{
   font-size: 1.6rem;
@@ -282,7 +284,6 @@ body{
 .why-icon-msg, 
 .new-icon-text{
   color:hsl(0, 0%, 50%);
-  
 }
 
 
@@ -351,16 +352,17 @@ body{
       text-align: center;
     }
     .why-header{
-      font-size: 2rem;
       text-align: center;
     }
     .why-icon-msg, 
     .new-icon-text{
     font-size: 1rem;
     }
+    
     .new-icon-item{
       display: block;
-      width: 30%;
+      width: 20%;
+      margin: 0 1rem;
     }
     .new-icon-list{
       display: flex;
@@ -369,10 +371,10 @@ body{
       text-align: center;
     }
     .new-icon-title, .why-icon-title{
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     .new-icon-text{
-      padding: 0 1rem;
+      padding: 0 2rem;
     }
     
     .second-new-section{
