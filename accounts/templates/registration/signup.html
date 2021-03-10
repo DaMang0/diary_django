@@ -1,0 +1,16 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
+
+{% block title %}Account Registration{% endblock %}
+
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="POST" action="{% url 'signup' %}">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create">
+  </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+/* *{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Merriweather', serif;
+  
+} */
+main{
+  margin: 25px 15px;
+}
+
+.head{
+  font-family: 'Merriweather', serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1.4em;
+  /* margin: 25px 15px; */
+}
+/* .chg-password{
+
+}
+.joined-date{
+  
+}
+.last-log{
+  
+} */

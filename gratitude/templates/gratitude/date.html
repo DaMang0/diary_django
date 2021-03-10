@@ -1,0 +1,102 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'gratitude/date.css' %}">
+{% endblock %}
+
+{% block title %}Gratitude{% endblock %}
+
+{% block content %}
+<div class="gratitude-color-bg-container"></div>
+<form class="create-form" method="POST">{% csrf_token %}
+  {{ form.title }}
+  <button class="submit-btn" type="submit"><i class="las la-plus"></i></button>
+</form>
+
+  {% if todays_list %}
+    <ul class="gratitude-ul">
+      
+      <div class='date-container'>
+        <div class="date-wrap">
+          <div class="date-container-1">
+            <p class="date-date">{{ custom_page_date.day }}</p>
+          </div>
+          <div class="date-container-2">
+            <!-- <p class="date-month">{{ custom_page_date.month }}</p> -->
+            <p class="date-month">{{ month_name }}</p>
+            <p class="date-year">{{ custom_page_date.year }}</p>
+          </div>
+        </div>
+
+        {% if streak_count and streak_count > 0 %}
+        <div class="flex date_and_streak_container">
+          
+          <p class="todays_list_count">{{ todays_list_count }} lists</p>
+          
+          <p class="streak">{{ streak_count }} days streak!</p>
+        </div>
+        {% endif %}
+      </div>
+      
+      <!-- <h2 class="list-title">Gratitude List</h2> -->
+      <div class="days-container">
+        <a class="previous-day-link" href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
+        
+        <a class="next-day-link" href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
+      </div>
+      {% for gratitude_list in todays_list %}
+      <div class="list-container">
+        <i class="las la-angle-right"></i>
+        <li class="gratitude-item">
+          <p>{{ gratitude_list.title }}</p>
+          <p class="gratitude-item-time-created">{{ gratitude_list.time_created|date:"G:i" }}</p>
+        </li>
+        <a class="gratitude-item-edit-link" href="{% url 'gratitude:update' gratitude_list.pk %}"><i class="fas fa-ellipsis-v"></i></i></a>
+        
+      </div>
+      
+      
+    
+    {% endfor %}
+    </ul>
+  {% else %}
+  <ul class="gratitude-ul">
+
+    
+    
+    <div class='date-container'>
+        
+      <div class="date-wrap">
+        <div class="date-container-1">
+          <p class="date-date">{{ custom_page_date.day }}</p>
+        </div>
+        <div class="date-container-2">
+          <p class="date-month">{{ custom_page_date.month }}</p>
+          <p class="date-year">{{ custom_page_date.year }}</p>
+        </div>
+      </div>
+
+      <div class="days-container">
+        <a href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
+        <!-- <a href="{% url 'gratitude:date' today.year today.month today.day %}">TODAY.</a> -->
+        <a href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
+      </div>
+    </div>
+  </ul>
+  <div>
+    <p class="no-entry-msg">No entry</p>
+  </div>
+  
+  {% endif %}
+
+{% endblock %}
+
+{% block footer %}
+  <script>
+    document.getElementById('id_title').setAttribute('placeholder', "I'm grateful...")
+    // var gratitude_input_field = document.getElementById('id_title');
+    // gratitude_input_field.id = 'gratitude_input_field'
+  </script>
+
+{% endblock %}

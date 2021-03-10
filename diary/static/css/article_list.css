@@ -1,0 +1,144 @@
+:root{
+  font-size: 62.5%;
+}
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+}
+body main {
+  position: relative;
+  color: #222;
+}
+
+.art-banner-container1{
+  display: none;
+  position: relative;
+  height: 35vh;
+  background-color: #eee;
+  max-width: 100%;
+  padding: 2rem;
+  transition: background-color, 200ms ease-in-out;
+}
+
+.art-banner-container1:hover .head-title{
+  transform: translateX(20px);
+  opacity: 1;
+}
+.type{
+  font-weight: 600;
+}
+.head-title{
+  width: 95%;
+  font-size: 4rem;
+  letter-spacing: -0.05rem;
+  line-height: 4rem;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+}
+
+.head-detail{
+  font-size: 0.87rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+.head-detail-date{
+  text-decoration: underline;
+}
+.article-wrapper{
+  padding: 5rem 0;
+  text-align: unset;
+  background-color: #fff;
+}
+.article-ol-container{
+  list-style-position: inside;
+  list-style-type: lower-roman;
+  list-style: none;
+}
+.latest-entry-title{
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.025rem;
+  border-radius: 2px;
+  background-color: rgb(21, 24, 28);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+  color: #fff;
+  display: inline-block;
+  padding: .5rem 1.5rem;
+}
+.article-list {
+  background-color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 5rem;
+  width: 80%;
+}
+.article-list:first-of-type{
+  padding-top: 10rem;
+}
+
+.article-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1.2;
+  letter-spacing: .96px;
+  text-decoration: none;
+  padding-left: 0rem;
+  padding-bottom: 5px;
+  color: inherit;
+  transition: color 150ms ease-in-out;
+}
+.article-link:hover{
+  color: #555;
+}
+.article-pub{
+  font-size: 10px;
+  opacity: .7;
+}
+.type{
+  font-size: 1.4rem;
+}
+.head-detail{
+  font-size: 1.1rem;
+}
+.entry-title{
+  padding: 2rem;
+  margin: 50px 4%;
+}
+
+@media only screen and (min-width: 750px){
+  :root{
+  font-size: 100%;
+  }
+  .art-banner-container1, .article-ol-container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .art-banner-container1{
+    height: 50vh;
+  } 
+  .article-list{
+    margin-bottom: 4rem;
+  }
+  .article-link{
+    font-size: 1.5rem;
+  }
+  
+}
+@media only screen and (min-width: 1000px){
+  .art-banner-container1{
+    padding-top: 10rem;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .article-ol-container{
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+      
+    
+

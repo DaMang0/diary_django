@@ -1,0 +1,426 @@
+/* MOBILE FIRST DESIGN */
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*{
+  line-height: 1.6;
+}
+header{
+  display: none;
+}
+.header-outer{
+  display: none;
+}
+.mind-lab-logo{
+  padding: 1.25rem 1rem;
+  color: #222;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+aside{
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+main{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  background-color: rgb(252, 252, 252);
+  background-color: rgb(250, 250, 250);
+}
+
+.index-test-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0, 0.3);
+  cursor: default;
+}
+.nav-signup-div {
+  display: flex;
+  list-style: none; 
+}
+.signup-link{
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem 2rem;
+  white-space: nowrap;
+}
+.login-first:hover{
+  text-decoration: underline;
+}
+.signup-first{
+  background-color: #FFD36A;
+  border: 1px solid #FFD36A;
+  border-radius: 4px;
+  transition: background-color 100ms ease-in-out;
+}
+.signup-first:hover{
+  background-color: #f1c356;
+}
+
+.main-section{
+  position: relative;
+  padding: 15rem 1rem 0; 
+}
+.main-text-wrap{
+  text-align: center;
+}
+.main-web-title{
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+.main-slogan{
+  margin: 0;
+  font-size: 5rem;
+  letter-spacing: -1.5px;
+  padding-bottom: 2rem;
+}
+.main-text{
+  font-size: 1.6rem;
+  margin: 0;
+  padding-bottom: 4rem;
+  font-weight: 500;
+}
+.mind-lab{
+  color: #2565aa;
+  text-decoration: underline;
+}
+.signup-container{
+  margin: 6rem auto;
+  text-align: center;
+  position: relative;
+  
+}
+.appreciation-svg{
+  width: 325px;
+}
+
+.get-start--link{
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #595959;
+  border: none;
+  border-radius: 4px;
+  background-color: #00bd28;
+  
+  padding: 1.2rem 1.5rem;
+  margin-left: 1rem;
+  background: linear-gradient(to right, hsl(133, 100%, 30%) 50%, #00bd28 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition-property: background-position;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+.get-start--link:hover{
+  background-position: left bottom;
+}
+.already-link{
+  margin-right: 1rem;
+  display: inline-block;
+  color: #444;
+}
+.already-link:hover{
+  text-decoration: none;
+}
+.responsive-section{
+  background-color: #fff;
+}
+.responsive-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.webdev-template{
+  width: 800px;
+  height: auto;
+}
+.new-section{
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8rem 1rem;
+}
+.new-text-wrapper{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.new-text{
+  color: #373a3c;;
+  font-size: 4rem;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+.new-icon-list{
+  padding: 5rem 0;
+}
+.new-icon-item{
+  display: flex;
+  margin-bottom: 3rem;
+}
+.new-icon-item > i {
+  align-self: flex-start;
+  font-size: 5rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-top: 10px;
+}
+
+.new-icon-title{
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.new-icon-text{
+  font-size: 1.4rem;
+}
+
+.last-div-text {
+  font-size: 1rem;
+  color: hsl(0, 0%, 50%);
+}
+.orange-section{
+  background: #FFD36A;
+}
+.blue-section{
+  background-color: #7eb9f9;
+}
+.orange-section, 
+.blue-section{
+  padding: 4rem 1rem;
+
+}
+
+.orange-container, 
+.blue-container{
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: left;
+}
+.orange-bg-title, 
+.blue-bg-title{
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+.orange-bg-text, 
+.blue-bg-text{
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 0 1rem;
+}
+.start-for-free-container{
+  text-align: right;
+  padding-right: 1rem;
+  
+}
+.start-for-free-btn{
+  display: inline-block;
+  text-align: right;
+  background-color: #ffffff;
+  box-shadow: 0 8px 6px -6px #000;
+  margin-top: 1rem;
+  
+  color: black;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: transform 200ms ease-in-out;
+}
+.start-for-free-btn:hover{
+  transform: scale(1.1);
+}
+.second-new-section{
+  padding: 1.5rem 1rem;
+  background-color: #faf7f2;
+}
+.why-header{
+  color: #373a3c;
+  padding: 1rem;
+  font-size: 4rem;
+}
+.why-icon-list {
+  padding: 2rem 1rem;
+  list-style: none;
+}
+.second-new-section .fas {
+  font-size: 5rem;
+}
+.why-icon-msg {
+  display: inline-block;
+  padding-bottom: 2rem;
+  font-size: 15px;
+  font-weight: 400;
+  /* border-bottom: 1px solid #efeff1; */
+}
+.why-icon-title{
+  font-size: 3rem;
+  font-weight: 600;
+}
+.why-icon-msg{
+  font-size: 1.6rem;
+}
+.why-icon-msg, 
+.new-icon-text{
+  color:hsl(0, 0%, 50%);
+}
+
+
+.platform-container{
+  padding: 2rem;
+  /* background-color: #f3f3f5; */
+}
+.platform{
+  font-size: 1.25rem;
+  text-align: center;
+  letter-spacing: .04rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title-test{
+  max-width: 100%;
+  padding: 2rem;
+  background-color: rgb(55, 55, 55);
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.no-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.no-item{
+  padding: 0.25rem .5rem;
+}
+.double-white-container{
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+  @media only screen and (min-width: 750px) {
+    .appreciation-svg{
+      width: 650px;
+    }
+    .main-slogan{
+      font-size: 5rem;
+    }
+    .signup-container{
+      margin-top: 9rem;
+    }
+    .signup-link{
+      margin-left: 2rem;
+    }
+    
+    .orange-container, .blue-container{
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+    .blue-bg-text, 
+    .orange-bg-text{
+      font-size: 1rem;
+      width: 60ch;
+    }
+    .new-text-wrapper{
+      text-align: center;
+    }
+    .why-header{
+      text-align: center;
+    }
+    .why-icon-msg, 
+    .new-icon-text{
+    font-size: 1rem;
+    }
+    
+    .new-icon-item{
+      display: block;
+      width: 20%;
+      margin: 0 1rem;
+    }
+    .new-icon-list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .new-icon-title, .why-icon-title{
+      font-size: 1.8rem;
+    }
+    .new-icon-text{
+      padding: 0 2rem;
+    }
+    
+    .second-new-section{
+      padding: 2rem;
+    }
+  
+}
+  
+
+  @media only screen and (min-width: 1000px) {
+    .main-slogan{
+      font-size: 7rem;
+    }
+    .get-start--link{
+      padding: 2rem 4rem;
+    }
+    
+    .orange-section{
+      padding: 10rem 0;
+    }
+    .blue-section{
+      padding: 5rem 0 10rem;
+    }
+    .orange-container, 
+    .blue-container{
+      padding-left: 5rem 10rem;
+      width: 60%;
+    }
+    .why-icon-list{
+      padding-left: 8rem;
+    }
+    .new-section{
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .new-icon-item > i{
+      font-size: 10rem;
+    }
+   
+    
+    .second-new-section{
+      min-height: 90vh;
+    }
+    
+    
+  }

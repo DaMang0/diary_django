@@ -1,0 +1,22 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/Pindex.css' %}">
+{% endblock %}
+
+{% block title %}{{ user.username.capitalize }} - Account{% endblock %}
+
+{% block content %}
+<h1 class="account-index-h2">Account Info</h1>
+
+{% if user.is_authenticated %}
+
+<a href="{% url 'account-profile' object.pk %}">My Profile</a>
+<br>
+<a href="{% url 'password_change' %}">Change Password?</a>
+<p>Date Joined: {{ user.date_joined|date:"d M Y" }}</p>
+<p>Last Login: {{ user.last_login|date:"d M Y" }}</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/article_create.css' %}">
+{% endblock %}
+
+{% block title %}Create a New Article{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.media }}
+  {{ form.title }}
+  {{ form.body }}
+  
+  <input class="article-submit-btn" type="submit" value="Submit">
+</form>
+{% endblock content %}
+
+{% block footer %}
+<script>
+  document.getElementById('id_title').setAttribute('placeholder', 'Title:')  
+  var ckeditor_widget = document.getElementsByClassName("django-ckeditor-widget");
+  ckeditor_widget.removeAttribute("style");
+  var ckeditor_body = document.getElementById("cke_id_body");
+  ckeditor_body.removeAttribute("style");
+  // document.getElementsByClassName("django-ckeditor-widget").removeAttribute("style")
+</script>
+{% endblock %}

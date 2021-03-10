@@ -1,0 +1,21 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+<!-- Load CSS -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/Pindex.css' %}">
+{% endblock %}
+<!-- Load Page Title -->
+{% block title %}{{ user.username }} - Profile{% endblock %}
+
+{% block content %}
+<h1 class="account-index-h2">{{ user.username }} Profile Info</h1>
+
+{% if user.is_authenticated and request.user.id == object.pk %}
+
+
+<a href="{% url 'password_change' %}">Change Password?</a>
+<p>Date Joined: {{ user.date_joined|date:"d M Y" }}</p>
+<p>Last Login: {{ user.last_login|date:"d M Y" }}</p>
+{% endif %}
+
+{% endblock %}

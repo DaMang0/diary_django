@@ -1,0 +1,67 @@
+body{
+  /* background: #f6efe8; */
+}
+main{
+  font-family: 'Montserrat', sans-serif; 
+}
+
+form{
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 5%;
+  position: relative;
+}
+.text-wrap{
+  margin-bottom: 7.5rem;
+  font-size: 1.8rem;
+}
+#id_username, #id_password{
+  border: none;
+  display: block;
+  padding: 1em 2em;
+  margin-bottom: 2rem;
+  outline: none !important;
+}
+#id_username:hover, #id_password:hover{
+  border: 1px solid #eee;
+  border-radius: 4px;
+  
+}
+#id_username:focus, #id_password:focus{
+  background-color: #f0fafa;
+  
+}
+.login-wrapper{
+  margin: 2rem 0;
+  
+  
+}
+.login-btn{
+  border: none;
+  background-color: #80aeae;
+  color: #fff;
+  padding: 1em 3em;
+  cursor: pointer;
+  transition: background-color 100ms ease-in-out;
+}
+.login-btn:hover{
+  background-color: hsl(180, 15%, 40%);
+}
+
+.help{
+  color: black;
+  opacity: .65;
+}
+.create-account{
+  color: rgb(60, 138, 138);
+}
+.create-account:hover{
+  color: hsl(180, 39%, 25%);
+}
+a:hover{
+  text-decoration: none;
+}
+
+.copy-right{
+  opacity: .5;
+}

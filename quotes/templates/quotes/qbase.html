@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% block css %}
+  {% endblock %}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <ul class="nav-box">
+    <li class="nav-list"><a class="nav-link" href="{% url 'article-list' %}">Home</a></li>
+    <!-- <li class="nav-list"><a class="nav-link" href="{% url 'article-create' %}">Create</a></li> -->
+    <li class="nav-list"><a href="#articles" class="nav-link">Articles</a></li>
+    <!-- <li class="nav-list"><a href="#" class="nav-link">BOOKS</a></li> -->
+    <!-- <li class="nav-list"><a href="#" class="nav-link">CLIPS</a></li> -->
+    <li class="nav-list"><a href="{% url 'quotes:index' %}" class="nav-link">QUOTES</a></li>
+    <li class="nav-list"><a href="#" class="nav-link">VALUES</a></li>
+  </ul>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

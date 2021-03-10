@@ -1,0 +1,58 @@
+{% extends 'diary/base.html' %}
+{% load static %}
+<!-- Load CSS -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/article_list.css' %}">
+{% endblock %}
+<!-- Load Page Title -->
+{% block title %}Inspired. | Articles {% endblock %}
+
+{% block content %}
+
+<!-- Article List View Title -->
+
+<div class="art-banner-container1">
+  <div class="head-container">
+    <h4 class="type">Journal</h4>
+    <h1 class="head-title">Better than, yesterday</h1>
+    <h6 class="head-detail">By Mathew Ho on <span class="head-detail-date">{% now "l, d F Y" %}</span></h6>
+  </div>
+  <!-- <div class="msg-container">
+    <p class="banner-msg">What is your story today?</p>
+  </div> -->
+</div>
+
+
+
+<!-- Create New Article  -->
+<a class="article-create create-link" href="{% url 'article:create' %}"><button class="create-button"><span>New</span></button></a>
+
+<!-- Print out all article -->
+
+
+
+<div class="article-wrapper">
+  {% if article_list %}
+  
+  <ol class="article-ol-container">
+    <p class="latest-entry-title">Latest journal entries</p>
+    <!-- <h1 class="article-container-title">What is your story today?</h1> -->
+    {% for article in article_list %}
+  
+  <li class="article-list">
+    <a class="article-link" href="{% url 'article:detail' article.slug %}">{{ article.title.capitalize }}</a><br>
+    <!-- <a href="{% url 'article:update' article.slug %}">Update</a> -->
+    
+    <small class="article-pub">{{ article.pub_date|date:"D. M d Y" }}</small>
+  </li>
+  
+
+    {% endfor %}
+  </ol>
+  {% else %}
+  <strong>There are no articles present.</strong>
+  {% endif %}
+</div>
+<br>
+
+{% endblock %}
