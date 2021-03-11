@@ -43,14 +43,31 @@
     <a class="article-link" href="{% url 'article:detail' article.slug %}">{{ article.title.capitalize }}</a><br>
     <!-- <a href="{% url 'article:update' article.slug %}">Update</a> -->
     
-    <small class="article-pub">{{ article.pub_date|date:"D. M d Y" }}</small>
+    <div style="display: inline-block; margin-left: 5px;">
+      <small class="article-pub">{{ article.pub_date|date:"D. M d Y" }}</small>
+    {% if article.category.get_name_display == "Article" %}
+      <small class="cate cate-article">{{ article.category.get_name_display }}</small>
+    {% elif article.category.get_name_display == "Creativity" %}
+      <small class="cate cate-creativity">{{ article.category.get_name_display }}</small>
+    {% elif article.category.get_name_display == "Diary" %}
+      <small class="cate cate-diary">{{ article.category.get_name_display }}</small>
+    {% elif article.category.get_name_display == "Journal" %}
+      <small class="cate cate-journal">{{ article.category.get_name_display }}</small>
+    {% else %}
+      <small class="cate cate-knowledge">{{ article.category.get_name_display }}</small>
+    {% endif %}
+    </div>  
+
+    <!-- <p>{{ article.category.get_name_display }}</p>  -->
+    
+    
   </li>
   
 
     {% endfor %}
   </ol>
   {% else %}
-  <strong>There are no articles present.</strong>
+  <p>There are no articles present.</p>
   {% endif %}
 </div>
 <br>

@@ -10,6 +10,8 @@
 <form action="" method="POST">
   {% csrf_token %}
   {{ form.media }}
+  <!-- {{ form.slug }} -->
+  {{ form.category }}
   {{ form.title }}
   {{ form.body }}
   

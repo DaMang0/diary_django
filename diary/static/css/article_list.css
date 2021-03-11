@@ -10,11 +10,7 @@ body main {
   margin-top: 2rem;
   /* height: 80vh; */
 }
-.message{
-  list-style: none;
-  background-color: #000;
-  color: #fff;
-}
+
 .art-banner-container1{
   display: none;
   position: relative;
@@ -25,7 +21,8 @@ body main {
   transition: background-color, 200ms ease-in-out;
 }
 
-.art-banner-container1:hover .head-title{
+.art-banner-container1:hover 
+.head-title{
   transform: translateX(20px);
   opacity: 1;
 }
@@ -86,23 +83,51 @@ body main {
 
 .article-link {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   text-transform: capitalize;
   line-height: 1.2;
   letter-spacing: .96px;
   text-decoration: none;
   padding-left: 0rem;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   color: inherit;
-  transition: color 150ms ease-in-out;
+  /* transition: color 150ms ease-in-out; */
 }
 .article-link:hover{
+  text-decoration: underline;
+  text-decoration-color: #aaa;
   color: #555;
 }
+.article-pub, 
+.cate{
+  font-size: .8rem;
+  opacity: .60;
+}
 .article-pub{
-  font-size: 10px;
-  opacity: .7;
+  color: #777;
+}
+.cate{
+  margin-left: 3px;
+}
+.cate:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+.cate-article{
+  color: rgb(43, 110, 253);
+}
+.cate-creativity{
+  color: rgb(255, 110, 100);
+}
+.cate-diary{
+  color: rgb(0, 164, 41);
+}
+.cate-journal{
+  color: rgb(230, 164, 0);
+}
+.cate-knowledge{
+  color:rgb(174, 43, 240);
 }
 .type{
   font-size: 1.4rem;
@@ -119,7 +144,8 @@ body main {
   :root{
   font-size: 100%;
   }
-  .art-banner-container1, .article-ol-container{
+  .art-banner-container1, 
+  .article-ol-container{
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -130,9 +156,11 @@ body main {
     margin-bottom: 4rem;
   }
   .article-link{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
-  
+  .article-pub, .cate{
+    font-size: .8rem;
+  }
 }
 @media only screen and (min-width: 1000px){
   .art-banner-container1{

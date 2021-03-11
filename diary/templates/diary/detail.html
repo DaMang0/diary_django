@@ -11,8 +11,17 @@
 
 <article class="article-container">
   
-  <p class="article-detail-title"><span class="by"></span>{{ object.pub_date|date:"M d Y" }} <span class="slash">/</span> {{ object.title.capitalize }}</p>
-  <br>
+  <!-- <p class="article-detail-title"><span class="by"></span>{{ object.pub_date|date:"M d Y" }} <span class="slash">/</span> {{ object.title.capitalize }}</p> -->
+  
+  <div class="article-info-outer">
+    <ul class="article-info-inner">
+      <p class="article-info-title">{{ object.title }}</p>
+      <div class="article-info-inside-inner">
+        <li class="article-info-posted">Posted: <span class="article-info-posted-color">{{ object.pub_date|date:"M d Y" }}</span></li>
+        <li class="article-info-category">Category: <span class="article-info-category-color">Personal Journal</span></li>
+      </div>
+    </ul>
+  </div>
   <p class="article-detail-body">{{ object.body|safe }}</p>
   
 </article>
