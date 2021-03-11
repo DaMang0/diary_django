@@ -24,7 +24,7 @@
         <i class="fas fa-trash-alt"></i>
       </button>
     </a>
-    <p style="color: white;">Last Modified: {{ object.modified }}</p>
+    <p class="last-modified-detail">Last Modified: {{ object.modified }}</p>
     
     <a class="detail-article-edit-btn" href="{% url 'article:update' object.slug %}">
       <button class="icon">

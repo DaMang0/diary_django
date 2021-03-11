@@ -7,8 +7,14 @@ body {
 body main {
   position: relative;
   color: #222;
+  margin-top: 2rem;
+  /* height: 80vh; */
 }
-
+.message{
+  list-style: none;
+  background-color: #000;
+  color: #fff;
+}
 .art-banner-container1{
   display: none;
   position: relative;
@@ -47,6 +53,7 @@ body main {
   text-decoration: underline;
 }
 .article-wrapper{
+  margin: 2rem;
   padding: 5rem 0;
   text-align: unset;
   background-color: #fff;

@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Article, RichTextArticle
 from django.urls import reverse_lazy
 from datetime import date
+from django.contrib.auth.mixins import LoginRequiredMixin
 class ArticleIndex(TemplateView):
   model = Article
   template_name = 'diary/index.html'
@@ -17,12 +18,14 @@ class ArticleIndex(TemplateView):
     context['day'] = today.day
     return context
 
-class ArticleListView(ListView):
+class ArticleListView(LoginRequiredMixin, ListView):
   model = Article
   context_object_name = 'article_list'
   template_name = 'diary/list.html'
-  queryset = Article.objects.all().order_by('-pub_date')
+  # queryset = Article.objects.all().order_by('-pub_date')
   # queryset = Article.objects.all().order_by('-modified')
+  def get_queryset(self):
+    return Article.objects.filter(user=self.request.user).order_by('-pub_date')
 
 class ArticleCreate(CreateView):
   model = Article
