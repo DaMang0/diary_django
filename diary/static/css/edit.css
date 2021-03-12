@@ -70,3 +70,6 @@ form{
   outline: none !important;
   box-shadow: none !important;
 }
+@media only screen and (min-width: 750px){
+  
+}
