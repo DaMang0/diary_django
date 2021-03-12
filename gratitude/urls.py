@@ -16,7 +16,7 @@ register_converter(DateConverter, 'yyyy')
 app_name = 'gratitude'
 urlpatterns = [
   path('<int:year>-<int:month>-<int:day>/', gratitude_view.Date, name='date'),
-  path('create/', gratitude_view.Date, name='create'),
+  # path('create/', gratitude_view.Date, name='create'),
   path('delete/<int:pk>/', gratitude_view.Delete.as_view(), name='delete'),
   path('update/<int:pk>/', gratitude_view.Update.as_view(), name='update'),
 ]

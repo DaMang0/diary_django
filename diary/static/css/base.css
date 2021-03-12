@@ -47,7 +47,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header-outer{
   max-width: 100%;
-  padding: 0 1rem;
+  padding: 0 4rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -72,10 +72,13 @@ body::-webkit-scrollbar-thumb {
   font-size: 1rem;
   /* text-transform: uppercase; */
   color: #000;
-  margin-left: 3rem;
+  
   position: relative;
   text-decoration: none;
   white-space: nowrap;
+}
+.nav-container > a:not(:first-child){
+  margin-left: 3rem;
 }
 .header-inner a:hover{
   text-decoration: none;
@@ -145,47 +148,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-.create-button {
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  position:absolute;
-  right: 0;
-  border-radius: 0px;
-  background-color: rgb(35, 35, 35);
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 1em 2.5em;
-  transition: all 200ms;
-  cursor: pointer;
-}
-.create-button:hover{
-  color: inherit;
-  opacity: 0.8;
-}
-.create-button span {
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 200ms;
-}
-.create-button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -1.4rem;
-  transition: 200ms;
-}
-.create-button:hover span {
-  padding-right: 1.25rem;
-}
-.create-button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+
 
 
     
@@ -196,13 +159,13 @@ body::-webkit-scrollbar-thumb {
       
       .header-outer{
         height: 110px;
-        
+        padding: 0 10rem;
       }
-      .header-inner{
+      /* .header-inner{
         width: 65%;
         margin: 0 auto;
       }
-      
+       */
       .nav-container > a {
         margin-left: 5rem;
       }

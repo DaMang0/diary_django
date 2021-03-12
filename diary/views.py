@@ -23,11 +23,12 @@ class ArticleListView(LoginRequiredMixin, ListView):
   model = Article
   context_object_name = 'article_list'
   template_name = 'diary/list.html'
+  paginate_by = 10
   # queryset = Article.objects.all().order_by('-pub_date')
   # queryset = Article.objects.all().order_by('-modified')
   
   def get_queryset(self):
-    return Article.objects.filter(user=self.request.user).order_by('-pub_date')
+    return Article.objects.filter(user=self.request.user).order_by('-modified')
 
 class ArticleCreate(CreateView):
   model = Article

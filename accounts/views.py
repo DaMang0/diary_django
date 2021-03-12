@@ -12,22 +12,7 @@ from django.utils import timezone
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-# Create your views here.
-# def SignUp(request):
-#   if request.method == 'POST':
-#     form = SignUpForm(request.POST)
-#     if form.is_valid():
-#       form.save()
-#       username = form.cleaned_data.get('username')
-#       Rpassword = form.cleaned_data.get('password')
-#       user = authenticate(username=username, password=Rpassword)
-#       login(request, user)
-#       return redirect('article:list')
-#   else:
-#     form = UserCreationForm()
-#   return render(request, 'registration/signup.html', {'form': form})
-
-def CustomSignUp(request):
+def SignUp(request):
   if request.method == 'POST':
     form = CustomSignUpForm(request.POST)
     if form.is_valid():
@@ -36,18 +21,7 @@ def CustomSignUp(request):
   else:
     form = CustomSignUpForm()
   context = {'form': form}
-  return render(request, 'registration/custom_register.html', context)
-
-# class SignUpView(SuccessMessageMixin, CreateView):
-#   form_class = SignUpForm
-#   template_name = 'registration/signup.html'
-#   success_url = reverse_lazy('login')
-#   # success_message = "%(username)s was created successfully"
-
-#   def get_success_message(self, cleaned_data):
-#     print(cleaned_data)
-#     return "Account Created!"
-
+  return render(request, 'registration/signup.html', context)
 
 class LoginFormView(SuccessMessageMixin, LoginView):
     template_name = 'registration/login.html'
@@ -77,25 +51,3 @@ class Profile(LoginRequiredMixin, DetailView):
 
   def get_object(self):
     return self.request.user
-
-class UserTasks(LoginRequiredMixin, DetailView):
-  model = User
-  login_url = 'login'
-  redirect_field_name = 'user-task'
-  template_name = 'accounts/user_tasks.html'
-
-  def get_context_data(self, **kwargs):
-    pk_ = self.kwargs.get("pk")
-    user = User.objects.get(id=pk_)
-    context = super().get_context_data(**kwargs) 
-    context['tasks_count'] = user.tasks_set.count()
-    return context
-  # def get_context_data(self, **kwargs):
-  #   user = User.objects.get(id=self.request.user.id)
-  #   context = super().get_context_data(**kwargs) 
-  #   context['tasks_count'] = user.tasks_set.count()
-  #   return context
-     
-# You could try this 
-# user = User.objects.get(username=request.user.username) 
-# user = User.objects.get(pk=request.user.id)

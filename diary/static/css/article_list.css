@@ -8,7 +8,6 @@ body main {
   position: relative;
   color: #222;
   margin-top: 2rem;
-  /* height: 80vh; */
 }
 
 .art-banner-container1{
@@ -56,21 +55,13 @@ body main {
   background-color: #fff;
 }
 .article-ol-container{
+  position: relative;
   list-style-position: inside;
   list-style-type: lower-roman;
   list-style: none;
+  padding-left: 0;
 }
-.latest-entry-title{
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: -0.025rem;
-  border-radius: 2px;
-  background-color: rgb(21, 24, 28);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
-  color: #fff;
-  display: inline-block;
-  padding: .5rem 1.5rem;
-}
+
 .article-list {
   background-color: #fff;
   text-transform: capitalize;
@@ -82,9 +73,9 @@ body main {
 }
 
 .article-link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: capitalize;
   line-height: 1.2;
   letter-spacing: .96px;
@@ -92,17 +83,17 @@ body main {
   padding-left: 0rem;
   padding-bottom: 10px;
   color: inherit;
-  /* transition: color 150ms ease-in-out; */
+  transition: color 50ms ease-in-out;
 }
 .article-link:hover{
-  text-decoration: underline;
-  text-decoration-color: #aaa;
+  /* text-decoration: underline; */
+  /* text-decoration-color: #aaa; */
   color: #555;
 }
 .article-pub, 
 .cate{
   font-size: .8rem;
-  opacity: .60;
+  opacity: 1;
 }
 .article-pub{
   color: #777;
@@ -112,7 +103,6 @@ body main {
 }
 .cate:hover{
   cursor: pointer;
-  opacity: 1;
 }
 .cate-article{
   color: rgb(43, 110, 253);
@@ -132,14 +122,104 @@ body main {
 .type{
   font-size: 1.4rem;
 }
+.pagination{
+  text-align: right;
+  margin-top: 4rem;
+}
+.pagination a{
+  text-decoration: none;
+  color: #67A872;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .head-detail{
   font-size: 1.1rem;
+}
+/* .latest-entry-title{
+  
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.025rem;
+  border-radius: 2px;
+  background-color: rgb(21, 24, 28);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  padding: .5rem 1.5rem;
+} */
+.latest-entry-title{
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.la-coffee{
+  font-size: 2rem;
+  padding-right: 8px;
+}
+.create-button {
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-weight: 300;
+  position:absolute;
+  right: 0;
+  top: 4rem;
+  border-radius: 3px;
+  background-color: rgb(35, 35, 35);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 4rem;
+  transition: all 200ms;
+  cursor: pointer;
+}
+.create-button:hover{
+  color: inherit;
+  opacity: 0.9;
+}
+.create-button span {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 200ms;
+}
+.create-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -1.4rem;
+  transition: 200ms;
+}
+.create-button:hover span {
+  padding-right: 1.25rem;
+}
+.create-button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 .entry-title{
   padding: 2rem;
   margin: 50px 4%;
 }
-
+.second-create-link-container{
+  text-align: center;
+}
+.second-article-create-link{
+  font-size: 1.5rem;
+  display: inline-block;
+  text-decoration: underline;
+  color: #555;
+}
+.second-article-create-link:hover{
+  text-decoration: none;
+  color: #000;
+}
+.la-pen-alt{
+  padding-left: 1rem;
+}
 @media only screen and (min-width: 750px){
   :root{
   font-size: 100%;
@@ -152,14 +232,24 @@ body main {
   .art-banner-container1{
     height: 50vh;
   } 
+  .create-button{
+    right: 10%;
+  }
   .article-list{
     margin-bottom: 4rem;
   }
   .article-link{
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
   .article-pub, .cate{
     font-size: .8rem;
+  }
+  .second-create-link-container{
+    text-align: left;
+    padding-left: 5rem;
+  }
+  .second-article-create-link{
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 1000px){
@@ -171,6 +261,9 @@ body main {
   .article-ol-container{
     padding-left: 15%;
     padding-right: 15%;
+  }
+  .article-link{
+    font-size: .8rem;
   }
 }
 

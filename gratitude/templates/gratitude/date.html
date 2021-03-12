@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'gratitude/date.css' %}">
 {% endblock %}
 
-{% block title %}Gratitude{% endblock %}
+{% block title %}Mind Lab – Gratitude List{% endblock %}
 
 {% block content %}
 <div class="gratitude-color-bg-container"></div>
@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        {% if streak_count and streak_count > 0 %}
+        {% if streak_count and streak_count > 1 %}
         <div class="flex date_and_streak_container">
           
           <p class="todays_list_count">{{ todays_list_count }} lists</p>

@@ -60,8 +60,8 @@ font-family: 'Source Serif Pro', serif;
 
         {% if request.user.is_authenticated %}
         <a href="{% url 'gratitude:date' year month day %}" id="gratitude-link">Gratitude<!--<br>List--></a>
-        <a href="{% url 'article:list' %}" id="journal-link"><!--My<br>-->Journal</a>
-        <a href="{% url 'user-profile' %}">Profile</a>
+        <a href="{% url 'article:list' %}" id="journal-link"><!--My<br>-->Write</a>
+        <a href="{% url 'profile' %}">Profile</a>
         <a id="logout-link" onclick="return confirm('Are you sure you want to logout?')" href="{% url 'logout' %}"><i class="fas fa-lock"></i>Logout</a>
 
         {% else %}

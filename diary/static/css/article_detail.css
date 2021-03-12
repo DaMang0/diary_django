@@ -35,6 +35,7 @@ body{
 }
 .article-container > p {
   font-family: 'Crimson Text', serif;
+  font-family: 'Montserrat', sans-serif;
   /* font-family: 'Montserrat', sans-serif; */
   font-size: 1.3rem;
 }
@@ -52,12 +53,13 @@ body{
   width: 60ch;
 }
 .icon-container{
+  color: #fff;
   text-align: right;
   background-color: #444;
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: .5rem 1rem;
+  padding: .5rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,8 +72,8 @@ body{
   background-color: inherit;
 }
 .fa-pen-square, .fa-trash-alt{
-  color: white;
-  font-size: 2.4rem;
+  color: #fff;
+  font-size: 1.8rem;
   border: none;
   cursor: pointer;
   padding: 0 1rem;
@@ -86,6 +88,10 @@ body{
   color: #fff;
   font-size: .8rem;
 }
+.go-back-link{
+  color: #fff;
+  text-decoration: none;
+}
 
     @media all and (min-width: 750px){
       :root{
@@ -98,13 +104,19 @@ body{
         /* min-height: 50vh; */ 
       }
       .article-container > p {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         
       }
       .article-container > p.article-detail-title{
         font-size: 2.2rem;
       }
       
+    }
+
+    @media only screen and (min-width: 1000px){
+      .article-container > p {
+        font-size: 1rem;
+      }
     }
 
 

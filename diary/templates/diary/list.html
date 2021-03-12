@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/article_list.css' %}">
 {% endblock %}
 <!-- Load Page Title -->
-{% block title %}Journal{% endblock %}
+{% block title %}Your Writings – Mind Lab {% endblock %}
 
 {% block content %}
 
@@ -17,58 +17,78 @@
     <h1 class="head-title">Better than, yesterday</h1>
     <h6 class="head-detail">By Mathew Ho on <span class="head-detail-date">{% now "l, d F Y" %}</span></h6>
   </div>
-  <!-- <div class="msg-container">
-    <p class="banner-msg">What is your story today?</p>
-  </div> -->
 </div>
 
 
-
 <!-- Create New Article  -->
-<a class="article-create create-link" href="{% url 'article:create' %}"><button class="create-button"><span>New</span></button></a>
+
+
 
 <!-- Print out all article -->
-
-
-
 <div class="article-wrapper">
-  {% if article_list %}
+  
+  
   
   <ol class="article-ol-container">
-    <p class="latest-entry-title">Latest journal entries</p>
+    
+    
     <!-- <h1 class="article-container-title">What is your story today?</h1> -->
+  {% if article_list %}
+    <p class="latest-entry-title"><i class="las la-coffee"></i>Latest entries</p>
+    <a class="article-create-link" href="{% url 'article:create' %}"><button class="create-button"><span>New</span></button></a>
     {% for article in article_list %}
   
-  <li class="article-list">
-    <a class="article-link" href="{% url 'article:detail' article.slug %}">{{ article.title.capitalize }}</a><br>
-    <!-- <a href="{% url 'article:update' article.slug %}">Update</a> -->
+    <li class="article-list">
+      <a class="article-link" href="{% url 'article:detail' article.slug %}">{{ article.title.capitalize }}</a><br>
+      <!-- <a href="{% url 'article:update' article.slug %}">Update</a> -->
+      
+      <div>
+        <small class="article-pub">{{ article.pub_date|date:"D. M d Y" }}</small>
+      {% if article.category.get_name_display == "Article" %}
+        <small class="cate cate-article">{{ article.category.get_name_display }}</small>
+      {% elif article.category.get_name_display == "Creativity" %}
+        <small class="cate cate-creativity">{{ article.category.get_name_display }}</small>
+      {% elif article.category.get_name_display == "Diary" %}
+        <small class="cate cate-diary">{{ article.category.get_name_display }}</small>
+      {% elif article.category.get_name_display == "Journal" %}
+        <small class="cate cate-journal">{{ article.category.get_name_display }}</small>
+      {% else %}
+        <small class="cate cate-knowledge">{{ article.category.get_name_display }}</small>
+      {% endif %}
+      </div>  
+      
+      {% endfor %}
+      <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a class="first" href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
     
-    <div style="display: inline-block; margin-left: 5px;">
-      <small class="article-pub">{{ article.pub_date|date:"D. M d Y" }}</small>
-    {% if article.category.get_name_display == "Article" %}
-      <small class="cate cate-article">{{ article.category.get_name_display }}</small>
-    {% elif article.category.get_name_display == "Creativity" %}
-      <small class="cate cate-creativity">{{ article.category.get_name_display }}</small>
-    {% elif article.category.get_name_display == "Diary" %}
-      <small class="cate cate-diary">{{ article.category.get_name_display }}</small>
-    {% elif article.category.get_name_display == "Journal" %}
-      <small class="cate cate-journal">{{ article.category.get_name_display }}</small>
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a class="last" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+      
+    </li>
+
     {% else %}
-      <small class="cate cate-knowledge">{{ article.category.get_name_display }}</small>
-    {% endif %}
-    </div>  
-
-    <!-- <p>{{ article.category.get_name_display }}</p>  -->
     
+    <div class="second-create-link-container">
+      <a class="second-article-create-link" href="{% url 'article:create' %}">Write a story<i class="las la-pen-alt"></i></a>
+    </div>
     
-  </li>
-  
-
-    {% endfor %}
   </ol>
-  {% else %}
-  <p>There are no articles present.</p>
+  
+  
   {% endif %}
+  
 </div>
 <br>
 

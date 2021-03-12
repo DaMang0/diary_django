@@ -1,16 +1,93 @@
-{% extends 'diary/base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <title>Get Started | Mind Lab</title>
+  
+</head>
+<body>
+  <header>
+    
+  </header>
+  <main>
+    <div class="big-wrap">
 
-{% block css %}
-<link rel="stylesheet" href="{% static 'css/signup.css' %}">
-{% endblock %}
+      <div class='text-wrap'>
+        <h1 class="text-title">Mind Lab.</h1>
+        <!-- <h2 class="text-msg">Inspire helps you connect and share with the people in your life.</h2> -->
+        <p class="text-msg">The best time to start is now.</p>
+      </div>
+      
 
-{% block title %}Account Registration{% endblock %}
-
-{% block content %}
-  <h2>Sign up</h2>
-  <form method="POST" action="{% url 'signup' %}">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Create">
-  </form>
-{% endblock %}
+      <div class="form-wrap">
+        <div class="bg-neon-container">
+          <div>
+            <i class="fas fa-user-alt"></i>
+          </div>
+          <p class="form-title">Start your free journal of Inspire</p>
+        </div>
+        
+        <form class="form-box" method="post" action="{% url 'signup' %}">{% csrf_token %}
+          {% if form.errors %}
+            <p>{{ form.errors }}</p>
+          {% endif %}
+          <div class="split">
+            <div class="field-wrap">
+              {{ form.email.label_tag }}
+              {{ form.email }}
+            </div>
+            <div class="field-wrap">
+              {{ form.username.label_tag }}
+              {{ form.username }}
+            </div>
+          </div>
+          <div class="split">
+            <div class="field-wrap">
+              {{ form.password1.label_tag }}
+              {{ form.password1 }}
+            </div>
+            <div class="field-wrap">
+              {{ form.password2.label_tag }}
+              {{ form.password2 }}
+            </div>
+          </div>
+    
+          <!-- <div class='name-wrap'>
+            {{ form.first_name.label_tag }}
+              {{ form.first_name }}
+            {{ form.last_name.label_tag }}
+              {{ form.last_name }}
+          </div> -->
+          
+          <a class="already" href="{% url 'login' %}">Already Member?</a>
+          <button class="register-btn" type="submit">Register</button>
+                  
+          <div class="cc-container">
+            <p class="no-cc-required">No credit card & payment required.</p>
+          </div>
+          
+          <div class="policy-container">
+            <p class="policy-text">by signing up you agree to our terms data policy and cookies policy</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <script>
+      // document.getElementById('id_username').setAttribute('placeholder', "*")
+      document.getElementById('id_email').setAttribute('placeholder', "examplemail@mail.com")
+      document.getElementById('id_password1').setAttribute('placeholder', "******")
+      document.getElementById('id_password2').setAttribute('placeholder', "Confirm Password")
+      // document.getElementById('id_first_name').setAttribute('placeholder', "First name")
+      // document.getElementById('id_last_name').setAttribute('placeholder', "Surname") 
+    </script>
+  </footer>
+</body>
+</html>

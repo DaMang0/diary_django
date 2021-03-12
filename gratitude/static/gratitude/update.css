@@ -1,10 +1,85 @@
-form{
-  margin-left: auto;
-  margin-right: auto;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  font-size: 62.5%;
+  background-color: #f1f1f1;
 }
-form > p > input {
-  font-size: 1.3rem;
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
   padding: 1rem;
-  min-width: 50vw;
-  max-width: 50vw;
+}
+form{
+  margin-top: 10rem;
+  padding: 2rem;
+  
+}
+label{
+  display: block;
+  font-size: 1.625rem;
+  color: #555;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+#id_title{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.625rem;
+  padding: .5rem 1rem;
+  color: #555;
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+  background-color: #fff;
+}
+#id_title:hover{
+  background-color: #fafafa;
+}
+#id_title:focus{
+  outline: none;
+  background-color: #fff;
+  color: 000;
+}
+#id_title:required{
+  box-shadow: none !important;
+}
+#id_title:invalid{
+  box-shadow: none !important;
+}
+.save-btn-container{
+  display: block;
+  text-align: right;
+}
+.back-link{
+  text-decoration: underline;
+  color: inherit;
+  color: #555;
+  margin-right: 1rem;
+}
+.back-link:hover{
+  text-decoration: none;
+}
+.save-input{
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 6px;
+  font-weight: 400;
+  background-color: rgb(61, 206, 131);
+  transition: background-color 150ms ease-in-out;
+}
+.save-input:hover{
+  background-color: hsl(149, 60%, 48%);
+}
+
+@media only screen and (min-width: 750px){
+  :root{
+    font-size: 100%;
+  }
+  .save-btn-container{
+    text-align: center;
+  }
 }

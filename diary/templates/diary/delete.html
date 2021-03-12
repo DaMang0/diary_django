@@ -1,4 +1,20 @@
-<form method="POST">{% csrf_token %}
-  <h1>Are you sure you want to delete?{{ object.title }}</h1>
-  <input type="submit" value="Confirm"> <a href="{% url 'article:list' %}">Cancel</a>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/delete.css' %}">
+  <title>Are you sure you want to delete?</title>
+</head>
+<body>
+
+  <form method="POST">{% csrf_token %}
+    <p class="are-you-sure-txt">Sure you want to delete?</p>
+    <p class="article-title">{{ object.title }}</p>
+    <input class="confirm-btn" type="submit" value="Confirm"><a href="{% url 'article:list' %}">Cancel</a>
+  </form>
+  
+</body>
+</html>

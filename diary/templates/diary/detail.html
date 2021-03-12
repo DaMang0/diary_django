@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="{% static 'css/article_detail.css' %}">
 {% endblock %}
 
-{% block title %}{{ object.title }}{% endblock %}
+{% block title %}{{ object.title }} – Mind Lab{% endblock title %}
 
 {% block content %}
 
@@ -28,18 +28,21 @@
   <!-- <p class="detail-pub-date">Date created: {{ object.pub_date|date:"M d Y" }}</p> -->
   
   <div class="icon-container">
-    <a class="detail-article-del-btn" href="{% url 'article:delete' object.slug %}">
-      <button class="icon" onclick="return confirm('Are you sure you want to delete this article?')">
-        <i class="fas fa-trash-alt"></i>
-      </button>
-    </a>
+    <div style="display: flex;">
+      <a class="detail-article-del-btn" href="{% url 'article:delete' object.slug %}">
+        <button class="icon" onclick="return confirm('Are you sure you want to delete this article?')">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </a>
+      <a class="detail-article-edit-btn" href="{% url 'article:update' object.slug %}">
+        <button class="icon">
+          <i class="fas fa-pen-square"></i>
+        </button>
+      </a>
+    </div>
     <p class="last-modified-detail">Last Modified: {{ object.modified }}</p>
+    <div><a class="go-back-link" href="{% url 'article:list' %}">Go back</a></div>
     
-    <a class="detail-article-edit-btn" href="{% url 'article:update' object.slug %}">
-      <button class="icon">
-        <i class="fas fa-pen-square"></i>
-      </button>
-    </a>
   </div>
   
 

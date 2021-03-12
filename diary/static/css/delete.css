@@ -1,0 +1,37 @@
+:root{
+  font-size: 62.5%;
+}
+html{
+  color: #333;
+}
+form{
+  width: 90vw;
+  margin: 20rem auto 0;
+  text-align: center;
+}
+
+.confirm-btn{
+  padding: 1rem 3rem;
+  background-color: #d74f4f;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+}
+.confirm-btn:hover{
+  cursor: pointer;
+}
+a{
+  color: inherit;
+  padding-left: 1rem;
+}
+.article-title{
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 750px){
+  :root{
+    font-size: 100%;
+  }
+}
