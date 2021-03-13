@@ -8,14 +8,19 @@ form{
   margin-left: auto;
   margin-right: auto;
 }
+body{
+  background-color: #fafafa;
+}
 #id_category{
   padding: 0.5rem 1rem;
-  color: #555;
+  color: #fff;
+  background-color: dodgerblue;
   
 }
 #id_title{
   font-size: 3.75rem;
   padding: 1rem 0;
+  margin: 2rem 0;
   border: none;
   background-color: transparent;
   color: #555;
@@ -39,6 +44,9 @@ form{
   width: 100%;
   border: none;
 }
+#cke_id_body{
+  background-color: #111;
+}
 #cke_1_top{
   opacity: .5;
   border: none;
@@ -53,7 +61,9 @@ form{
   background-color: #333;
   display: block;
   color: #fff;
-  padding: 1rem 2.4rem;
+  font-size: 1rem;
+  padding: 1.5rem 4rem;
+  opacity: .9;
   border-radius: 3px;
   border: 1px solid #333;
   transition-property: opacity;
@@ -61,7 +71,7 @@ form{
   transition-timing-function: ease-in-out;
 }
 .article-submit-btn:hover{
-  opacity: .9;
+  opacity: 1;
   /* background-color: #111; */
   /* color: #333; */
 
@@ -73,11 +83,12 @@ form{
   @media only screen and (min-width: 750px){
     form{
       position: absolute;
-      left: 10%;
+      left: 5%;
+      margin-right: 5rem;
     }
   }
       @media only screen and (min-width: 1000px){
         form{
-          left: 20%;
+          left: 10%;
         }
       }

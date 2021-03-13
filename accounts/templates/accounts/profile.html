@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/Pindex.css' %}">
 {% endblock %}
 <!-- Load Page Title -->
-{% block title %}{{ user.username }} - Profile{% endblock %}
+{% block title %}Profile - {{ user.username }}{% endblock %}
 
 {% block content %}
 <h1 class="account-index-h2">{{ user.username }} Profile Info</h1>

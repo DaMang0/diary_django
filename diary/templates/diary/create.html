@@ -4,14 +4,16 @@
 <link rel="stylesheet" href="{% static 'css/article_create.css' %}">
 {% endblock %}
 
-{% block title %}Creating a New Story{% endblock %}
+{% block title %}Writing in Progress{% endblock %}
 
 {% block content %}
 <form action="" method="POST">
   {% csrf_token %}
   {{ form.media }}
   <!-- {{ form.slug }} -->
-  {{ form.category }}
+  <div class="select-container">
+    {{ form.category }}
+  </div>
   {{ form.title }}
   {{ form.body }}
   

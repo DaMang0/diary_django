@@ -62,7 +62,7 @@
         <span class="step-links">
             {% if page_obj.has_previous %}
                 <a class="first" href="?page=1">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                <a class="previous" href="?page={{ page_obj.previous_page_number }}">previous</a>
             {% endif %}
     
             <span class="current">
@@ -70,7 +70,7 @@
             </span>
     
             {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a class="next" href="?page={{ page_obj.next_page_number }}">next</a>
                 <a class="last" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
             {% endif %}
         </span>
@@ -80,8 +80,19 @@
 
     {% else %}
     
-    <div class="second-create-link-container">
-      <a class="second-article-create-link" href="{% url 'article:create' %}">Write a story<i class="las la-pen-alt"></i></a>
+    <div class="second-create-container">
+      <div>
+        <i class="las la-pen-alt"></i>
+      </div>
+      <p class="second-create-container-title">Write your first story</p>
+      <p class="second-create-container-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ratione.</p>
+      <div>
+        <a class="learn-more-link" href="{% url 'article:learn-more' %}">Learn more <i class="fas fa-long-arrow-alt-right"></i></a>
+      </div>
+      <form action="{% url 'article:create' %}" method="POST">
+        {% csrf_token %}
+        <input class="write-story-btn" type="submit" value="Write a story">
+      </form>
     </div>
     
   </ol>
