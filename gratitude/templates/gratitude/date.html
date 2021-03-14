@@ -8,11 +8,9 @@
 {% block title %}Gratitude List – Mind Lab {% endblock %}
 
 {% block content %}
-<i class="lar la-times-circle"></i>
-<i class="las la-times-circle"></i>
-<section style="padding: 2rem;" class="gratitude-color-bg-outer">
+<section class="gratitude-color-bg-outer">
   <div class="date-wrap">
-    <div><a class="white-space" href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}"><-- Previ Day</a></div>
+    <div class="day-link-container"><a class="day-link" href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}"><-- Previ Day</a></div>
     <div class="date-container-1">
       <p class="date-date">{{ custom_page_date.day }}</p>
     </div>
@@ -22,7 +20,7 @@
       <p class="date-year">{{ custom_page_date.year }}</p>
     </div>
     
-    <div><a class="white-space" href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next Day --></a></div>
+    <div class="day-link-container"><a class="day-link" href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next Day --></a></div>
   </div>
   <div>
     <form class="create-form" method="POST">{% csrf_token %}
@@ -48,8 +46,8 @@
 
         {% if streak_count and streak_count > 1 %}
         <div class="flex date_and_streak_container">
-          <p class="todays_list_count">{{ todays_list_count }} lists</p>
-          <p class="streak">{{ streak_count }} days streak!</p>
+          <p class="todays_list_count">Total: {{ todays_list_count }}</p>
+          <p class="streak">Current streak: {{ streak_count }} days</p>
         </div>
         {% endif %}
       </div>
@@ -77,31 +75,13 @@
     </ul>
   {% else %}
   <ul class="gratitude-ul">
-
-    
-    
-    <div class='date-container'>
-        
-      <div class="date-wrap">
-        <div class="date-container-1">
-          <p class="date-date">{{ custom_page_date.day }}</p>
-        </div>
-        <div class="date-container-2">
-          <p class="date-month">{{ custom_page_date.month }}</p>
-          <p class="date-year">{{ custom_page_date.year }}</p>
-        </div>
-      </div>
-
-      <div class="days-container">
-        <a href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
-        <!-- <a href="{% url 'gratitude:date' today.year today.month today.day %}">TODAY.</a> -->
-        <a href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
-      </div>
-    </div>
+    <p class="empty-title">Title title title title title</p>
+    <li class="ideas-msg">What do you get to do today / tomorrow?</li>
+    <li class="ideas-msg">What did you not have to do today / tomorrow?</li>
+    <li class="ideas-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li class="ideas-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
   </ul>
-  <div>
-    <p class="no-entry-msg">No entry</p>
-  </div>
+  
   
   {% endif %}
 
