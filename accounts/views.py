@@ -21,27 +21,11 @@ def SignUp(request):
   else:
     form = CustomSignUpForm()
   context = {'form': form}
-  return render(request, 'registration/signup.html', context)
+  return render(request, 'accounts/signup.html', context)
 
-class LoginFormView(SuccessMessageMixin, LoginView):
-    template_name = 'registration/login.html'
+class Login(SuccessMessageMixin, LoginView):
+    template_name = 'accounts/login.html'
     success_message = "Welcome "
-
-class UserAccount(DetailView):
-  template_name = 'accounts/index.html'
-  model = User
-
-  def get_object(self):
-    pk_ = self.kwargs.get("pk")
-    return get_object_or_404(User, pk=pk_)
-    
-  def get_context_data(self, **kwargs):
-    pk_ = self.kwargs.get("pk")
-    user = User.objects.get(id=pk_)
-    context = super().get_context_data(**kwargs)   
-    context['now'] = timezone.now()
-    context['user_book'] = user.book_set.all()
-    return context
 
 class Profile(LoginRequiredMixin, DetailView):
   model = User

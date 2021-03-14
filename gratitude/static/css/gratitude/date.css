@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
-/* 
-font-family: 'Caveat', cursive;
- */
+body{
+  background-color: #eee;
+}
 main {
   margin-top: 2rem;
   color: #222;
@@ -9,14 +9,25 @@ main {
   font-weight: 400;
 }
 
+.day-link{
+  white-space: nowrap;
+  color: #000;
+  padding: 0 20px;
+}
+.day-link:hover{
+  text-decoration: none;
+}
+
+.gratitude-color-bg-outer{
+  background: #FFD36A;
+  max-width: 100vw;
+  padding: 1rem;
+}
 
 .create-form{
-  
   margin: 0 auto;
   position: relative;
   display: flex;
-  border: 1px solid #777;
-  padding: 1rem;
   transition: transform 200ms ease-in-out;
 }
 
@@ -97,8 +108,6 @@ main {
   margin: 0 auto;
   padding: 0rem 2rem 1rem;
   padding-bottom: 10rem;
-  /* background-color: white; */
-  
 }
 .date-wrap{
   display: flex;
@@ -155,7 +164,7 @@ main {
   display: flex;
   justify-content: flex-start;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #fdfdfd;
   box-shadow: -5px 7px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -163,12 +172,17 @@ main {
   margin-bottom: 1rem;
   
 }
-.la-angle-right{
+.la-angle-right, 
+.la-times-circle, 
+.fa-ellipsis-v, 
+.gratitude-item-time-created{
+  color: #a3a3a3;
+}
+.la-times-circle{
   align-self: center;
 }
-
-.la-angle-right, .fa-ellipsis-v, .gratitude-item-time-created{
-  color: #a3a3a3;
+.la-times-circle:hover{
+  color: maroon;
 }
 
 .gratitude-item{
@@ -220,30 +234,29 @@ main {
 }
 
 /* Message if the page does not have any gratitude list entry yet */
-.no-entry-msg{
-  font-size: 2.5rem;
-  /* padding-left: 15rem; */
+.empty-title{
+  text-decoration: underline;
+}
+.ideas-msg{
   text-align: center;
 }
 
 
 @media only screen and (min-width: 750px) {
   
-  .create-form{
-    padding-left: 10%;
-    padding-right: 10%;
+  .gratitude-color-bg-outer, .gratitude-ul{
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
   }
+  
   .submit-btn{
-    width: 10%;
+    width: 20%;
     font-size: 1.25rem;
   }
   #id_title{
-    width: 90%;
+    width: 80%;
   }
-  .gratitude-ul{
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+  
   .gratitude-item{
     padding-top: 0rem;
     padding-bottom: 0rem;
@@ -268,10 +281,13 @@ main {
 }
 
 @media only screen and (min-width: 1000px) {
-  
-  .gratitude-ul{
+  .gratitude-color-bg-outer{
     padding-left: 10rem;
     padding-right: 10rem;
+  }
+  .gratitude-ul{
+    padding-left: 25%;
+    padding-right: 25%;
   }
   
 }

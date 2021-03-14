@@ -10,7 +10,7 @@ from django.urls import path, re_path
 urlpatterns = [
     path('profile/', account_views.Profile.as_view(), name='profile'),
     path('signup/', account_views.SignUp, name='signup'),
-    path('login/', account_views.LoginFormView.as_view(), name='login',
+    path('login/', account_views.Login.as_view(), name='login',
     kwargs={'redirect_authenticated_user': True}),
     path('logout/', views.LogoutView.as_view(), name='logout'),
     
