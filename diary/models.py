@@ -14,7 +14,7 @@ class Category(models.Model):
     ('5', 'Knowledge'),
     )
   # article = models.ForeignKey(Article, on_delete=models.CASCADE)
-  name = models.CharField(max_length=25, choices=CHOICES, unique=True)
+  name = models.CharField(max_length=25, choices=CHOICES, unique=True, default='1')
   description = models.TextField(blank=True)
 
   def __str__(self):

@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/diary/delete.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gratitude/delete.css' %}">
   <title>Sure you want to delete?</title>
 </head>
 <body>
 
   <form method="POST">{% csrf_token %}
-    <p class="warning-msg"><span class="warning">Warning!! </span>Are you sure you want to delete?</p>
-    <p class="article-title">{{ object.title }}</p>
+    <p class="warning-msg"><span>Warning!! </span>Are you sure you want to delete?</p>
+    <p class="gratitude-content">{{ object.title }}</p>
     <input class="confirm-btn" type="submit" value="Confirm"><a href="javascript:history.back()">Go Back</a>
   </form>
   

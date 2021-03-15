@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 form{
   min-width: 100vw;
   padding: 1rem 2rem;
@@ -14,8 +13,6 @@ body{
 #id_category{
   padding: 0.5rem 1rem;
   color: #fff;
-  background-color: dodgerblue;
-  
 }
 #id_title{
   font-size: 3.75rem;
@@ -58,23 +55,20 @@ body{
   display: none;
 }
 .article-submit-btn{
-  background-color: #333;
+  background-color: rgb(84, 105, 212);
   display: block;
   color: #fff;
   font-size: 1rem;
   padding: 1.5rem 4rem;
   opacity: .9;
   border-radius: 3px;
-  border: 1px solid #333;
+  border: none;
   transition-property: opacity;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
 .article-submit-btn:hover{
   opacity: 1;
-  /* background-color: #111; */
-  /* color: #333; */
-
   outline: none !important;
   box-shadow: none !important;
 }

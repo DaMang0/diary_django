@@ -3,13 +3,15 @@ from .models import Article
 from django.contrib.auth import get_user_model
 from django.shortcuts import reverse
 from django.urls import resolve
+from django.contrib.auth.models import User
 # Create your tests here.
 User = get_user_model()
 
 class ArticleTestCase(TestCase):
   
   def setUp(self):
-    article_1 = Article.objects.create(title='title1', body='body')
+    user = User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')
+    article_1 = Article.objects.create(title='title1', body='body', user=user)
   
   def test_article_list_url(self):
     url = reverse('article:list')
