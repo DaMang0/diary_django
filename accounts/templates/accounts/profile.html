@@ -13,7 +13,12 @@
 {% if user.is_authenticated and request.user.id == object.pk %}
 
 
-<a href="{% url 'password_change' %}">Change Password?</a>
+<div>
+  <a href="{% url 'password_change' %}">Change Password?</a>
+</div>
+<div>
+  <a href="{% url 'feedback' %}">Want to leave a feedback?</a>
+</div>
 <p>Date Joined: {{ user.date_joined|date:"d M Y" }}</p>
 <p>Last Login: {{ user.last_login|date:"d M Y" }}</p>
 {% endif %}

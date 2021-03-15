@@ -60,7 +60,7 @@
       </div> -->
       {% for gratitude_list in todays_list %}
       <div class="list-container">
-        <i class="las la-times-circle"></i>
+        <a class="delete-link" href="{% url 'gratitude:delete' gratitude_list.pk %}"><i class="las la-times-circle"></i></a>
         <li class="gratitude-item">
           <p>{{ gratitude_list.title }}</p>
           <p class="gratitude-item-time-created">{{ gratitude_list.time_created|date:"G:i" }}</p>
@@ -75,11 +75,11 @@
     </ul>
   {% else %}
   <ul class="gratitude-ul">
-    <p class="empty-title">Title title title title title</p>
-    <li class="ideas-msg">What do you get to do today / tomorrow?</li>
-    <li class="ideas-msg">What did you not have to do today / tomorrow?</li>
-    <li class="ideas-msg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-    <li class="ideas-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+    <p class="empty-title">Ideas:</p>
+    <li class="ideas-msg">Gratitude for</li>
+    <li class="ideas-msg">Gratitude for not</li>
+    <li class="ideas-msg">Family / Love</li>
+    <li class="ideas-msg">Activity / Work</li>
   </ul>
   
   

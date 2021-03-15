@@ -13,7 +13,7 @@ urlpatterns = [
     path('login/', account_views.Login.as_view(), name='login',
     kwargs={'redirect_authenticated_user': True}),
     path('logout/', views.LogoutView.as_view(), name='logout'),
-    
+    path('feedback/', account_views.Feedback.as_view(), name='feedback'),
     
     
 

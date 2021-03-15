@@ -1,5 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
+from .models import Profile
 from django.contrib.auth import authenticate
 # Create your tests here.
 class UserTestCase(TestCase):
@@ -48,3 +49,8 @@ class UserTestCase(TestCase):
   def test_wrong_password(self):
     user = authenticate(username='aaa', password='wrongPassword')
     self.assertFalse(user is not None and user.is_authenticated)
+  
+  def profile_count_equal_to_user_count(self):
+    user_count = User.objects.all().count()
+    profile_count = Profile.objects.all().count()
+    self.assertEqual(user_count, 1)

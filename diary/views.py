@@ -24,12 +24,19 @@ class List(LoginRequiredMixin, ListView):
   template_name = 'diary/list.html'
   paginate_by = 10
   
+  
   def get_queryset(self):
     return Article.objects.filter(user=self.request.user).order_by('-modified')
 
 class Detail(LoginRequiredMixin, DetailView):
   model = Article
   template_name = 'diary/detail.html'
+
+  def get_context_data(self, *, object_list=None, **kwargs):
+    user = self.request.user
+    context = super().get_context_data(**kwargs)
+    context['recent_articles'] = Article.objects.filter(user=user).order_by('-modified')[:3]
+    return context
 
   def get_object(self):
     slug_ = self.kwargs.get("slug")

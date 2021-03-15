@@ -95,6 +95,7 @@ def gratitude_create_view(request):
 class Delete(LoginRequiredMixin, DeleteView):
   model = Gratitude_List
   login_url='login'
+  template_name = 'gratitude/delete.html'
 
   def get_object(self):
     pk_ = self.kwargs.get("pk")

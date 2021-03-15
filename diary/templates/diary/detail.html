@@ -45,5 +45,12 @@
     
   </div>
   
+<div class="grid-wrapper">
+  {% for article in recent_articles %}
+    <div>
+      <a target="_blank" href="{% url 'article:detail' article.slug %}">{{ article.title }}</a>
+    </div>
+  {% endfor %}
+</div>
 
 {% endblock %}
