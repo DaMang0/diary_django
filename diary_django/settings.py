@@ -18,7 +18,7 @@ import os
 import os.path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-django_heroku.settings(locals())
+
 key = os.environ.get("DIARY_DJANGO_KEY")
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -160,3 +160,4 @@ STATICFILES_DIRS = (
 # assign the name of the url
 LOGIN_REDIRECT_URL = 'article:list'
 LOGOUT_REDIRECT_URL = 'login'
+django_heroku.settings(locals())
