@@ -32,7 +32,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://mind-lab-mathew.herokuapp.com/', '127.0.0.1', 'localhost', 'http://mindlab-au.com/', 'mindlab-au.com']
+ALLOWED_HOSTS = ['https://mind-lab-live-app.herokuapp.com/', '127.0.0.1', 'localhost', 'http://mindlab-au.com/', 'mindlab-au.com']
 
 SECRET_KEY = "q&80n=dxk0k+-_hqbi6ca(u8$sh4ebmp4+(57wy2jc7zhwu$=2"
 # Application definition
