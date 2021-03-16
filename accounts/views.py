@@ -40,18 +40,6 @@ class Profile(LoginRequiredMixin, DetailView):
   def get_object(self):
     return self.request.user
 
-# def Feedback(request):
-  
-#   if request.method == "POST":
-#     form = FeedbackForm(request.POST or None)
-#     if form.is_valid:
-#       form.save()
-#       return redirect("article:list")
-#   else:
-#     form = FeedbackForm()
-  
-#   return render(request, 'accounts/feedback.html', {'form':form},)
-
 class Feedback(LoginRequiredMixin, SuccessMessageMixin, CreateView):
   model = Feedback
   form_class = FeedbackForm

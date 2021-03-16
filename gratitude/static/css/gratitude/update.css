@@ -10,7 +10,7 @@ body{
   padding: 1rem;
 }
 form{
-  margin-top: 10rem;
+  margin-top: 20rem;
   padding: 2rem;
   
 }
@@ -22,6 +22,7 @@ label{
   padding-left: 1rem;
 }
 #id_title{
+  font-size: 1.2rem;
   width: 100%;
   margin: 0 auto;
   font-size: 1.625rem;
@@ -47,6 +48,7 @@ label{
   box-shadow: none !important;
 }
 .save-btn-container{
+  margin-top: 1rem;
   display: block;
   text-align: right;
 }
@@ -75,11 +77,18 @@ label{
   background-color: hsl(149, 60%, 48%);
 }
 
-@media only screen and (min-width: 750px){
-  :root{
-    font-size: 100%;
+  @media only screen and (min-width: 750px){
+    :root{
+      font-size: 100%;
+    }
+    
+    .save-btn-container{
+      text-align: center;
+    }
   }
-  .save-btn-container{
-    text-align: center;
+
+  @media only screen and (min-width: 1000px){
+    form{
+      padding: 2rem 4rem;
+    }
   }
-}

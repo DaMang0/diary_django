@@ -34,16 +34,6 @@
   {% if todays_list %}
     <ul class="gratitude-ul">
       <div class='date-container'>
-        <!-- <div class="date-wrap">
-          <div class="date-container-1">
-            <p class="date-date">{{ custom_page_date.day }}</p>
-          </div>
-          <div class="date-container-2">
-            <p class="date-month">{{ month_name }}</p>
-            <p class="date-year">{{ custom_page_date.year }}</p>
-          </div>
-        </div> -->
-
         {% if streak_count and streak_count > 1 %}
         <div class="flex date_and_streak_container">
           <p class="todays_list_count">Total: {{ todays_list_count }}</p>
@@ -52,12 +42,6 @@
         {% endif %}
       </div>
       
-      
-      <!-- <div class="days-container">
-        <a class="previous-day-link" href="{% url 'gratitude:date' yesterday.year yesterday.month yesterday.day %}">Prev</a>
-        
-        <a class="next-day-link" href="{% url 'gratitude:date' tomorrow.year tomorrow.month tomorrow.day %}">Next</a>
-      </div> -->
       {% for gratitude_list in todays_list %}
       <div class="list-container">
         <a class="delete-link" href="{% url 'gratitude:delete' gratitude_list.pk %}"><i class="las la-times-circle"></i></a>
@@ -68,19 +52,27 @@
         <a class="gratitude-item-edit-link" href="{% url 'gratitude:update' gratitude_list.pk %}"><i class="fas fa-ellipsis-v"></i></i></a>
         
       </div>
-      
-      
-    
     {% endfor %}
+
+    <div class="test-test">
+      {% if streak_count and streak_count == 1 %}
+      <p class="test-streak">Current streak: 1 days</p>
+      {% elif streak_count and streak_count > 1 %}    
+      <p class="test-streak">Current streak: {{ streak_count }} days</p>  
+      {% endif %}
+      <p class="test-total">Total: {{ todays_list_count }}</p>
+    </div>
+      
     </ul>
+    
   {% else %}
-  <ul class="gratitude-ul">
-    <p class="empty-title">Ideas:</p>
-    <li class="ideas-msg">Gratitude for</li>
-    <li class="ideas-msg">Gratitude for not</li>
-    <li class="ideas-msg">Family / Love</li>
-    <li class="ideas-msg">Activity / Work</li>
-  </ul>
+  
+  <div>
+    <form class="idea-form" action="{% url 'gratitude:idea' %}" method="GET">
+      <input class="idea-btn" type="submit" value="Need an idea?">
+    </form>
+  </div>
+  
   
   
   {% endif %}
@@ -88,10 +80,9 @@
 {% endblock %}
 
 {% block footer %}
+
   <script>
     document.getElementById('id_title').setAttribute('placeholder', "I'm grateful...")
-    // var gratitude_input_field = document.getElementById('id_title');
-    // gratitude_input_field.id = 'gratitude_input_field'
   </script>
 
 {% endblock %}

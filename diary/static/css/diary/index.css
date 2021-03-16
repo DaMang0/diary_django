@@ -85,7 +85,7 @@ body{
 }
 .main-slogan{
   margin: 0;
-  font-size: 5rem;
+  font-size: 3rem;
   letter-spacing: -1.5px;
   padding-bottom: 2rem;
 }
@@ -167,7 +167,7 @@ body{
 }
 .new-text{
   color: #373a3c;;
-  font-size: 4rem;
+  font-size: 2.4rem;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -258,7 +258,7 @@ body{
 .why-header{
   color: #373a3c;
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 2.4rem;
 }
 .why-icon-list {
   padding: 2rem 1rem;
@@ -275,7 +275,7 @@ body{
   /* border-bottom: 1px solid #efeff1; */
 }
 .why-icon-title{
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 .why-icon-msg{
@@ -285,7 +285,15 @@ body{
 .new-icon-text{
   color:hsl(0, 0%, 50%);
 }
-
+.fa-brain{
+  color: #ff8e83;
+}
+.fa-dollar-sign{
+  color: #57d080;
+}
+.fa-lightbulb{
+  color: rgb(255, 205, 0);
+}
 
 .platform-container{
   padding: 2rem;
