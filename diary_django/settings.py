@@ -12,11 +12,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from django.urls import reverse_lazy
+import django_heroku
 # from .secret import SECRET_key
 import os
 import os.path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+django_heroku.settings(locals())
 key = os.environ.get("DIARY_DJANGO_KEY")
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
