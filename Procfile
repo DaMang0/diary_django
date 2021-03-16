@@ -1,1 +1,1 @@
-web: gunicorn diary_django.wsgi
+web: gunicorn diary_django.wsgi --log-file -
