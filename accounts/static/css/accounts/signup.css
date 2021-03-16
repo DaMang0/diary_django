@@ -100,7 +100,7 @@ label{
   color: rgb(225, 69, 69);
   font-weight: 400;
   padding-bottom: 1.5rem;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 label:last-of-type{
   margin-top: 1rem;
@@ -138,6 +138,9 @@ form input:focus{
   }
   body{
     padding-top: 10rem;
+  }
+  main{
+    width: 90%;
   }
   .bg-neon-container{
     width: 50%;

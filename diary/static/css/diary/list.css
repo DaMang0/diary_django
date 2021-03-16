@@ -195,6 +195,10 @@ body main {
   font-size: 3rem;
   opacity: .7;
 }
+.second-create-container{
+  padding-left: 0 2rem;
+  /* text-align: right; */
+}
 .second-create-container-title{
   font-size: 1.2rem;
   font-weight: 600;

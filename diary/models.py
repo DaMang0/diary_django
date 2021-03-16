@@ -12,6 +12,7 @@ class Category(models.Model):
     ('3', 'Diary'),
     ('4', 'Journal'),
     ('5', 'Knowledge'),
+    ('6', 'Value'),
     )
   # article = models.ForeignKey(Article, on_delete=models.CASCADE)
   name = models.CharField(max_length=25, choices=CHOICES, unique=True, default='1')

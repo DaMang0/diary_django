@@ -11,10 +11,8 @@ main {
 
 .day-link{
   white-space: nowrap;
-  color: #000;
+  color: #2A6655;
   padding: 0 20px;
-}
-.day-link:hover{
   text-decoration: none;
 }
 
@@ -22,7 +20,7 @@ main {
   background: hsl(169, 100%, 40%);
   background: #81b5a6;
   max-width: 100vw;
-  padding: 1rem;
+  padding: 1rem 7.5%;
 }
 
 .create-form{
@@ -136,6 +134,7 @@ main {
   display: flex;
 }
 .date_and_streak_container{
+  border: 2px solid black;
   justify-content: space-between;
   font-size: 1.25rem;
   color: #888;
@@ -178,7 +177,10 @@ main {
 .la-angle-right, 
 .la-times-circle, 
 .fa-ellipsis-v, 
-.gratitude-item-time-created{
+.gratitude-item-time-created,
+.test-streak,
+.test-total
+{
   color: #a3a3a3;
 }
 .la-times-circle{
@@ -206,10 +208,12 @@ main {
 .gratitude-item::first-letter{
   text-transform: capitalize;
 }
-.gratitude-item-time-created, .fa-ellipsis-v{
+.gratitude-item-time-created, 
+.fa-ellipsis-v{
   transition: color 100ms ease-in-out;
 }
-.gratitude-item-time-created:hover, .fa-ellipsis-v:hover{
+.gratitude-item-time-created:hover, 
+.fa-ellipsis-v:hover{
   color: black;
   cursor: pointer;
 }
@@ -237,26 +241,35 @@ main {
 }
 
 /* Message if the page does not have any gratitude list entry yet */
-.empty-title{
-  color: #e89272;
+.idea-title{
+  color: #81B5A6;
   font-weight: 600;
   font-size: 1.4rem;
-  /* text-decoration: underline; */
 }
-.ideas-msg{
-  display: block;
-  width: 500px;
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 2rem 0 ;
+.test-test{
+  text-align: right;
 }
-
+.idea-form{
+  margin: 5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.idea-btn{
+  font-family: Inter, sans-serif;
+  background-color: rgb(84, 105, 212);
+  color: #fff;
+  cursor: pointer;
+  padding: .5em 2em;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+}
 
 @media only screen and (min-width: 750px) {
   
   .gratitude-color-bg-outer, .gratitude-ul{
-    padding-left: 7.5rem;
-    padding-right: 7.5rem;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
   }
   
   .submit-btn{
@@ -292,8 +305,8 @@ main {
 
 @media only screen and (min-width: 1000px) {
   .gratitude-color-bg-outer{
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 15%;
+    padding-right: 15%;
   }
   .gratitude-ul{
     padding-left: 25%;

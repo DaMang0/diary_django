@@ -18,6 +18,7 @@ urlpatterns = [
   path('<int:year>-<int:month>-<int:day>/', gratitude_view.Date, name='date'),
   path('delete/<int:pk>/', gratitude_view.Delete.as_view(), name='delete'),
   path('update/<int:pk>/', gratitude_view.Update.as_view(), name='update'),
+  path('idea/', gratitude_view.Idea.as_view(), name='idea'),
 ]
 
 

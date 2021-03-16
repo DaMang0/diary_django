@@ -69,10 +69,8 @@ def Date(request, year, month, day):
       break
     compare_date = xlist.date_created
 
-    
 
-  # yesterdays_list = user.gratitude_list_set.all().filter(date_created__year=year, date_created__month=month, date_created__day=path)
-  context = {'todays_list_count': todays_list_count, 'streak_count': streak_count, 'month_name' :month_name, 'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
+  context = { 'todays_list_count': todays_list_count, 'streak_count': streak_count, 'month_name' :month_name, 'custom_page_date': custom_page_date, 'yesterday':yesterday, 'tomorrow':tomorrow, 'form': form, 'todays_list': todays_list, 'today': today, }
   return render(request, 'gratitude/date.html', context)
 
 
@@ -118,7 +116,6 @@ class Update(LoginRequiredMixin, UpdateView):
   def get_success_url(self):
     return reverse('gratitude:date', kwargs={'day': today.day, 'month': today.month, 'year': today.year,})
 
-
-  
-
+class Idea(TemplateView):
+  template_name = 'gratitude/idea.html'
   
